@@ -1,0 +1,11 @@
+{
+  "name": "static-application-toolkit",
+  "version": "0.1.0",
+  "description": "The Ontario.ca Service Integration static application toolkit.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache 2.0"
+}
