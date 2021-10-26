@@ -10,4 +10,4 @@
 
 ## Hooks
 
-Please install the project's `git_hooks` in your `.git/hooks` directory
+* Please copy the project's `git_hooks` in your `.git/hooks` directory either manually or with `npm run installHooks`

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"TODO: tests here \" && exit 0",
-    "lint": "echo \"TODO: linting here \" && exit 0"
+    "lint": "echo \"TODO: linting here \" && exit 0",
+    "installHooks": "cp git_hooks/* .git/hooks"
   },
   "author": "",
   "license": "Apache 2.0",
