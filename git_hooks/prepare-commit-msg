@@ -29,7 +29,7 @@ SHA1=$3
 # ex: OSI-29_static-site-skeleton -> JIRA-Ref: OSI-29
 JIRA_REF=`git branch --show | awk -F'_' '{print $1}'`
 
-echo "# Insert commit message \nJIRA-Ref: $JIRA_REF" > "$COMMIT_MSG_FILE"
+echo "# Insert commit message \n\nJIRA-Ref: $JIRA_REF" > "$COMMIT_MSG_FILE"
 
 # case "$COMMIT_SOURCE,$SHA1" in
 #  ,|template,)
