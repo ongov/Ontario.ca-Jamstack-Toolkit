@@ -1,0 +1,126 @@
+@import "../../sass/variables-import";
+
+.ontario-header-navigation {
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    width: 20rem;
+    height: 100vh;
+    max-height: 100%;
+    background-color: $ontario-colour-white;
+    border-left: 1px solid $ontario-greyscale-20;
+    overflow-y: auto;
+    z-index: 3;
+    transition: all 500ms ease 0s;
+    visibility: hidden;
+
+    @media screen and (max-width: $xsmall-breakpoint) {
+        width: 15rem;
+        right: -15rem;
+    }
+
+    @media screen and (min-width: $small-breakpoint) {
+        width: 22.5rem;
+        right: -22.5rem;
+    }
+
+    @media screen and (min-width: $medium-breakpoint) {
+        width: 25rem;
+        right: -25rem;
+    }
+}
+
+.ontario-header-navigation--is-ready[aria-hidden="false"] {
+    box-shadow: -8px 0px 24px 0px rgba(0, 0, 0, 0.4);
+    right: 0;
+    overflow: hidden;
+}
+
+.ontario-header-navigation__banner {
+    background-color: $ontario-colour-black;
+    color: $ontario-colour-white;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    font-size: 2rem;
+    padding: $spacing-4;
+}
+
+.ontario-header-navigation__close-menu-button {
+    border-radius: 4px;
+
+    min-width: $spacing-7;
+    margin: $spacing-0;
+    padding-left: $spacing-1;
+    padding-right: $spacing-1;
+
+    svg {
+        font-size: 2rem;
+        width: $spacing-7;
+        height: $spacing-7;
+        margin: $spacing-0;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 4px #009adb;
+        background-color: $ontario-colour-black;
+    }
+}
+
+.ontario-header-navigation__menu-list {
+    margin: $spacing-0;
+    padding: $spacing-2 0;
+    width: 20rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(100vh - 80px);
+
+    @media screen and (max-width: $xsmall-breakpoint) {
+        width: 15rem;
+    }
+
+    @media screen and (min-width: $small-breakpoint) {
+        width: 22.5rem;
+    }
+
+    @media screen and (min-width: $medium-breakpoint) {
+        width: 25rem;
+    }
+}
+
+.ontario-header-navigation__menu-item {
+    font-size: 1.125rem;
+    list-style-type: none;
+    padding: $spacing-1;
+}
+
+.ontario-header-navigation__menu-item a {
+    display: block;
+    padding: $spacing-2 $spacing-6 $spacing-2;
+    color: $ontario-colour-black;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        background-color: $ontario-greyscale-5;
+    }
+
+    &:focus,
+    &:active {
+        background-color: $ontario-greyscale-5;
+    }
+}
+
+.ontario-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}

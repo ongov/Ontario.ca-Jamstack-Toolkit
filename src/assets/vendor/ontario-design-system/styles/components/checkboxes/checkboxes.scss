@@ -1,0 +1,118 @@
+@import "../../../sass/variables-import";
+
+$ontario-touch-target-size: 36px;
+$ontario-touch-target-size-mobile: 40px;
+$ontario-checkboxes-size: 28px;
+$ontario-checkboxes-size-mobile: 32px;
+$ontario-checkbox-border-size: 2px;
+
+.ontario-checkboxes {
+    margin-bottom: $spacing-7;
+    max-width: 48rem;
+}
+
+.ontario-checkboxes__item {
+    position: relative;
+    margin: 0 0 $spacing-4;
+    padding: 0 0 0 $spacing-6;
+    min-height: $ontario-checkboxes-size;
+    box-sizing: content-box;
+    &:last-of-type {
+        margin: 0;
+    }
+    @media screen and (max-width: $small-breakpoint) {
+        padding: 0 0 0$spacing-7;
+        min-height: $ontario-checkboxes-size-mobile;
+    }
+}
+
+.ontario-checkboxes__input {
+    cursor: pointer;
+    margin: 0;
+    position: absolute;
+    top: -$ontario-checkbox-border-size;
+    left: -$ontario-checkbox-border-size;
+    opacity: 0;
+    width: $ontario-touch-target-size;
+    height: $ontario-touch-target-size;
+    z-index: 1;
+
+    // prevent blue default highlighting of input on android
+    -webkit-tap-highlight-color: transparent;
+
+    @media screen and (max-width: $small-breakpoint) {
+        width: $ontario-touch-target-size-mobile;
+        height: $ontario-touch-target-size-mobile;
+    }
+}
+
+.ontario-checkboxes__label {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 1.5;
+    margin: $spacing-1 0;
+    padding: 0 $spacing-4;
+    width: auto;
+    white-space: normal;
+
+    @media screen and (max-width: $small-breakpoint) {
+        margin: 0.33rem 0;
+    }
+
+    // [ ] Check box styles
+    &:before {
+        content: "";
+        border: $ontario-checkbox-border-size solid $ontario-colour-black;
+        border-radius: $global-radius;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $ontario-checkboxes-size-mobile;
+        height: $ontario-checkboxes-size-mobile;
+        transition: border 0.1s ease-in-out;
+        display: block;
+
+        @media screen and (min-width: $small-breakpoint) {
+            width: $ontario-checkboxes-size;
+            height: $ontario-checkboxes-size;
+        }
+    }
+
+    // ✔✔✔ Check mark styles ✔✔✔
+    &:after {
+        content: "";
+        background-image: url("#{$icon-dir}/ontario-checkbox-background-no-width.svg");
+        background-repeat: no-repeat;
+        height: $ontario-checkboxes-size + $ontario-checkbox-border-size;
+        width: $ontario-checkboxes-size + $ontario-checkbox-border-size;
+        position: absolute;
+        top: $ontario-checkbox-border-size / 2;
+        left: $ontario-checkbox-border-size / 2;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        display: block;
+        @media screen and (max-width: $small-breakpoint) {
+            height: $ontario-checkboxes-size-mobile +
+                $ontario-checkbox-border-size;
+            width: $ontario-checkboxes-size-mobile +
+                $ontario-checkbox-border-size;
+        }
+    }
+}
+
+.ontario-checkboxes__input:focus + .ontario-checkboxes__label:before {
+    -moz-box-shadow: 0 0 0 4px $ontario-colour-focus;
+    -webkit-box-shadow: 0 0 0 4px $ontario-colour-focus;
+    box-shadow: 0 0 0 4px $ontario-colour-focus;
+    outline: 4px solid transparent;
+    transition: all 0.1s ease-in-out;
+}
+
+.ontario-checkboxes__input:checked + .ontario-checkboxes__label:after {
+    opacity: 1;
+}
+
+.ontario-checkboxes__input:checked + .ontario-checkboxes__label:before {
+    background-color: $ontario-colour-black;
+}

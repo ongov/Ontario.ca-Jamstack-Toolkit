@@ -1,0 +1,9 @@
+@import "../../../sass/variables-import";
+
+.ontario-textarea {
+    display: block;
+    width: 100%;
+    min-height: 144px;
+    margin: 0 0 $spacing-5;
+    white-space: pre-wrap;
+}

@@ -1,0 +1,129 @@
+
+
+<dt class="fractal-dt ontario-padding-bottom-24-!">Default</dt><!-- Start: @hint-text--default --><dd>
+<div class="ontario-form-group">
+        <label class="ontario-label" for="hint-text-example">
+                Label<span class="ontario-label__flag">(required/optional)</span>
+        </label>
+            <p class="ontario-hint" id="hint-text-example-hint">Hint text placeholder</p>
+        <input  aria-describedby="hint-text-example-hint" class="ontario-input" type="text" id="hint-text-example">
+    </div>
+</dd><!-- End: @hint-text--default -->
+
+<dt class="fractal-dt ontario-padding-bottom-24-!">Hint expander</dt><!-- Start: @hint-text--hint-expander --><dd>
+<div class="ontario-form-group">
+        <label class="ontario-label" for="hint-expander-example">
+            Enter your driver&#x27;s licence number<span class="ontario-label__flag">(required/optional)</span>
+                <span class="ontario-show-for-sr">More information on (label name) is available in the next element</span>
+        </label>
+        <input   class="ontario-input ontario-input--20-char-width" type="text" id="hint-expander-example">
+            <div class="ontario-hint-expander__container">
+                <button class="ontario-hint-expander__button" id="hint-expander-button-id-2" aria-controls="hint-expander-content-2" aria-expanded="false" data-toggle="ontario-collapse">
+                    <span class="ontario-hint-expander__button-icon--close"><svg class="ontario-icon" alt="" aria-hidden="true" focusable="false" sol:category="primary" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" ><use xlink:href="#ontario-icon-chevron-up"></use></svg></span>
+                    <span class="ontario-hint-expander__button-icon--open"><svg class="ontario-icon" alt="" aria-hidden="true" focusable="false" sol:category="primary" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" ><use xlink:href="#ontario-icon-chevron-down"></use></svg></span>
+                    Where is my driver&#x27;s licence number?
+                </button>
+                <div class="ontario-hint-expander__content" id="hint-expander-content-2" aria-labelledby="hint-expander-button-id-2" aria-hidden="true" data-toggle="ontario-expander-content">
+                    <p>A driver’s licence number is 15 characters in length; the first character is a letter and the next 14 are numbers. The last two characters must be a number from 01 to 31.</p>
+                    <img src="../../markdown-assets/hint-text/DS-hint-expander_img.png " alt="Sample of an Ontario Driver´s Licence indicating the location of the Driver´s Licence Number.">
+                </div>
+            </div>
+    </div>
+
+
+    <script src="../../scripts/ontario-expand-collapse.js"></script>
+</dd><!-- End: @hint-text--hint-expander -->
+
+<dt class="fractal-dt ontario-padding-bottom-24-!">Hint expander with checkboxes</dt><!-- Start: @hint-text--hint-expander-with-checkboxes --><dd>
+<fieldset class="ontario-fieldset">
+        <legend class="ontario-fieldset__legend">
+            Do you have children?<span class="ontario-label__flag">(required/optional)</span>
+        </legend>
+        <p class="ontario-hint" id="hint-text-checkbox-hint">Select all that apply</p>
+        <div class="ontario-checkboxes">
+            <div class="ontario-checkboxes__item">
+                <input class="ontario-checkboxes__input" id="checkbox-option-1" name="options" type="checkbox" value="option-1">
+                <label class="ontario-checkboxes__label" for="checkbox-option-1">
+                    Yes
+                </label>
+            </div>
+            <div class="ontario-checkboxes__item">
+                <input class="ontario-checkboxes__input" id="checkbox-option-2" name="options" type="checkbox" value="option-2">
+                <label class="ontario-checkboxes__label" for="checkbox-option-2">
+                    I am adopting or looking to adopt a child
+                </label>
+            </div>
+            <div class="ontario-checkboxes__item">
+                <input class="ontario-checkboxes__input" id="checkbox-option-3" name="options" type="checkbox" value="option-3">
+                <label class="ontario-checkboxes__label" for="checkbox-option-3">
+                    I have legal custody of a child
+                </label>
+            </div>
+            <div class="ontario-checkboxes__item">
+                <input class="ontario-checkboxes__input" id="checkbox-option-4" name="options" type="checkbox" value="option-4">
+                <label class="ontario-checkboxes__label" for="checkbox-option-4">
+                    I have a child in my temporary care
+                </label>
+                <div class="ontario-hint-expander__container">
+                    <button class="ontario-hint-expander__button" id="hint-expander-button-id-1" aria-controls="hint-expander-content-1" aria-expanded="false" data-toggle="ontario-collapse">
+                        <span class="ontario-hint-expander__button-icon--close"><svg class="ontario-icon" alt="" aria-hidden="true" focusable="false" sol:category="primary" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" ><use xlink:href="#ontario-icon-chevron-up"></use></svg></span>
+                        <span class="ontario-hint-expander__button-icon--open"><svg class="ontario-icon" alt="" aria-hidden="true" focusable="false" sol:category="primary" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" ><use xlink:href="#ontario-icon-chevron-down"></use></svg></span>
+                        What does temporary care mean?
+                    </button>
+                    <div class="ontario-hint-expander__content" id="hint-expander-content-1" aria-labelledby="hint-expander-button-id-1" aria-hidden="true" data-toggle="ontario-expander-content">
+                        <p>Temporary care means you are temporarily taking care of a child and you are not the child&#x27;s birth or adoptive parent.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ontario-checkboxes__item">
+                <input class="ontario-checkboxes__input" id="checkbox-option-5" name="options" type="checkbox" value="option-5">
+                <label class="ontario-checkboxes__label" for="checkbox-option-5">
+                    No
+                </label>
+            </div>
+        </div>
+    </fieldset>
+</dd><!-- End: @hint-text--hint-expander-with-checkboxes -->
+
+<dt class="fractal-dt ontario-padding-bottom-24-!">Hint expander with radios</dt><!-- Start: @hint-text--hint-expander-with-radios --><dd>
+<div class="ontario-form-group">
+        <fieldset class="ontario-fieldset">
+            <legend class="ontario-fieldset__legend">
+                Do you have a legal issue?<span class="ontario-label__flag">(required/optional)</span>
+            </legend>
+            <div class="ontario-radios">
+                <div class="ontario-radios__item">
+                    <input class="ontario-radios__input" id="radio-button-option-1" name="radio-buttons" type="radio" value="option-1">
+                    <label class="ontario-label ontario-radios__label" for="radio-button-option-1">
+                        Yes
+                    </label>
+                </div>
+                <div class="ontario-radios__item">
+                    <input class="ontario-radios__input" id="radio-button-option-2" name="radio-buttons" type="radio" value="option-2">
+                    <label class="ontario-label ontario-radios__label" for="radio-button-option-2">
+                        No
+                    </label>
+                </div>
+                <div class="ontario-hint-expander__container">
+                    <button class="ontario-hint-expander__button" id="hint-expander-button-id-3" aria-controls="hint-expander-content-3" aria-expanded="false" data-toggle="ontario-collapse">
+                        <span class="ontario-hint-expander__button-icon--close"><svg class="ontario-icon" alt="" aria-hidden="true" focusable="false" sol:category="primary" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" ><use xlink:href="#ontario-icon-chevron-up"></use></svg></span>
+                        <span class="ontario-hint-expander__button-icon--open"><svg class="ontario-icon" alt="" aria-hidden="true" focusable="false" sol:category="primary" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" ><use xlink:href="#ontario-icon-chevron-down"></use></svg></span>
+                        What are some examples of legal issues?
+                    </button>
+                    <div class="ontario-hint-expander__content" id="hint-expander-content-3" aria-labelledby="hint-expander-button-id-1" aria-hidden="true" data-toggle="ontario-expander-content">
+                        <p>Legal issues may include:</p>
+                        <ul>
+                            <li>Criminal matters</li>
+                            <li>Family law issues like divorce, child custody or support</li>
+                            <li>Immigration and refugee matters</li>
+                            <li>Civil claims, including ones made in small claims court</li>
+                            <li>Issues before a tribunal or board, including landlord/tenant issues</li>
+                            <li>Social assistance review</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</dd><!-- End: @hint-text--hint-expander-with-radios -->
+

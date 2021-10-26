@@ -1,0 +1,39 @@
+@import "../../sass/variables-import";
+
+.ontario-tag{
+    border: none;
+    border-radius: $global-radius*3;
+    box-sizing: border-box;
+    box-shadow: none;
+    display: inline-block;
+    font-size: 0.625rem;
+    font-weight: 500;
+    font-family: $ontario-font-raleway-modified;
+    font-style: normal;
+    padding: 0px 12px;
+    text-align: center;
+    text-decoration: none;
+    background: $ontario-greyscale-20;
+    color: $ontario-colour-black;
+
+    @media screen and (min-width: 40em) {
+        font-size: 0.875rem;
+    }
+
+}
+
+.ontario-tag--lime{
+    background: $ontario-colour-lime;
+}
+
+.ontario-tag--gold{
+    background: $ontario-colour-gold;
+}
+
+.ontario-tag--yellow{
+    background: $ontario-colour-yellow;
+}
+
+.ontario-tag--taupe{
+    background: $ontario-colour-taupe;
+}

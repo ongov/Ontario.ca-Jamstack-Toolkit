@@ -1,0 +1,145 @@
+@import "../../sass/variables-import";
+@import "../../sass/tools/focus.placeholder";
+
+.ontario-accordions__container {
+    max-width: 48rem;
+    width: 100%;
+}
+
+.ontario-accordion {
+    border-top: 2px solid $ontario-greyscale-20;
+
+    &:last-of-type {
+        border-bottom: 2px solid $ontario-greyscale-20;
+    }
+}
+
+.ontario-accordion__controls {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ontario-accordion__button,
+.ontario-accordion__button--expand-all {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.ontario-accordion__button--expand-all {
+    font-size: 1rem;
+    margin-bottom: $spacing-2;
+    color: $ontario-colour-link;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        color: $ontario-colour-link--hover;
+        text-decoration: underline;
+    }
+
+    &:focus {
+        @extend %ontario-focus;
+    }
+
+    &:active {
+        color: $ontario-colour-link--active;
+        text-decoration: underline;
+    }
+}
+
+.ontario-accordion--expand-close-all {
+    display: none;
+}
+
+.ontario-accordion__controls--active {
+    .ontario-accordion--expand-close-all {
+        display: block;
+    }
+
+    .ontario-accordion--expand-open-all {
+        display: none;
+    }
+}
+
+.ontario-accordion__button {
+    display: flex;
+    align-items: center;
+
+    color: $ontario-colour-link;
+    cursor: pointer;
+    padding: $spacing-3 $spacing-2;
+    text-align: left;
+    width: 100%;
+
+    p,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @extend %h4-styles;
+        margin-bottom: 0;
+    }
+
+    .ontario-accordion__button-icon--close,
+    .ontario-accordion__button-icon--open {
+        margin-right: $spacing-2;
+    }
+
+    .ontario-icon {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    &:focus,
+    &:hover {
+        background-color: $ontario-greyscale-5;
+        color: $ontario-colour-link--hover;
+    }
+
+    &:focus {
+        @extend %ontario-focus;
+        box-shadow: 0 0 0 4px $ontario-colour-focus inset;
+    }
+
+    &:active {
+        color: $ontario-colour-link--active;
+    }
+}
+
+.ontario-accordion__content {
+    display: none;
+    padding: $spacing-3;
+    margin-left: 0;
+
+    @media screen and (min-width: $small-breakpoint) {
+        margin-left: $spacing-6;
+    }
+
+    * {
+        margin-top: 0;
+        max-width: 48rem;
+        width: 100%;
+    }
+
+    ul,
+    ol {
+        max-width: calc(100% - 3rem);
+    }
+}
+
+.ontario-expander--active {
+    .ontario-accordion__content,
+    .ontario-accordion__button-icon--close {
+        display: block;
+    }
+
+    .ontario-accordion__button-icon--open {
+        display: none;
+    }
+}
+
+.ontario-accordion__button-icon--close {
+    display: none;
+}
