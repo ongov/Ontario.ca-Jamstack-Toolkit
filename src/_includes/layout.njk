@@ -8,6 +8,10 @@
 </head>
 <body>
 {% include "_header.njk" %}
-{{ content | safe }}
+<div class="ontario-row">
+    <div class="ontario-column ontario-small-12">
+        {{ content | safe }}
+    </div>
+</div>
 {% include "_footer.njk" %}
 </body>
