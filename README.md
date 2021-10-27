@@ -2,9 +2,14 @@
 
 ## Getting Started
 
-The steps below require [Node.js](https://nodejs.org/en/) to be installed.
+[Node.js](https://nodejs.org/en/) must be installed.
 
-From a fresh checkout:
-1. `npm install`
-2. `npm run build` to build the static site once
-3. `npm run serve` to serve the generated static site locally, updating as changes are made
+From a fresh checkout, `npm install` will install all dependencies.
+
+### Local Development
+
+`npm run serve` will serve the generated static site locally, updating and rebuilding as changes are made - the generated files will appear in the `dist` directory.
+
+### Deployment
+
+`npm run build` will generate static site in the `dist` directory (after removing it to ensure a clean build) - this directory can then be deployed to a suitable static hosting environment.

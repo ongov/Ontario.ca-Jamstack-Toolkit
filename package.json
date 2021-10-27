@@ -4,9 +4,9 @@
   "description": "The Ontario.ca Service Integration static application toolkit.",
   "main": "index.js",
   "scripts": {
-    "test": "rm -rf dist && npm run build && mocha",
+    "test": "mocha",
     "lint": "echo \"TODO: linting here \" && exit 0",
-    "build": "eleventy",
+    "build": "rm -rf dist && eleventy && npm test",
     "serve": "eleventy --serve",
     "installHooks": "cp git_hooks/* .git/hooks",
     "htmlValidateSrc": "html-validate src/**/*.njk",
