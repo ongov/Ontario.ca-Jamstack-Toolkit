@@ -16,7 +16,7 @@ JIRA-Ref: OSI-29
 
 ## Branch Names
 
-* Please name branches in this style: `{issue id}_{branch description} (this lets our Git hooks determine the issue ID and insert it automatically in commit messages)
+* Please name branches in this style: `{issue id}_{branch description}` (this lets our Git hooks determine the issue ID and insert it automatically in commit messages)
 
 ## Hooks
 
