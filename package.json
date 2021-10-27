@@ -11,7 +11,7 @@
     "installHooks": "cp git_hooks/* .git/hooks",
     "installDesignSystem": "export DS_VERSION=0.12.0 && export DS_ZIP_NAME=ontario-design-system.zip && export VEN_DIR=src/assets/vendor && export DS_UNZIP_DIR=$VEN_DIR/ontario-design-system && curl https://designsystem.ontario.ca/dist/ontario-design-system-dist-$DS_VERSION.zip > $VEN_DIR/$DS_ZIP_NAME && unzip -o $VEN_DIR/$DS_ZIP_NAME -d $DS_UNZIP_DIR && rm $VEN_DIR/$DS_ZIP_NAME"
   },
-  "author": "",
+  "author": "Ontario Digital Service",
   "license": "Apache 2.0",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
