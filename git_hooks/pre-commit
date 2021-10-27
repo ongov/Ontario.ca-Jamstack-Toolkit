@@ -11,6 +11,9 @@ fi
 # If you want to allow non-ASCII filenames set this variable to true.
 allownonascii=$(git config --type=bool hooks.allownonascii)
 
+# Redirect output to stderr.
+exec 1>&2
+
 # Cross platform projects tend to avoid non-ASCII filenames; prevent
 # them from being added to the repository. We exploit the fact that the
 # printable range starts at the space character and ends with tilde.
@@ -35,11 +38,26 @@ EOF
 	exit 1
 fi
 
-# If there are whitespace errors, print the offending file names and fail.
-git diff-index --check --cached $against --
-
 # Run tests
 npm run test
+if [ $? -eq 0 ]; then
+  echo "commit tests passed"
+else
+  echo "commit aborted, test failure" && exit 1
+fi
 
 # Run linters
 npm run lint
+if [ $? -eq 0 ]; then
+  echo "commit linting passed"
+else
+  echo "commit aborted, linter failure" && exit 1
+fi
+
+# If there are whitespace errors, print the offending file names and fail.
+git diff-index --check --cached $against --
+if [ $? -eq 0 ]; then
+  echo "commit tests passed"
+else
+  echo "commit aborted, whitespace error failure" && exit 1
+fi
