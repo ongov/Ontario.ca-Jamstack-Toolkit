@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "lint": "echo \"TODO: linting here \" && exit 0",
-    "build": "rm -rf dist && eleventy && npm test",
+    "build": "rm -rf dist && eleventy",
     "serve": "eleventy --serve",
     "installHooks": "cp git_hooks/* .git/hooks",
     "htmlValidateSrc": "html-validate src/**/*.njk",
