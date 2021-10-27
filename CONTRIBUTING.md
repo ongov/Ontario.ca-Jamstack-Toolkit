@@ -4,7 +4,7 @@
 
 * Please use the https://www.conventionalcommits.org/ standard
 
-Your commit messages should look like the following (body is optional, if extended explanation is useful):
+Your commit messages should look like the following (body is optional, if any extended explanation is useful):
 
 ```
 feat: add basic layout file
