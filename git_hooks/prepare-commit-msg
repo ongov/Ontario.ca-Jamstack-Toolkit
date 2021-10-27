@@ -7,4 +7,4 @@ COMMIT_MSG_FILE=$1
 # ex: OSI-29_static-site-skeleton -> JIRA-Ref: OSI-29
 JIRA_REF=`git branch --show | awk -F'_' '{print $1}'`
 
-echo "# Insert commit message \n\nJIRA-Ref: $JIRA_REF" > "$COMMIT_MSG_FILE"
+echo "\n\nJIRA-Ref: $JIRA_REF" >> "$COMMIT_MSG_FILE"
