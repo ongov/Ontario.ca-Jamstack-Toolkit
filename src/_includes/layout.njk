@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>{{ title }}</title>
+    <head>
+    <title>{{ title }}</title>
 
-<link href="/assets/css/style.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
 
-</head>
-<body>
+    </head>
+    <body>
 
-{% include "_icon_definitions.njk" %}
-{% include "_header.njk" %}
-<div class="ontario-row">
-    <div class="ontario-column ontario-small-12">
-        {{ content | safe }}
+    {% include "_icon_definitions.njk" %}
+    {% include "_header.njk" %}
+    <div class="ontario-row">
+        <div class="ontario-column ontario-small-12">
+            {{ content | safe }}
+        </div>
     </div>
-</div>
-{% include "_footer.njk" %}
-</body>
+    {% include "_footer.njk" %}
+    </body>
+</html>

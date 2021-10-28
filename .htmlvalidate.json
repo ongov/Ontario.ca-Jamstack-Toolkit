@@ -3,6 +3,8 @@
       "html-validate:recommended"
     ],
     "rules": {
-        "void-style": "off"
+        "void-style": "off",
+        "prefer-button": "off",
+        "svg-focusable": "off"
     }
 }
