@@ -4,6 +4,7 @@
     ],
     "rules": {
         "void-style": "off",
-        "prefer-button": "off"
+        "prefer-button": "off",
+        "svg-focusable": "off"
     }
 }
