@@ -24,7 +24,10 @@ From a fresh checkout, `npm install` will install all dependencies.
 
 #### Git Hooks
 
-Git hooks used for this project are in the `git_hooks` directory and can be copied into `.git/hooks` using `npm installHooks`
+* This project uses [`pre-commit`](https://pre-commit.com/) to manage needed hooks. After installing `pre-commit` on your system, use the following to install the project's hooks.
+    * `pre-commit autoupdate`
+    * `pre-commit install`
+    * `pre-commit install --hook-type prepare-commit-msg`
 
 ### Deployment
 
