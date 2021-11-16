@@ -23,4 +23,4 @@ JIRA-Ref: OSI-29
 * This project uses [`pre-commit`](https://pre-commit.com/) to manage needed hooks. After installing `pre-commit` on your system, use the following to install the project's hooks.
     * `pre-commit autoupdate`
     * `pre-commit install`
-    * `pre-commit install-hooks`
+    * `pre-commit install --hook-type prepare-commit-msg`
