@@ -2,11 +2,14 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
 -   repo: https://git.ontariogovernment.ca/service-integration/team-tools/pre-commit
-    rev: 493aeb74a585be9f8d428d8ac12b2e73a7c35d9b
+    rev: 4a11c3396ae683123f72e8a25d4be7509006aa62
     hooks:
     -   id: npm-run-test
         always_run: true
         stages: [commit]
     -   id: npm-run-lint
         always_run: true
-        stages: [commit]        
+        stages: [commit]
+    -   id: check-whitespace
+        always_run: true
+        stages: [commit]
