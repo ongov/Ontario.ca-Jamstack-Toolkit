@@ -21,3 +21,8 @@ JIRA-Ref: OSI-29
 ## Hooks
 
 * Please copy the project's `git_hooks` in your `.git/hooks` directory either manually or with `npm run installHooks`
+
+* We are working on using the [`pre-commit`](https://pre-commit.com/) tool instead to manage our hooks, stay tuned!
+    * `pre-commit autoupdate`
+    * `pre-commit install`
+    * `pre-commit install-hooks`
