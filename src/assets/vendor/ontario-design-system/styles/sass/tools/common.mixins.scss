@@ -9,3 +9,16 @@
     -webkit-hyphens: auto;
     hyphens: auto;
 }
+
+@mixin ontario-two-column-lists() {
+    column-count: 1;
+    display: block;
+
+    @media screen and (min-width: $small-breakpoint) {
+        column-count: 2;
+
+        li:last-child {
+            padding: 0 0 0.75rem 0;
+        }
+    }
+}

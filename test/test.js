@@ -12,8 +12,9 @@ describe('Site generation', function() {
   describe('Ontario design system inclusion', function() {
     it('should copy over the design system assets', function() {
       assert(fs.existsSync(odsDir), "Expected directory for design system not found");
-      const length = fs.readdirSync(odsDir).length;
-      assert(fs.readdirSync(odsDir).length === 9, "Expected number of files in design system directory not found");
+      const actualLength = fs.readdirSync(odsDir).length;
+      const expectedLength = 10
+      assert(actualLength === expectedLength, `The expected number of files in design system directory were not found, expected ${expectedLength}, got ${actualLength}`);
     });
   });
   describe('Site CSS file present', function() {

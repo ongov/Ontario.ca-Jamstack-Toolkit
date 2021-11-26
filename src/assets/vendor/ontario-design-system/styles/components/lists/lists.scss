@@ -1,0 +1,14 @@
+@import "../../sass/variables-import";
+@import "../../sass/tools/common.mixins";
+
+// To be used for markdown
+.ontario-lists--two-column-list-md {
+    ul {
+        @include ontario-two-column-lists;
+    }
+}
+
+// To be used for general lists
+.ontario-lists--two-column-list {
+    @include ontario-two-column-lists;
+}

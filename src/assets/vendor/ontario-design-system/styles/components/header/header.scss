@@ -261,7 +261,10 @@ input[type="reset"].ontario-header__search-reset {
     }
 
     svg {
+        width: 2rem;
+        height: 2rem;
         margin-right: 6px;
+        margin-bottom: 0;
 
         @media screen and (max-width: $xsmall-breakpoint) {
             margin-right: 0;
