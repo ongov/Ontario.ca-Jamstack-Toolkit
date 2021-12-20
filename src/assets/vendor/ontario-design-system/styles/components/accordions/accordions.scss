@@ -64,7 +64,7 @@
 
 .ontario-accordion__button {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     color: $ontario-colour-link;
     cursor: pointer;
@@ -110,7 +110,7 @@
 
 .ontario-accordion__content {
     display: none;
-    padding: $spacing-3;
+    padding: $spacing-3 $spacing-3 $spacing-6 $spacing-3;
     margin-left: 0;
 
     @media screen and (min-width: $small-breakpoint) {
@@ -126,6 +126,10 @@
     ul,
     ol {
         max-width: calc(100% - 3rem);
+    }
+
+    & > :last-child {
+        margin-bottom: 0;
     }
 }
 

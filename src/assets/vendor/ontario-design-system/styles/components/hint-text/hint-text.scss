@@ -55,7 +55,7 @@
     color: $ontario-colour-black;
     background-color: $ontario-greyscale-5;
     display: none;
-    padding: $spacing-4;
+    padding: $spacing-4 $spacing-4 $spacing-4 calc(#{$spacing-4} + #{$spacing-1});
     margin: 0 0 $spacing-4 $spacing-1;
 
     & *:last-child {
