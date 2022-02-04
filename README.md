@@ -29,6 +29,15 @@ From a fresh checkout, `npm install` will install all dependencies.
     * `pre-commit install`
     * `pre-commit install --hook-type prepare-commit-msg`
 
+#### French Translation
+
+This product implements a simple but functional approach to presenting content in both official languages that parallels the URL structure of `Ontario.ca`:
+
+* English-language pages should go in the root of `src`
+* The equivalent French-language page should go in `src/fr`, with the same filename, and include `lang: fr` in its [front matter](https://www.11ty.dev/docs/data-frontmatter/)
+
+Appropriate headers and footers will then be used, and a language switcher link generated between the two different page versions in English and French.
+
 ### Deployment
 
 `npm run build` will generate static site in the `dist` directory (after removing it to ensure a clean build) - this directory can then be deployed to a suitable static hosting environment.
