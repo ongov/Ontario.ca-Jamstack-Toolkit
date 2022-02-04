@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "lint": "npm run htmlValidateSrc",
+    "lint": "npm run htmlValidateDist",
     "build": "rm -rf dist && eleventy",
     "serve": "eleventy --serve",
     "htmlValidateSrc": "html-validate src/**/*.njk",
