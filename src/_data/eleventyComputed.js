@@ -1,5 +1,5 @@
-// Solution from https://github.com/11ty/eleventy/issues/648#issuecomment-663507116
 module.exports = {
+    // Solution for rootPath from https://github.com/11ty/eleventy/issues/648#issuecomment-663507116
     rootPath: function(data) {
       return data.page.url
         .split('/')
