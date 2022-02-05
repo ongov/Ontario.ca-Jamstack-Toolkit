@@ -1,8 +1,14 @@
 // Builds a rem-calc function for use in SCSS
+@use "sass:math";
+
 @function rem-calc($size) {
-    $remSize: $size / 16;
-    @return #{$remSize}rem;
+    $remSize: math.div($size, 16);
+    @return $remSize * 1rem;
 }
 
 // Radius for rounded corners (for example, buttons)
 $global-radius: 4px;
+
+// Width values
+$standard-width: 48rem;
+$full-width: 100%;

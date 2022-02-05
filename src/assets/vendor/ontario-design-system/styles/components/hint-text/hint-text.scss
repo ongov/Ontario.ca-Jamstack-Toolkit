@@ -5,12 +5,12 @@
     color: $ontario-greyscale-70;
     display: inline-block;
     margin: 0 0 $spacing-4 0;
-    width: 100%;
-    max-width: 48rem;
+    width: $full-width;
+    max-width: $standard-width;
 }
 
 .ontario-hint-expander__container {
-    max-width: 48rem;
+    max-width: $standard-width;
 }
 
 .ontario-hint-expander__button {
@@ -63,7 +63,7 @@
     }
 
     & img {
-        width: 100%;
+        width: $full-width;
 
         @media screen and (min-width: $small-breakpoint) {
             width: 50%;

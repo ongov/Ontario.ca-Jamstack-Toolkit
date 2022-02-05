@@ -10,7 +10,7 @@
     margin: 0 0 $spacing-4 0;
     max-width: 38.75em;
     white-space: normal;
-    width: 100%;
+    width: $full-width;
 
     @media screen and (max-width: $small-breakpoint) {
         font-size: 1.125rem;
@@ -30,10 +30,12 @@
     }
 }
 
-.ontario-label--heading {
-    h1 {
+h1{
+    .ontario-label--heading {
+        @extend %h1-styles;
         display: inline-block;
         margin: $spacing-0;
+        
     }
 }
 

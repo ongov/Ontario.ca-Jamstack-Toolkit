@@ -1,5 +1,7 @@
 @import "../variables/colours.variables.scss";
 
+@import "../variables/global.variables.scss";
+
 @import "../variables/typography.variables.scss";
 
 /* everything - including before and after - should inherit their box sizing */
@@ -21,7 +23,7 @@ main p,
 main p:not(.ontario-lead-statement),
 main dd,
 main li {
-    max-width: 48rem;
+    max-width: $standard-width;
 }
 
 hr {

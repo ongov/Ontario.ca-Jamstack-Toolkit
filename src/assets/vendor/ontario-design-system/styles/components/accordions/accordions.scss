@@ -2,8 +2,8 @@
 @import "../../sass/tools/focus.placeholder";
 
 .ontario-accordions__container {
-    max-width: 48rem;
-    width: 100%;
+    max-width: $standard-width;
+    width: $full-width;
 }
 
 .ontario-accordion {
@@ -70,7 +70,7 @@
     cursor: pointer;
     padding: $spacing-3 $spacing-2;
     text-align: left;
-    width: 100%;
+    width: $full-width;
 
     p,
     h2,
@@ -119,8 +119,8 @@
 
     * {
         margin-top: 0;
-        max-width: 48rem;
-        width: 100%;
+        max-width: $standard-width;
+        width: $full-width;
     }
 
     ul,

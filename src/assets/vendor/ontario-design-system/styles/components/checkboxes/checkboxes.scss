@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "../../../sass/variables-import";
 
 $ontario-touch-target-size: 36px;
@@ -8,7 +9,7 @@ $ontario-checkbox-border-size: 2px;
 
 .ontario-checkboxes {
     margin-bottom: $spacing-7;
-    max-width: 48rem;
+    max-width: $standard-width;
 }
 
 .ontario-checkboxes__item {
@@ -86,8 +87,8 @@ $ontario-checkbox-border-size: 2px;
         height: $ontario-checkboxes-size + $ontario-checkbox-border-size;
         width: $ontario-checkboxes-size + $ontario-checkbox-border-size;
         position: absolute;
-        top: $ontario-checkbox-border-size / 2;
-        left: $ontario-checkbox-border-size / 2;
+        top: math.div($ontario-checkbox-border-size, 2);
+        left: math.div($ontario-checkbox-border-size, 2);
         right: 0;
         bottom: 0;
         opacity: 0;

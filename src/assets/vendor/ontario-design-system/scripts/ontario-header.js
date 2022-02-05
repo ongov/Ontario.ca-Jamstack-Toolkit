@@ -1,6 +1,8 @@
 // run asynchronously
 function deferInFn(fn) {
-    if (typeof fn === "function") setTimeout(fn, 0);
+    if (typeof fn === "function") {
+        setTimeout(fn, 0);
+    }
 }
 
 /*
@@ -8,10 +10,13 @@ function deferInFn(fn) {
 */
 (function () {
     "use strict";
-
     // review browser support
-    if (!("addEventListener" in window) || !document.documentElement.classList)
+    if (
+        !("addEventListener" in window) ||
+        !document.documentElement.classList
+    ) {
         return;
+    }
 
     var navPanelSelector = "ontario-header-navigation",
         isReadyClass = "ontario-header-navigation--is-ready",
@@ -28,7 +33,9 @@ function deferInFn(fn) {
         ),
         body = document.getElementsByTagName("body")[0];
 
-    if (!nav) return;
+    if (!nav) {
+        return;
+    }
 
     var currentTogger = null,
         currentDomEl = null;
@@ -87,11 +94,15 @@ function deferInFn(fn) {
     function onClickHandler(e) {
         var isNavPanel = e.target === currentDomEl;
         var isElementInsideNav = currentDomEl.contains(e.target);
-        if (!isNavPanel && !isElementInsideNav) hideNavPanel();
+        if (!isNavPanel && !isElementInsideNav) {
+            hideNavPanel();
+        }
     }
 
     function onKeyboradHandler(e) {
-        if (e.key === "Escape" || e.keyCode === KEYCODE.ESCAPE) hideNavPanel();
+        if (e.key === "Escape" || e.keyCode === KEYCODE.ESCAPE) {
+            hideNavPanel();
+        }
     }
 
     //  bind-unbind events
@@ -143,8 +154,12 @@ function deferInFn(fn) {
     "use strict";
 
     // review browser support
-    if (!("addEventListener" in window) || !document.documentElement.classList)
+    if (
+        !("addEventListener" in window) ||
+        !document.documentElement.classList
+    ) {
         return;
+    }
 
     var header = document.getElementById("ontario-header"),
         searchFormContainer = document.getElementById(
@@ -160,7 +175,9 @@ function deferInFn(fn) {
         searchClose = document.getElementById("ontario-header-search-close"),
         searchOpenClass = "ontario-header--search-open";
 
-    if (!searchFormContainer || !searchInputField || !searchReset) return;
+    if (!searchFormContainer || !searchInputField || !searchReset) {
+        return;
+    }
 
     searchInputField.addEventListener("keyup", function (e) {
         if (e.key === "Escape" || e.keyCode === KEYCODE.ESCAPE) {

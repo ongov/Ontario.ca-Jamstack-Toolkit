@@ -133,8 +133,8 @@
 }
 
 .ontario-footer p {
-    max-width: 48rem;
-    width: 100%;
+    max-width: $standard-width;
+    width: $full-width;
 
     a {
         color: $ontario-colour-white;
@@ -156,7 +156,7 @@
 }
 
 .ontario-footer__ministry-logo {
-    width: 100%;
+    width: $full-width;
     max-width: 255px;
 }
 
@@ -190,7 +190,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
+        width: $full-width;
         height: 100%;
     }
 }

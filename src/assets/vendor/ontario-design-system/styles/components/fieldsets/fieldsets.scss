@@ -9,7 +9,7 @@
     line-height: 1.5;
     max-width: 38.75em;
     white-space: normal;
-    width: 100%;
+    width: $full-width;
 
     @media screen and (max-width: $small-breakpoint) {
         font-size: 1.125rem;

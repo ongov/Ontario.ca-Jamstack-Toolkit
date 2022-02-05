@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "../../sass/variables-import";
 @import "../../sass/tools/focus.placeholder";
 
@@ -18,7 +19,7 @@ $ontario-button-bg-secondary: $ontario-colour-white;
     line-height: calc(14/9);
     margin: $spacing-0 calc(#{$spacing-4} + #{$spacing-3}) $spacing-5 $spacing-0;
     min-width: 10rem;
-    padding: calc((#{$spacing-4} + #{$spacing-1}) / 2) $spacing-5;
+    padding: math.div($spacing-4 + $spacing-1, 2) $spacing-5;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -31,7 +32,7 @@ $ontario-button-bg-secondary: $ontario-colour-white;
     @media screen and (max-width: $small-breakpoint) {
         margin-right: 0;
         display: block;
-        width: 100%;
+        width: $full-width;
     }
 
     .ontario-icon{

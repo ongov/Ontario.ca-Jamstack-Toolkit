@@ -1,4 +1,5 @@
 @import "../variables/spacing.variables.scss";
+@import "../variables/global.variables.scss";
 
 $font-dir: "../fonts" !default;
 
@@ -97,6 +98,7 @@ $ontario-font-raleway-modified: "Raleway", "Open Sans", "Helvetica Neue",
 %lead-statement {
     font-size: rem-calc(20);
     line-height: 1.6;
+    max-width: $full-width;
     @media screen and (min-width: 40em) {
         font-size: rem-calc(22);
     }
