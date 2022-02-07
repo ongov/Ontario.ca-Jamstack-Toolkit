@@ -1,7 +1,7 @@
 {
-  "name": "static-application-toolkit",
-  "version": "0.1.0",
-  "description": "The Ontario.ca Service Integration static application toolkit.",
+  "name": "jamstack-application-toolkit",
+  "version": "0.2.0",
+  "description": "The Ontario.ca Service Integration Jamstack application toolkit.",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
