@@ -108,11 +108,6 @@
             </ul>
         </nav>
 
-        <div class="ontario-overlay"></div>
-
-        <script src="{{ rootPath }}{{ globals.designSystemRoot }}/scripts/ontario-a11y.js"></script>
-        <script src="{{ rootPath }}{{ globals.designSystemRoot }}/scripts/ontario-header.js"></script>
-        <script src="{{ rootPath }}{{ globals.designSystemRoot }}/scripts/ontario-search.js"></script>
 {% else %}
 <header class="ontario-header" id="ontario-header">
 <div class="ontario-row">
@@ -135,7 +130,7 @@
         </button>
     </form>
     <div class="ontario-header__nav-right-container ontario-columns ontario-small-10 ontario-medium-8 ontario-large-3">
-        <a href="{{ page.url + "fr" }}" class="ontario-header__language-toggler ontario-header-button ontario-header-button--without-outline">
+        <a href="{{ rootPath + 'fr' + page.url }}" class="ontario-header__language-toggler ontario-header-button ontario-header-button--without-outline">
             <abbr title="Français" class="ontario-show-for-small-only">
                 FR
             </abbr>
@@ -222,12 +217,13 @@
 </ul>
 </nav>
 
+{% endif %}
+
 <div class="ontario-overlay"></div>
 
 <script src="{{ rootPath }}{{ globals.designSystemRoot }}/scripts/ontario-a11y.js"></script>
 <script src="{{ rootPath }}{{ globals.designSystemRoot }}/scripts/ontario-header.js"></script>
 <script src="{{ rootPath }}{{ globals.designSystemRoot }}/scripts/ontario-search.js"></script>
-{% endif %}
 
 <div class="ontario-row">
     <div class="ontario-column ontario-small-12">
