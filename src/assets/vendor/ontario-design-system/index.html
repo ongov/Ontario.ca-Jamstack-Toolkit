@@ -47,7 +47,7 @@
 		<div class="ontario-column ontario-small-12">
 		<!-- inject:menu:html -->
 		<div id="main-header">
-            <span>Release 0.12.4</span>
+            <span>Release 0.12.5</span>
             <h1><a href="https://designsystem.ontario.ca/" title="Ontario Design System Examples">Ontario Design System Examples</a></h1>
             <p class="ontario-lead-statement">To preview this page you may use the <a href=https://www.npmjs.com/package/serve>Serve</a> command`serve dist`</p><ul>
 <li><a href='#Colours'>Colours</a></li>
@@ -132,6 +132,9 @@
 
 		
 <li><a href='#Header'>Header</a></li>
+
+		
+<li><a href='#Step-indicator'>Step indicator</a></li>
 
 		
 <li><a href='#Icon-primaryheader'>Icons Primary</a></li>
@@ -543,9 +546,9 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis exercitationem be
 		<hr><h2 id=Dropdown-lists--default>Dropdown lists default</h2>
 
 <div class="ontario-form-group">
-    <label class="ontario-label" for="dropdown-list-example">
-        Label<span class="ontario-label__flag">(required/optional)</span>
-    </label>
+        <label class="ontario-label " for="dropdown-list-example">
+            Label<span class="ontario-label__flag">(required/optional)</span>
+        </label>
     <select  class="ontario-input ontario-dropdown" id="dropdown-list-example" name="dropdown-list-example">
         <option value="">Select</option>
         <option value="option-1">Option 1</option>
@@ -557,9 +560,9 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis exercitationem be
 		<hr><h2 id=Dropdown-lists--with-default-option-selected>Dropdown lists with default option selected</h2>
 
 <div class="ontario-form-group">
-    <label class="ontario-label" for="province-selection">
-        Province/territory<span class="ontario-label__flag">(required)</span>
-    </label>
+        <label class="ontario-label " for="province-selection">
+            Province/territory<span class="ontario-label__flag">(required)</span>
+        </label>
     <select required class="ontario-input ontario-dropdown" id="province-selection" name="province-selection">
         <option value="">Select</option>
         <option value="AB">Alberta</option>
@@ -583,9 +586,9 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis exercitationem be
 
 <dt class="fractal-dt ontario-padding-bottom-24-!">Default</dt><!-- Start: @hint-text--default --><dd>
 <div class="ontario-form-group">
-        <label class="ontario-label" for="hint-text-example">
+            <label class="ontario-label " for="hint-text-example">
                 Label<span class="ontario-label__flag">(required/optional)</span>
-        </label>
+            </label>
             <p class="ontario-hint" id="hint-text-example-hint">Hint text placeholder</p>
         <input  aria-describedby="hint-text-example-hint" class="ontario-input" type="text" id="hint-text-example">
     </div>
@@ -712,34 +715,31 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis exercitationem be
 		<hr><h2 id=Labels--default>Labels default</h2>
 
 <div class="ontario-form-group">
-    <label class="ontario-label" for="label-example">
-        Label<span class="ontario-label__flag">(required/optional)</span>
-    </label>
+        <label class="ontario-label " for="label-example">
+            Label<span class="ontario-label__flag">(required/optional)</span>
+        </label>
     <input   class="ontario-input" type="text" id="label-example">
  </div>
-
 
 		<hr><h2 id=Labels--labels-as-page-headings>Labels labels as page headings</h2>
 
 <div class="ontario-form-group">
-    <label class="ontario-label ontario-label--heading" for="heading-label-example">
-        <h1>
+        <h1 class="ontario-label">
+            <label class="ontario-label ontario-label--heading" for="heading-label-example">
             Heading label<span class="ontario-label__flag">(required/optional)</span>
+            </label>
         </h1>
-    </label>
     <input   class="ontario-input" type="text" id="heading-label-example">
  </div>
-
 
 		<hr><h2 id=Labels--large-label>Labels large label</h2>
 
 <div class="ontario-form-group">
-    <label class="ontario-label ontario-label--large" for="large-label-example">
-        Label<span class="ontario-label__flag">(required/optional)</span>
-    </label>
+        <label class="ontario-label ontario-label--large" for="large-label-example">
+            Label<span class="ontario-label__flag">(required/optional)</span>
+        </label>
     <input   class="ontario-input" type="text" id="large-label-example">
  </div>
-
 
 		<hr><h2 id=Radio-buttons>Radio buttons</h2>
 
@@ -778,9 +778,9 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis exercitationem be
 		<hr><h2 id=Text-areas>Text areas</h2>
 
 <div class="ontario-form-group">
-    <label class="ontario-label" for="text-area-example">
-        Label<span class="ontario-label__flag">(required/optional)</span>
-    </label>
+        <label class="ontario-label " for="text-area-example">
+            Label<span class="ontario-label__flag">(required/optional)</span>
+        </label>
     <textarea class="ontario-input ontario-textarea"  name="text-area-example" id="text-area-example"></textarea>
 </div>
 
@@ -789,72 +789,72 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis exercitationem be
 
 <dt class="fractal-dt ontario-padding-bottom-24-!">Default</dt><!-- Start: @text-inputs--default --><dd>
 <div class="ontario-form-group">
-    <label class="ontario-label" for="text-input-example">
-        Label<span class="ontario-label__flag">(required/optional)</span>
-    </label>
+        <label class="ontario-label " for="text-input-example">
+            Label<span class="ontario-label__flag">(required/optional)</span>
+        </label>
     <input   class="ontario-input" type="text" id="text-input-example">
 </div>
 </dd><!-- End: @text-inputs--default -->
 
 <dt class="fractal-dt ontario-padding-bottom-24-!">Input width overrides</dt><!-- Start: @text-inputs--20-character-width --><dd>
 <div class="ontario-form-group">
-    <label class="ontario-label" for="text-input-example-width-20">
-        20 character width<span class="ontario-label__flag">(required/optional)</span>
-    </label>
+        <label class="ontario-label " for="text-input-example-width-20">
+            20 character width<span class="ontario-label__flag">(required/optional)</span>
+        </label>
     <input   class="ontario-input ontario-input--20-char-width" type="text" id="text-input-example-width-20">
 </div>
 </dd><!-- End: @text-inputs--20-character-width -->
 
 <!-- Start: @text-inputs--10-character-width --><dd>
 <div class="ontario-form-group">
-    <label class="ontario-label" for="text-input-example-width-10">
-        10 character width<span class="ontario-label__flag">(required/optional)</span>
-    </label>
+        <label class="ontario-label " for="text-input-example-width-10">
+            10 character width<span class="ontario-label__flag">(required/optional)</span>
+        </label>
     <input   class="ontario-input ontario-input--10-char-width" type="text" id="text-input-example-width-10">
 </div>
 </dd><!-- End: @text-inputs--10-character-width -->
 
 <!-- Start: @text-inputs--7-character-width --><dd>
 <div class="ontario-form-group">
-    <label class="ontario-label" for="text-input-example-width-7">
-        7 character width<span class="ontario-label__flag">(required/optional)</span>
-    </label>
+        <label class="ontario-label " for="text-input-example-width-7">
+            7 character width<span class="ontario-label__flag">(required/optional)</span>
+        </label>
     <input   class="ontario-input ontario-input--7-char-width" type="text" id="text-input-example-width-7">
 </div>
 </dd><!-- End: @text-inputs--7-character-width -->
 
 <!-- Start: @text-inputs--5-character-width --><dd>
 <div class="ontario-form-group">
-    <label class="ontario-label" for="text-input-example-width-5">
-        5 character width<span class="ontario-label__flag">(required/optional)</span>
-    </label>
+        <label class="ontario-label " for="text-input-example-width-5">
+            5 character width<span class="ontario-label__flag">(required/optional)</span>
+        </label>
     <input   class="ontario-input ontario-input--5-char-width" type="text" id="text-input-example-width-5">
 </div>
 </dd><!-- End: @text-inputs--5-character-width -->
 
 <!-- Start: @text-inputs--4-character-width --><dd>
 <div class="ontario-form-group">
-    <label class="ontario-label" for="text-input-example-width-4">
-        4 character width<span class="ontario-label__flag">(required/optional)</span>
-    </label>
+        <label class="ontario-label " for="text-input-example-width-4">
+            4 character width<span class="ontario-label__flag">(required/optional)</span>
+        </label>
     <input   class="ontario-input ontario-input--4-char-width" type="text" id="text-input-example-width-4">
 </div>
 </dd><!-- End: @text-inputs--4-character-width -->
 
 <!-- Start: @text-inputs--3-character-width --><dd>
 <div class="ontario-form-group">
-    <label class="ontario-label" for="text-input-example-width-3">
-        3 character width<span class="ontario-label__flag">(required/optional)</span>
-    </label>
+        <label class="ontario-label " for="text-input-example-width-3">
+            3 character width<span class="ontario-label__flag">(required/optional)</span>
+        </label>
     <input   class="ontario-input ontario-input--3-char-width" type="text" id="text-input-example-width-3">
 </div>
 </dd><!-- End: @text-inputs--3-character-width -->
 
 <!-- Start: @text-inputs--2-character-width --><dd>
 <div class="ontario-form-group">
-    <label class="ontario-label" for="text-example-width-2">
-        2 character width<span class="ontario-label__flag">(required/optional)</span>
-    </label>
+        <label class="ontario-label " for="text-example-width-2">
+            2 character width<span class="ontario-label__flag">(required/optional)</span>
+        </label>
     <input   class="ontario-input ontario-input--2-char-width" type="text" id="text-example-width-2">
 </div>
 </dd><!-- End: @text-inputs--2-character-width -->
@@ -862,6 +862,48 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis exercitationem be
 
 		<hr><h2 id=Footers>Footers</h2><iframe src='./html-samples/footers.html' width='1100' height='1000'></iframe>'
 		<hr><h2 id=Header>Header</h2><iframe src='./html-samples/header.html' width='1100' height='1000'></iframe>'
+		<hr><h2 id=Step-indicator>Step indicator</h2>
+
+<dt class="fractal-dt ontario-padding-bottom-24-!">Indicator for step 1 (no back button)</dt><!-- Start: @step-indicator--default --><dd>
+<div class="ontario-step-indicator">
+    <div class="ontario-row">
+        <div class="ontario-columns ontario-small-12">
+            <div class="ontario-step-indicator--without-back-button">
+                <span class="ontario-h4">Step&nbsp;1 of&nbsp;5</span>
+            </div>
+            <hr />
+        </div>
+    </div>
+</div>
+</dd><!-- End: @step-indicator--default -->
+
+<dt class="fractal-dt ontario-padding-bottom-24-!">Indicator for steps after 1 (with back button)</dt><!-- Start: @step-indicator--indicator-for-steps-after-1-(with-back-button) --><dd>
+<div class="ontario-step-indicator">
+    <div class="ontario-row">
+        <div class="ontario-columns ontario-small-12">
+            <div class="ontario-step-indicator--with-back-button">
+                    <button class="ontario-button ontario-button--tertiary">
+                        <svg
+                            class="ontario-icon"
+                            alt=""
+                            aria-hidden="true"
+                            focusable="false"
+                            sol:category="primary"
+                            viewBox="0 0 24 24"
+                            preserveAspectRatio="xMidYMid meet"
+                        >
+                            <use href="#ontario-icon-chevron-left"></use>
+                        </svg>Back
+                    </button>
+                <span class="ontario-h4">Step&nbsp;2 of&nbsp;5</span>
+            </div>
+            <hr />
+        </div>
+    </div>
+</div>
+</dd><!-- End: @step-indicator--indicator-for-steps-after-1-(with-back-button) -->
+
+
 		<hr id="Icon-primaryheader">
 
 <h2>Icons primary</h2>

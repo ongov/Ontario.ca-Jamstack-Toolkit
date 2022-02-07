@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "../../sass/variables-import";
 @import "../../sass/tools/focus.placeholder";
 
@@ -45,7 +46,7 @@
     }
 
     @media screen and (min-width: $small-breakpoint) {
-        padding-right: calc(2rem / 2);
+        padding-right: math.div(2rem, 2);
     }
 }
 
@@ -191,7 +192,7 @@ input[type="reset"].ontario-header__search-reset {
     font-weight: 600;
     font-family: $ontario-font-open-sans;
     height: 48px;
-    line-height: calc(14 / 9);
+    line-height: math.div(14, 9);
     text-align: center;
     text-decoration: none;
 
@@ -226,7 +227,7 @@ input[type="reset"].ontario-header__search-reset {
 .ontario-header-button--with-outline {
     border: 2px solid $ontario-colour-white;
     margin: $spacing-0 $spacing-0 $spacing-0 $spacing-4;
-    padding: calc(#{$spacing-3} / 2) $spacing-4;
+    padding: math.div($spacing-3, 2) $spacing-4;
 
     &:hover {
         border: 2px solid $ontario-colour-white;
@@ -245,7 +246,7 @@ input[type="reset"].ontario-header__search-reset {
 }
 
 .ontario-header__menu-toggler {
-    padding: calc(#{$spacing-3} / 2) $spacing-4;
+    padding: math.div($spacing-3, 2) $spacing-4;
 
     @media screen and (max-width: $xsmall-breakpoint) {
         padding-left: $spacing-2;
@@ -295,7 +296,7 @@ input[type="reset"].ontario-header__search-reset {
     flex-direction: column-reverse;
     font-weight: 400;
     margin-right: $spacing-4;
-    padding: calc(#{$spacing-5} / 10) $spacing-1;
+    padding: math.div($spacing-5, 10) $spacing-1;
     position: relative;
     height: 60px;
     display: none;

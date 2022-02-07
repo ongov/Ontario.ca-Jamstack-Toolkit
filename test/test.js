@@ -4,9 +4,14 @@ const fs= require('fs');
 const odsDir = "dist/assets/vendor/ontario-design-system";
 
 describe('Site generation', function() {
-  describe('root index.html present', function() {
-    it('should generate a root index.html', function() {
+  describe('English-language index.html present', function() {
+    it('should generate index.html in the site root', function() {
       assert(fs.existsSync("dist/index.html"));
+    });
+  });
+  describe('French-language index.html present', function() {
+    it('should generate a parallel French-language index.html', function() {
+      assert(fs.existsSync("dist/fr/index.html"));
     });
   });
   describe('Ontario design system inclusion', function() {

@@ -8,7 +8,7 @@
     padding: $spacing-5;
 
     * {
-        max-width: 48rem;
+        max-width: $standard-width;
 
         &:last-child {
             margin-bottom: $spacing-2;

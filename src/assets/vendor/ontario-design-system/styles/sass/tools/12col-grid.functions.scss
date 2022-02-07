@@ -2,6 +2,8 @@
 //    Grid functions
 //----------------------------------------
 // We use these functions to define ranges for various things, like media queries.
+@use "sass:math";
+
 @function ontario-lower-bound($range) {
     @if length($range) <= 0 {
         @return 0;
@@ -20,7 +22,7 @@
 
 // We use this function to turn n number of columns into a percentage of the whole width
 @function ontario-grid-calc($colNumber, $totalColumns) {
-    $result: percentage(($colNumber / $totalColumns));
+    $result: percentage(math.div($colNumber, $totalColumns));
     @if $result == 0% {
         $result: 0;
     }

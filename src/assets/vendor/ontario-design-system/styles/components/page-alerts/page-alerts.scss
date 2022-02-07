@@ -36,7 +36,7 @@
 
 .ontario-alert__body {
     margin-left: 3.25rem;
-    max-width: 48rem;
+    max-width: $standard-width;
 
     @media screen and (max-width: $small-breakpoint) {
         margin-left: 0;
@@ -122,4 +122,3 @@
         color: #280000;
     }
 }
-

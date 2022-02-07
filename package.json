@@ -5,13 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "lint": "html-validate dist/**/*.html",
+    "lint": "rm -rf dist && eleventy & npm run htmlValidateDist",
     "build": "rm -rf dist && eleventy",
     "serve": "eleventy --serve",
-    "installHooks": "cp git_hooks/* .git/hooks",
     "htmlValidateSrc": "html-validate src/**/*.njk",
     "htmlValidateDist": "html-validate dist/**/*.html",
-    "installDesignSystem": "export DS_VERSION=0.12.4 && export DS_ZIP_NAME=ontario-design-system.zip && export VEN_DIR=src/assets/vendor && export DS_UNZIP_DIR=$VEN_DIR/ontario-design-system && curl https://designsystem.ontario.ca/dist/ontario-design-system-dist-$DS_VERSION.zip > $VEN_DIR/$DS_ZIP_NAME && unzip -o $VEN_DIR/$DS_ZIP_NAME -d $DS_UNZIP_DIR && rm $VEN_DIR/$DS_ZIP_NAME && rm $DS_UNZIP_DIR/version-release-notes-*.* && rm -rf $DS_UNZIP_DIR/html-samples"
+    "installDesignSystem": "export DS_VERSION=0.12.5 && export DS_ZIP_NAME=ontario-design-system.zip && export VEN_DIR=src/assets/vendor && export DS_UNZIP_DIR=$VEN_DIR/ontario-design-system && curl https://designsystem.ontario.ca/dist/ontario-design-system-dist-$DS_VERSION.zip > $VEN_DIR/$DS_ZIP_NAME && unzip -o $VEN_DIR/$DS_ZIP_NAME -d $DS_UNZIP_DIR && rm $VEN_DIR/$DS_ZIP_NAME && rm $DS_UNZIP_DIR/version-release-notes-*.* && rm -rf $DS_UNZIP_DIR/html-samples"
   },
   "author": "Ontario Digital Service",
   "license": "Apache 2.0",
