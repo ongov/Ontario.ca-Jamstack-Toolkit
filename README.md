@@ -6,21 +6,50 @@
 
 ## About this Toolkit
 
-This toolkit provides a straightforward starter template for building Jamstack-style sites that conform to the requirements for integrationwith [Ontario.ca](https://ontario.ca).
+This toolkit provides a straightforward starter template for building Jamstack-style applications that conform to the requirements for integration with [Ontario.ca](https://ontario.ca). Specifically, it focuses on providing a quick means of getting started building a statically-served web front end that can be enriched by back-end APIs.
 
-## Prerequisites
+The separate [Jamstack backing services](https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-backing-services) project provides some example back-end services to demonstrate various patterns.
+
+### Tech Used and Rationale
+
+We have tried to be relatively framework neutral in our choices, in order to provide a skeleton that can be supplemented if necessary with a team's front-end framework of choice.
+
+Specifically:
+* We use the [Eleventy](https://www.11ty.dev/) static site generator for handling composition and build
+* We use the lightweight [Alpine.js](https://alpinejs.dev/) framework or plain Javascript for any Javascript usage
+* We use the work of the [Ontario Design System](https://designsystem.ontario.ca/) to allow the quick construction of applications that match the [Ontario.ca](http://ontario.ca/) look and feel guidelines
+
+## Prerequisites and Installation
 
 [Node.js](https://nodejs.org/en/) must be installed.
 
 From a fresh checkout, `npm install` will install all dependencies.
 
-## Local Development
+## Using as the Base for a New Project
 
-`npm run serve` will serve the generated site locally, updating and rebuilding as changes are made - the generated files will appear in the `dist` directory.
+At this time, we recommend the following steps:
+* `git clone` the project
+* Delete the `.git` folder to remove the history
+* Initiate your version control of choice - `git init` if using git
+
+## Development
+
+### Serving and Rebuilding the Application
+
+`npm run serve` will serve the generated application locally, updating and rebuilding as changes are made - the generated files will appear in the `dist` directory.
+
+### French Translation
+
+This product implements a simple but functional approach to presenting content in both official languages that parallels the URL structure of `Ontario.ca`:
+
+* English-language pages should go in the root of `src`
+* The equivalent French-language page should go in `src/fr`, with the same filename, and include `lang: fr` in its [front matter](https://www.11ty.dev/docs/data-frontmatter/)
+
+Appropriate headers and footers will then be used, and a language switcher link generated between the two different page versions in English and French.
 
 ### Automated Tests
 
-* `test/test.js` has some simple tests using Mocha to check the site is being built as expected.
+* `test/test.js` has some simple tests using Mocha to check the app is being built as expected
 * The tests can be run at any time with `npm test`
 
 ### HTML Validation
@@ -32,20 +61,11 @@ From a fresh checkout, `npm install` will install all dependencies.
 
 ### Git Hooks
 
-* This project uses [`pre-commit`](https://pre-commit.com/) to manage needed hooks. After installing `pre-commit` on your system, use the following to install the project's hooks.
+* This project uses [`pre-commit`](https://pre-commit.com/) to manage its [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks). After installing `pre-commit` on your system, use the following to install the project's hooks.
     * `pre-commit autoupdate`
     * `pre-commit install`
     * `pre-commit install --hook-type prepare-commit-msg`
 
-### French Translation
-
-This product implements a simple but functional approach to presenting content in both official languages that parallels the URL structure of `Ontario.ca`:
-
-* English-language pages should go in the root of `src`
-* The equivalent French-language page should go in `src/fr`, with the same filename, and include `lang: fr` in its [front matter](https://www.11ty.dev/docs/data-frontmatter/)
-
-Appropriate headers and footers will then be used, and a language switcher link generated between the two different page versions in English and French.
-
 ## Deployment
 
-`npm run build` will generate site in the `dist` directory (after removing it to ensure a clean build) - this directory can then be deployed to a suitable hosting environment for serving static sites.
+`npm run build` will generate the application in the `dist` directory (after removing it to ensure a clean build) - this directory can then be deployed to a suitable hosting environment for serving static content.
