@@ -73,6 +73,6 @@ Appropriate headers and footers will then be used, and a language switcher link 
 ### Environment Variables
 
 For template values that need to differ between environments, the [basic approach described in the Eleventy documentation has been used](https://www.11ty.dev/docs/data-js/#example-exposing-environment-variables) has been used. This lets you do the following:
-* when building: `ELEVENTY_ENV=staging npm run build`
+* when building: `ELEVENTY_ENV=staging npm run build` - sets the build environment to `staging` or another value
 * in templates: `{{ globals.environment }}` to access the supplied value of `ELEVENTY_ENV` (defaults to `development` if no value supplied)
-* in `_data/globals.js`: use the `env` value in `module.exports` to implement environment-differentiated variables or functions
+* in `_data/globals.js`: use the `env` value in `module.exports` to implement environment-differentiated variables or functions to supply to your templates
