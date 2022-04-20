@@ -1,0 +1,19 @@
+{% set env = globals.environment %}
+{% if env === 'development' %}
+{# env specific script #}
+{% elif env === 'staging' %}
+{# env specific script #}
+{% endif %}
+
+  <script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="icon" href="{{ globals.assetsDir }}/images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{ globals.assetsDir }}/images/favicon.ico" type="image/x-icon" />
+
+{% if pageLang === 'fr' %}
+  <link rel="alternate" hreflang="en" href="{{ localized_page_url }}">
+{% elif pageLang === 'en' %}
+  <link rel="alternate" hreflang="fr" href="{{ localized_page_url }}">
+{% endif %}
