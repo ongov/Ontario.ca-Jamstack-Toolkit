@@ -1,0 +1,24 @@
+<blockquote class="example-quote"></blockquote>
+<br>
+<script>
+    const exampleQuote = document.querySelector(".example-quote");
+
+    document.addEventListener('DOMContentLoaded', function () {
+        fetch(`{{ globals.apiFetchUrl }}`, {
+            method: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        }).then((response) => response.json())
+        .then((data) => {
+            quoteResponse = "";
+            if ('quote' in data){
+                quoteResponse = data.quote + "\n  - Kanye West";
+            } else {
+                quoteResponse = data.joke;
+            }
+            exampleQuote.innerText = quoteResponse ;
+        })
+    })
+</script>
