@@ -1,2 +1,2 @@
-src/assets/vendor
-dist/assets/vendor
+src/assets/vendor/**
+dist/assets/vendor/**

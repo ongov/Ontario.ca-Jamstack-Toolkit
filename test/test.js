@@ -18,7 +18,7 @@ describe('Site generation', function() {
     it('should copy over the design system assets', function() {
       assert(fs.existsSync(odsDir), "Expected directory for design system not found");
       const actualLength = fs.readdirSync(odsDir).length;
-      const expectedLength = 7
+      const expectedLength = 5
       assert(actualLength === expectedLength, `The expected number of files in design system directory were not found, expected ${expectedLength}, got ${actualLength}`);
     });
   });

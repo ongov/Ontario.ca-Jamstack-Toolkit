@@ -24,3 +24,13 @@ JIRA-Ref: OSI-29
     * `pre-commit autoupdate`
     * `pre-commit install`
     * `pre-commit install --hook-type prepare-commit-msg`
+
+## Design System Updates
+
+Do not update the [Ontario Design System](https://designsystem.ontario.ca/docs/documentation/for-developers.html) manually. Instead:
+* Update the `installDesignSystem` script in `package.json` to the current design system version by changing the `DS_VERSION` variable
+* Run that script
+* Run `npm build` to update the `dist` directory with the built site
+* Run `npm run test` and update the tests for `Ontario design system inclusion` as necessary
+
+The general purpose of this script is to automate the update of the design system and remove example files and others that are unnecessary for deployment.
