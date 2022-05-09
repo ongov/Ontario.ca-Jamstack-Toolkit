@@ -1,7 +1,14 @@
+﻿---
+redirect: "jamstack-toolkit/"
 ---
-layout: layout.njk
-title: "Ontario.ca Jamstack Application Toolkit"
----
-<h2>Home Page</h2>
-<p>Welcome to the Ontario.ca <a href="https://jamstack.org/">Jamstack</a> Application Toolkit.</p>
-<p>This site was build for the <strong>{{ globals.userFriendlyEnvString }}</strong> environment.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="0; url='{{ redirect }}'" />
+	<title>Redirecting...</title>
+</head>
+<body>
+	Rediriger vers: <a href="{{ redirect }}">{{ redirect }}</a>
+</body>
+</html>
