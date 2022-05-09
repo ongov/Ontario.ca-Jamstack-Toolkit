@@ -47,6 +47,8 @@ This product implements a simple but functional approach to presenting content i
 
 Appropriate headers and footers will then be used, and a language switcher link generated between the two different page versions in English and French.
 
+### Custom Header Tags
+
 ### Automated Tests
 
 * `test/test.js` has some simple tests using Mocha to check the app is being built as expected
