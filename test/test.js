@@ -4,14 +4,19 @@ const fs= require('fs');
 const odsDir = "dist/assets/vendor/ontario-design-system";
 
 describe('Site generation', function() {
-  describe('English-language index.html present', function() {
-    it('should generate index.html in the site root', function() {
+  describe('Top-level redirect page present', function() {
+    it('should generate a top-level redirect page', function() {
       assert(fs.existsSync("dist/index.html"));
     });
   });
-  describe('French-language index.html present', function() {
-    it('should generate a parallel French-language index.html', function() {
-      assert(fs.existsSync("dist/fr/index.html"));
+  describe('English-language example page present', function() {
+    it('should generate an English-language example page', function() {
+      assert(fs.existsSync("dist/jamstack-toolkit/index.html"));
+    });
+  });
+  describe('French-language example page present', function() {
+    it('should generate a French-language example page', function() {
+      assert(fs.existsSync("dist/boite-a-outils-dapplication-jamstack/index.html"));
     });
   });
   describe('Ontario design system inclusion', function() {

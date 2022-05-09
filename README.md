@@ -38,14 +38,22 @@ At this time, we recommend the following steps:
 
 `npm run serve` will serve the generated application locally, updating and rebuilding as changes are made - the generated files will appear in the `dist` directory.
 
-### French Translation
+### Translation
 
-This product implements a simple but functional approach to presenting content in both official languages that parallels the URL structure of `Ontario.ca`:
+The toolkit includes features to support building in both official languages of Ontario.ca.
 
-* English-language pages should go in the root of `src`
-* The equivalent French-language page should go in `src/fr`, with the same filename, and include `lang: fr` in its [front matter](https://www.11ty.dev/docs/data-frontmatter/)
+#### Translating Pages
 
-Appropriate headers and footers will then be used, and a language switcher link generated between the two different page versions in English and French.
+The simplest way of maintaining parallel English and French pages is to maintain two pages that reference each other through their front matter.
+
+* In an English language page, `fr_page_url` should be a reference to the URL of the parallel French language page.
+* In a French language page, `en_page_url` should be a reference to the URL of the parallel French language page. All French language pages should also contain `lang: fr` in their front matter.
+
+This structure above allows the language switcher link to be appropriately generated in the header when building the site.
+
+#### Maintaining Locale Files
+
+You can create localization strings for shared components or similar uses in `src/_data/localeStrings.json`, which can then be referred to in page templates using the `localeString` filter: `{{ "[key]" | localeString}}`. This filter will insert the appropriate localized string for the key based on the current page language.
 
 ### Custom Head Tags
 
