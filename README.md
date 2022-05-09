@@ -47,7 +47,9 @@ This product implements a simple but functional approach to presenting content i
 
 Appropriate headers and footers will then be used, and a language switcher link generated between the two different page versions in English and French.
 
-### Custom Header Tags
+### Custom Head Tags
+
+Insert any needed custom tags for the `<head></head>` portion of the site layout in `src/_includes/_head_custom.njk`.
 
 ### Automated Tests
 
