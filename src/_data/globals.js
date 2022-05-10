@@ -6,18 +6,23 @@ module.exports = function() {
     dev: "development",
     stage: "staging",
     prod: "production"
-  }
+  };
 
   var siteRootEnvs = {
-    development: "",
-    staging: "",
+    dev: "",
+    stage: "",
     prod: ""
-  }
+  };
 
-  var siteRoot = siteRootEnvs[env]
+  var siteRoot = siteRootEnvs[env];
+
+  var assetsRoot = siteRoot + "/jamstack-toolkit/assets";
+
+  var designSystemRoot = assetsRoot + "/vendor/ontario-design-system"
 
   return {
-    designSystemRoot: siteRoot + "/assets/vendor/ontario-design-system",
+    assetsRoot: assetsRoot,
+    designSystemRoot: designSystemRoot,
     environment: env,
     siteRoot: siteRoot,
     userFriendlyEnvString: userFriendlyEnvString[env]

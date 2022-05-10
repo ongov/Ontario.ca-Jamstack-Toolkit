@@ -82,10 +82,16 @@ Insert any needed custom tags for the `<head></head>` portion of the site layout
 
 `npm run build` will generate the application in the `dist` directory (after removing it to ensure a clean build) - this directory can then be deployed to a suitable hosting environment for serving static content.
 
-### Environment Variables
+### Environment-Dependent Variables
 
 For values that need to differ between environments, the [basic approach described in the Eleventy documentation has been used](https://www.11ty.dev/docs/data-js/#example-exposing-environment-variables) has been used. This lets you do the following:
 * when building: `ELEVENTY_ENV=stage npm run build` - sets the build environment to `stage` or another value
 * in templates: `{{ globals.environment }}` to access the supplied value of `ELEVENTY_ENV` (defaults to `development` if no value supplied)
 * in `_data/globals.js`: use the `env` value in `module.exports` to implement environment-differentiated variables or functions to supply to your templates
     * The `userFriendlyEnvString` values provides a simple example of how to do this
+
+### Site Root Configuration
+
+Jamstack sites deployed to Ontario.ca will need to configure a site root based on their deployed subfolder. The `siteRootEnvs` object in `src/_data/globals.js` can be used for these purposes.
+
+### Build Output
