@@ -1,0 +1,12 @@
+﻿{% if lang === "fr" %}
+<p style="text-align: right; font-size: small">
+    Mis &agrave; jour: {{ frDateFormat(page.date) }}<br/>
+    Date de publication: {{ frDateFormat(published_date) }}<br/>
+</p>
+{% else %}
+
+<p style="text-align: right; font-size: small">
+    Updated: {{ enDateFormat(page.date) }}<br/>
+    Published: {{ enDateFormat(published_date) }}<br/>
+</p>
+{% endif %}
