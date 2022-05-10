@@ -4,7 +4,7 @@ const fs = require('fs')
 const matter = require('gray-matter')
 
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("src/assets")
+    eleventyConfig.addPassthroughCopy({"src/assets" : "jamstack-toolkit/assets"})
 
     eleventyConfig.addFilter("localeString", function(key) {
       // Solution for accessing page front matter from https://stackoverflow.com/a/67746326

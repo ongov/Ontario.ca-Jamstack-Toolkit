@@ -82,10 +82,23 @@ Insert any needed custom tags for the `<head></head>` portion of the site layout
 
 `npm run build` will generate the application in the `dist` directory (after removing it to ensure a clean build) - this directory can then be deployed to a suitable hosting environment for serving static content.
 
-### Environment Variables
+### Environment-Dependent Variables
 
 For values that need to differ between environments, the [basic approach described in the Eleventy documentation has been used](https://www.11ty.dev/docs/data-js/#example-exposing-environment-variables) has been used. This lets you do the following:
 * when building: `ELEVENTY_ENV=stage npm run build` - sets the build environment to `stage` or another value
 * in templates: `{{ globals.environment }}` to access the supplied value of `ELEVENTY_ENV` (defaults to `development` if no value supplied)
 * in `_data/globals.js`: use the `env` value in `module.exports` to implement environment-differentiated variables or functions to supply to your templates
     * The `userFriendlyEnvString` values provides a simple example of how to do this
+
+### Site Root Configuration
+
+Jamstack sites deployed to Ontario.ca will need to configure a site root based on their deployed subfolder. The `siteRootEnvs` object in `src/_data/globals.js` can be used for these purposes.
+
+### Build Output Configuration
+
+Eleventy can be configured to build site outputs that are different from the source input by modifying options in the `.eleventy.js` configuration file. The default state of the toolkit shows some examples of this approach that aligns with deploying Jamstack sites to Ontario.ca:
+
+* The `addPassthroughCopy` statement copies the root-level `assets` folder in `src` to the `jamstack-toolkit` folder of the built site
+* The `assetsRoot` variable from `src/_data/globals.js` is used to reference the build location of the assets folder in the templates
+
+This configuration simplifies deployment to Ontario.ca by requiring only two routes to be configured, one for each language, with an assets directory shared between the two.
