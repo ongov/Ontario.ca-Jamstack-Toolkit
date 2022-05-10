@@ -94,4 +94,11 @@ For values that need to differ between environments, the [basic approach describ
 
 Jamstack sites deployed to Ontario.ca will need to configure a site root based on their deployed subfolder. The `siteRootEnvs` object in `src/_data/globals.js` can be used for these purposes.
 
-### Build Output
+### Build Output Configuration
+
+Eleventy can be configured to build site outputs that are different from the source input by modifying options in the `.eleventy.js` configuration file. The default state of the toolkit shows some examples of this approach that aligns with deploying Jamstack sites to Ontario.ca:
+
+* The `addPassthroughCopy` statement copies the root-level `assets` folder in `src` to the `jamstack-toolkit` folder of the built site
+* The `assetsRoot` variable from `src/_data/globals.js` is used to reference the build location of the assets folder in the templates
+
+This configuration simplifies deployment to Ontario.ca by requiring only two routes to be configured, one for each language, with an assets directory shared between the two.
