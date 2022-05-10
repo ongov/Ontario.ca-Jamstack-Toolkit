@@ -8,9 +8,18 @@ module.exports = function() {
     prod: "production"
   }
 
+  var siteRootEnvs = {
+    development: "",
+    staging: "",
+    prod: ""
+  }
+
+  var siteRoot = siteRootEnvs[env]
+
   return {
-    designSystemRoot: "/assets/vendor/ontario-design-system",
+    designSystemRoot: siteRoot + "/assets/vendor/ontario-design-system",
     environment: env,
+    siteRoot: siteRoot,
     userFriendlyEnvString: userFriendlyEnvString[env]
   }
 }
