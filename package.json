@@ -15,7 +15,7 @@
   "author": "Ontario Digital Service",
   "license": "Apache 2.0",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.1",
     "dotenv": "^16.0.0",
     "html-validate": "^6.1.0",
     "mocha": "^9.1.3"
