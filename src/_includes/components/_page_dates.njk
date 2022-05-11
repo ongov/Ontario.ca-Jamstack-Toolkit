@@ -1,9 +1,9 @@
 ﻿<p class="right small">
 {% if lang === "fr" %}
-Mis &agrave; jour: {{ frDateFormat(page.date) }}<br/>
-Date de publication: {{ frDateFormat(published_date) }}<br/>
+Mis &agrave; jour: {{ frDateFormatUpdated(page.date) }}<br/>
+Date de publication: {{ frDateFormatPublished(published_date, 'UTC') }}<br/>
 {% else %}
-Updated: {{ enDateFormat(page.date) }}<br/>
-Published: {{ enDateFormat(published_date) }}<br/>
+Updated: {{ enDateFormatUpdated(page.date) }}<br/>
+Published: {{ enDateFormatPublished(published_date, 'UTC') }}<br/>
 {% endif %}
 </p>
