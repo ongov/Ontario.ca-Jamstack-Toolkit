@@ -59,6 +59,19 @@ You can create localization strings for shared components or similar uses in `sr
 
 Insert any needed custom tags for the `<head></head>` portion of the site layout in `src/_includes/_head_custom.njk`.
 
+### Publication and Updated Dates for Pages
+
+The default layout includes a component to make handling publication and updated dates for pages easier that matches the style of pages published on the Ontario.ca CMS.
+
+Any pages using it should include the following in their YAML front matter:
+
+```
+date: git Last Modified
+published_date: 2022-05-07
+```
+
+By using `git Last Modified`, pages will receive their update time from Git version control when the application is built. [This feature is described in more detail in Eleventy's documentation](https://www.11ty.dev/docs/dates/#setting-a-content-date-in-front-matter).
+
 ### Automated Tests
 
 * `test/test.js` has some simple tests using Mocha to check the app is being built as expected
