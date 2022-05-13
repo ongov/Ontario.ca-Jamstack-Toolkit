@@ -57,7 +57,7 @@ You can create localization strings for shared components or similar uses in `sr
 
 ### Custom Head Tags
 
-Insert any needed custom tags for the `<head></head>` portion of the site layout in `src/_includes/_head_custom.njk`.
+Insert any needed custom tags for the `<head></head>` portion of the site layout in `src/_includes/core/_head_custom.njk`.
 
 ### Publication and Updated Dates for Pages
 

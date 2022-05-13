@@ -3,20 +3,20 @@
     <head>
     <title>{{ title }}</title>
     <link href="{{ globals.assetsRoot }}/css/style.css" rel="stylesheet" />
-    {% include "_head_custom.njk" %}
+    {% include "app/_head_custom.njk" %}
     </head>
     <body>
 
-    {% include "_icon_definitions.njk" %}
-    {% include "_header.njk" %}
+    {% include "core/_icon_definitions.njk" %}
+    {% include "core/_header.njk" %}
     <div class="ontario-row">
         <div class="ontario-column ontario-small-12">
             {{ content | safe }}
         </div>
         <div class="ontario-column ontario-small-12">
-            {% include "components/_page_dates.njk" %}
+            {% include "core/components/_page_dates.njk" %}
         </div>
     </div>
-    {% include "_footer.njk" %}
+    {% include "core/_footer.njk" %}
     </body>
 </html>

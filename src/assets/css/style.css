@@ -1,9 +1,3 @@
-@import "../vendor/ontario-design-system/styles/ds-theme.css";
+@import "core/core-styles.css";
 
-.right {
-    text-align: right;
-}
-
-.small {
-    font-size: small;
-}
+@import "app/app-styles.css";
