@@ -34,6 +34,14 @@ At this time, we recommend the following steps:
 
 ## Development
 
+### Modifying Components and Styles
+
+The project divide resources into `core` and `app` directories in various places.
+
+* Avoid modfiying `core` files if you want an easier process of bringing in future improvements from new versions of the toolkit
+* `app` files are starting points for customizations your own product will need, especially when intersecting with `core` components
+    * Example: `src/_includes/app/_head_custom.njk` allows the insertion of additional tags into the `<head>` portion of your templates.
+
 ### Serving and Rebuilding the Application
 
 `npm run serve` will serve the generated application locally, updating and rebuilding as changes are made - the generated files will appear in the `dist` directory.
