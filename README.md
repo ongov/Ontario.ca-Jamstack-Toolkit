@@ -6,9 +6,12 @@
 
 ## About this Toolkit
 
-This toolkit provides a straightforward starter template for building Jamstack-style applications that conform to the requirements for integration with [Ontario.ca](https://ontario.ca). Specifically, it focuses on providing a quick means of getting started building a statically-served web front end that can be enriched by back-end APIs.
+This toolkit provides a straightforward and flexible starting point for building Jamstack applications that conform to the requirements for integration with [Ontario.ca](https://ontario.ca). Specifically, it focuses on providing a quick means of getting started building a statically-served web front end that can be enriched by back-end APIs.
 
 The separate [Jamstack backing services](https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-backing-services) project provides some example back-end services to demonstrate various patterns.
+
+Existing applications built with the toolkit include:
+* Public Sector Salary Disclosure
 
 ### Tech Used and Rationale
 
@@ -34,6 +37,10 @@ At this time, we recommend the following steps:
 
 ## Development
 
+### Serving and Rebuilding the Application
+
+`npm run serve` will serve the generated application locally, updating and rebuilding as changes are made - the generated files will appear in the `dist` directory.
+
 ### Modifying Code, Components, and Styles
 
 The project divide resources into `core` and `app` directories in various places.
@@ -41,10 +48,6 @@ The project divide resources into `core` and `app` directories in various places
 * Avoid modfiying `core` files if you want an easier process of bringing in future improvements from new versions of the toolkit
 * `app` files are starting points for customizations your own product will need, especially when intersecting with `core` components
     * Example: `src/_includes/app/_head_custom.njk` allows the insertion of additional tags into the `<head>` portion of your templates.
-
-### Serving and Rebuilding the Application
-
-`npm run serve` will serve the generated application locally, updating and rebuilding as changes are made - the generated files will appear in the `dist` directory.
 
 ### Translation
 
@@ -69,7 +72,7 @@ Insert any needed custom tags for the `<head></head>` portion of the site layout
 
 ### Publication and Updated Dates for Pages
 
-The default layout includes a component to make handling publication and updated dates for pages easier that matches the style of pages published on the Ontario.ca CMS.
+The default layout includes a component to make handling publication and updated dates for pages easier that matches the style of pages published with the Ontario.ca CMS.
 
 Any pages using it should include the following in their YAML front matter:
 
