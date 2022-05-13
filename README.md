@@ -34,7 +34,7 @@ At this time, we recommend the following steps:
 
 ## Development
 
-### Modifying Components and Styles
+### Modifying Code, Components, and Styles
 
 The project divide resources into `core` and `app` directories in various places.
 
