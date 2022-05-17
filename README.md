@@ -49,6 +49,14 @@ The project divide resources into `core` and `app` directories in various places
 * `app` files are starting points for customizations your own product will need, especially when intersecting with `core` components
     * Example: `src/_includes/app/_head_custom.njk` allows the insertion of additional tags into the `<head>` portion of your templates.
 
+### Setting the Header Style
+
+You can set your application to use either the Ontario.ca main website header or the Ontario application header used for applications and subsites outside of the main website using the `useApplicationHeader` boolean option in `src/_data/app/app-globals.js`
+
+For full details on the two header styles available in the Ontario Design System, consult these two pages:
+* [Ontario.ca header](https://designsystem.ontario.ca/components/detail/ontario-header.html) - *mandatory for all pages that are part of the main ontario.ca website*
+* [Application header](https://designsystem.ontario.ca/components/detail/application-header.html) - *for applications and subsites outside of the main ontario.ca website*
+
 ### Translation
 
 The toolkit includes features to support building in both official languages of Ontario.ca.

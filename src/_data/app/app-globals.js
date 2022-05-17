@@ -6,7 +6,10 @@
         prod: "production"
       };
 
+    var useApplicationHeader = false;
+
       return {
           userFriendlyEnvString: userFriendlyEnvString,
+          useApplicationHeader: useApplicationHeader
       }
 }
