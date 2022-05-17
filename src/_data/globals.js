@@ -3,12 +3,14 @@ var app = require("./app/app-globals");
 
 module.exports = function() {
 
+  var env = core().env;
+
   var globals = {
     assetsRoot: core().assetsRoot,
     designSystemRoot: core().designSystemRoot,
-    environment: core().env,
+    environment: env,
     siteRoot: core().siteRoot,
-    userFriendlyEnvString: app().userFriendlyEnvString[core().env]
+    userFriendlyEnvString: app().userFriendlyEnvString[env]
   }
 
   return globals;
