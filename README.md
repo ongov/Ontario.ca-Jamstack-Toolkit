@@ -1,5 +1,10 @@
 # Ontario.ca Service Integration: Jamstack Application Toolkit
 
+## Release History
+
+* 0.4.0 (2022-05-17): Add option to use the application header from the Ontario Design System instead of the main Ontario.ca website header
+
+
 ## About the Jamstack Approach
 
 "Jamstack" refers to an approach to developing web applications based on decoupled patterns. [Jamstack.org](https://jamstack.org/) is a good starting point for learning about this pattern.
