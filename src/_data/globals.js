@@ -10,7 +10,8 @@ module.exports = function() {
     designSystemRoot: core().designSystemRoot,
     environment: env,
     siteRoot: core().siteRoot,
-    userFriendlyEnvString: app().userFriendlyEnvString[env]
+    userFriendlyEnvString: app().userFriendlyEnvString[env],
+    useApplicationHeader: app().useApplicationHeader
   }
 
   return globals;
