@@ -4,7 +4,6 @@
 
 * 0.4.0 (2022-05-17): Add option to use the application header from the Ontario Design System instead of the main Ontario.ca website header
 
-
 ## About the Jamstack Approach
 
 "Jamstack" refers to an approach to developing web applications based on decoupled patterns. [Jamstack.org](https://jamstack.org/) is a good starting point for learning about this pattern.
@@ -38,7 +37,8 @@ From a fresh checkout, `npm install` will install all dependencies.
 At this time, we recommend the following steps:
 * `git clone` the project
 * Delete the `.git` folder to remove the history
-* Initiate your version control of choice - `git init` if using git
+* `git init` and make an initial commit
+    * Note that the use of `git Last Modified` for page dates (see below under **Publication and Updated Dates for Pages**) means the example site will fail to build without an initial commit. Change the use of `git Last Modified` in the page date if you need to work without git or with another version control system.
 
 ## Development
 
@@ -91,7 +91,7 @@ Any pages using it should include the following in their YAML front matter:
 
 ```
 date: git Last Modified
-published_date: 2022-05-07
+published_date: {YYYY-MM-DD formatted date for initial publication}
 ```
 
 By using `git Last Modified`, pages will receive their update time from Git version control when the application is built. [This feature is described in more detail in Eleventy's documentation](https://www.11ty.dev/docs/dates/#setting-a-content-date-in-front-matter).
