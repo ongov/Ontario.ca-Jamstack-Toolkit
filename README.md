@@ -129,7 +129,7 @@ For values that need to differ between environments, the [basic approach describ
 
 ### Site Root Configuration
 
-Jamstack sites deployed to Ontario.ca will need to configure a site root based on their deployed subfolder. The `siteRootEnvs` object in `src/_data/globals.js` can be used for these purposes.
+Jamstack sites deployed to Ontario.ca will need to configure a site root based on their deployment subfolder. The `siteRootEnvs` object in `src/_data/app/app-globals.js` can be used for these purposes.
 
 ### Build Output Configuration
 
