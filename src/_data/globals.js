@@ -5,11 +5,17 @@ module.exports = function() {
 
   var env = core().env;
 
+  var siteRoot = app().siteRootEnvs[env];
+
+  var assetsRoot = siteRoot + app().assetsPath;
+
+  var designSystemRoot = assetsRoot + core().designSystemPath;
+
   var globals = {
-    assetsRoot: core().assetsRoot,
-    designSystemRoot: core().designSystemRoot,
+    assetsRoot: assetsRoot,
+    designSystemRoot: designSystemRoot,
     environment: env,
-    siteRoot: core().siteRoot,
+    siteRoot: siteRoot,
     userFriendlyEnvString: app().userFriendlyEnvString[env],
     useApplicationHeader: app().useApplicationHeader
   }
