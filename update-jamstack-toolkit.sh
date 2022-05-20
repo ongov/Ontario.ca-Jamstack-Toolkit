@@ -1,5 +1,8 @@
 ﻿#!/bin/sh
 
+# Change to the tagged release or branch version of
+# https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit.git
+# that you want to update to
 tag="r0.5.0"
 
 echo "Ontario.ca Jamstack Toolkit - Update to $tag"

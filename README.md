@@ -40,6 +40,14 @@ At this time, we recommend the following steps:
 * `git init` and make an initial commit
     * Note that the use of `git Last Modified` for page dates (see below under **Publication and Updated Dates for Pages**) means the example site will fail to build without an initial commit. Change the use of `git Last Modified` in the page date if you need to work without git or with another version control system.
 
+### Updating Your Project from Future Development of the Jamstack Application Toolkit
+
+You can use the `update-jamstack-toolkit.sh` script to pull in certain changes from the Jamstack Application toolkit repo. Specifically, this script will update:
+* Any `core` files in `src` - see **Modifying Code, Components, and Styles** for more details
+* The `src/assets/vendor` directory that contains the Ontario Design System files and other third-party dependencies
+
+You should [refer to the Jamstack Application Toolkit repo](https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit) for available release tags and modify the script to use the appropriate one using the `tag` variable.
+
 ## Development
 
 ### Serving and Rebuilding the Application
