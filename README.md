@@ -2,6 +2,7 @@
 
 ## Release History
 
+* r0.6.0 (2022-05-20): Added `update-jamstack-toolkit.sh` script
 * r0.5.0 (2022-05-19): Moved site root configuration into `src/_data/app/app-globals.js` from `src/_data/core/core-globals.js`
 * r0.4.0 (2022-05-17): Add option to use the application header from the Ontario Design System instead of the main Ontario.ca website header
 
