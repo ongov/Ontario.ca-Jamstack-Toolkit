@@ -34,3 +34,12 @@ Do not update the [Ontario Design System](https://designsystem.ontario.ca/docs/d
 * Run `npm run test` and update the tests for `Ontario design system inclusion` as necessary
 
 The general purpose of this script is to automate the update of the design system and remove example files and others that are unnecessary for deployment.
+
+## Releases
+
+New or updated features should be managed as a release as follows:
+
+* Bump the version number where appropriate in `package.json`, `README.md` and similar
+* Add the version number and a short release note to `README.md`
+* Add a tag in the style `r[x].[y].[z]` (same as the existing ones) to match that version number
+* Bump the tag used in `update-jamstack-toolkit.sh` to match that version number
