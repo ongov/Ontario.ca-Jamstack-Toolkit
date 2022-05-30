@@ -39,7 +39,9 @@ The general purpose of this script is to automate the update of the design syste
 
 New or updated features should be managed as a release as follows:
 
-* Bump the version number where appropriate in `package.json`, `README.md` and similar
-* Add the version number and a short release note to `README.md`
-* Add a tag in the style `r[x].[y].[z]` (same as the existing ones) to match that version number
-* Bump the tag used in `update-jamstack-toolkit.sh` to match that version number
+* In the merge request, ideally immediately before merge:
+    * Bump the version number where appropriate in `package.json`, `README.md` and similar
+    * Add the version number and a short release note to `README.md`
+    * Bump the tag used in `update-jamstack-toolkit.sh` to match that version number
+* Once merged:
+    * Add a tag in the style `r[x].[y].[z]` (same as the existing ones) to match that version number
