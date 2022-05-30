@@ -2,6 +2,7 @@
 
 ## Release History
 
+* 0.7.0 (2022-05-30): Enhance localeStrings to allow nesting of keys for better content organization, and to allow markdown in the localeStrings. README.md contains more details.
 * r0.6.0 (2022-05-20): Added `update-jamstack-toolkit.sh` script
 * r0.5.0 (2022-05-19): Moved site root configuration into `src/_data/app/app-globals.js` from `src/_data/core/core-globals.js`
 * r0.4.0 (2022-05-17): Add option to use the application header from the Ontario Design System instead of the main Ontario.ca website header
@@ -86,6 +87,42 @@ The simplest way of maintaining parallel English and French pages is to maintain
 This structure above allows the language switcher link to be appropriately generated in the header when building the site.
 
 #### Maintaining Locale Files
+
+Maintenance is much easier when content is separate from presentation and code, so we abstract out the content.
+
+Content is added to `src/_data/localeStrings.json` and the localized string gets injected into the page with a custom filter, `localeString`, according to the current page language.
+
+Content can be organized using nested keys. As seen below, you can group by page, section, element, and so-forth.
+
+```json
+{
+    "homePage": {
+        "title": {
+          "en": "Home Page",
+          "fr": "Page d'accueil" 
+        }
+    }
+}
+```
+To inject the content into your template, use the `localeString` filter:
+
+```html
+<h2>{{ "homePage.title" | localeString}}</h2>
+```
+
+To keep things clean, especially when dealing with images and links, markup can be added to the content file using two additional filters: `markdown` and `safe`. Using the `safe` filter sanitizes the markdown.
+
+```json
+"welcome": {
+          "en": "Welcome to the Ontario.ca <a href=\"https://jamstack.org/\">Jamstack</a> Application Toolkit.",
+          "fr": "Bienvenue à la trousse d'outils d'application <a href=\"https://jamstack.org/\">Jamstack</a> d'Ontario.ca."
+        },
+}
+```
+
+```html
+<p>{{ "homePage.welcome" | localeString | markdown | safe}}</p>
+```
 
 You can create localization strings for shared components or similar uses in `src/_data/localeStrings.json`, which can then be referred to in page templates using the `localeString` filter: `{{ "[key]" | localeString}}`. This filter will insert the appropriate localized string for the key based on the current page language.
 

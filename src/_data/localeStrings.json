@@ -1,6 +1,22 @@
 {
     "homePage": {
-        "en": "Home Page",
-        "fr": "Page d'accueil"
+        "title": {
+          "en": "Home Page",
+          "fr": "Page d'accueil" 
+        },
+        "welcome": {
+          "en": "Welcome to the Ontario.ca <a href=\"https://jamstack.org/\">Jamstack</a> Application Toolkit.",
+          "fr": "Bienvenue à la trousse d'outils d'application <a href=\"https://jamstack.org/\">Jamstack</a> d'Ontario.ca."
+        },
+        "environment": {
+          "firstHalf": {
+            "en": "This site was built for the ",
+            "fr": "Ce site a été construit pour l'environnement de "
+          },
+          "secondHalf": {
+            "en": " environment.",
+            "fr": "."
+          }
+        }
     }
 }

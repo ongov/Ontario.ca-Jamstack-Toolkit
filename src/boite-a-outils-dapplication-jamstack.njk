@@ -6,6 +6,6 @@ en_page_url: "/jamstack-toolkit"
 date: git Last Modified
 published_date: 2022-05-07
 ---
-<h2>{{ "homePage" | localeString}}</h2>
-<p>Bienvenue à la trousse d'outils d'application <a href="https://jamstack.org/">Jamstack</a> d'Ontario.ca.</p>
-<p>Ce site a été construit pour l'environnement de <strong>{{ globals.userFriendlyEnvString }}</strong>.</p>
+<h2>{{ "homePage.title" | localeString}}</h2>
+<p>{{ "homePage.welcome" | localeString | markdown | safe}}</p>
+<p>{{ "homePage.environment.firstHalf" | localeString}}<strong>{{ globals.userFriendlyEnvString }}</strong>{{ "homePage.environment.secondHalf" | localeString}}</p>
