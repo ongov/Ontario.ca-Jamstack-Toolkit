@@ -3,8 +3,9 @@
 ## Release History
 
 * 0.7.0 (2022-05-30): Enhance localeStrings to allow nesting of keys for better content organization, and to allow markdown in the localeStrings. README.md contains more details.
-
-* 0.4.0 (2022-05-17): Add option to use the application header from the Ontario Design System instead of the main Ontario.ca website header
+* r0.6.0 (2022-05-20): Added `update-jamstack-toolkit.sh` script
+* r0.5.0 (2022-05-19): Moved site root configuration into `src/_data/app/app-globals.js` from `src/_data/core/core-globals.js`
+* r0.4.0 (2022-05-17): Add option to use the application header from the Ontario Design System instead of the main Ontario.ca website header
 
 ## About the Jamstack Approach
 
@@ -41,6 +42,14 @@ At this time, we recommend the following steps:
 * Delete the `.git` folder to remove the history
 * `git init` and make an initial commit
     * Note that the use of `git Last Modified` for page dates (see below under **Publication and Updated Dates for Pages**) means the example site will fail to build without an initial commit. Change the use of `git Last Modified` in the page date if you need to work without git or with another version control system.
+
+### Updating Your Project from Future Development of the Jamstack Application Toolkit
+
+You can use the `update-jamstack-toolkit.sh` script to pull in certain changes from the Jamstack Application toolkit repo. Specifically, this script will update:
+* Any `core` files in `src` - see **Modifying Code, Components, and Styles** for more details
+* The `src/assets/vendor` directory that contains the Ontario Design System files and other third-party dependencies
+
+You should [refer to the Jamstack Application Toolkit repo](https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit) for available release tags and modify the script to use the appropriate one using the `tag` variable.
 
 ## Development
 
