@@ -2,6 +2,8 @@
 
 ## Release History
 
+* 0.5.0 (2022-05-30): Enhance localeStrings to allow nesting of keys for better content organization, and to allow markdown in the localeStrings. README.md contains more details.
+
 * 0.4.0 (2022-05-17): Add option to use the application header from the Ontario Design System instead of the main Ontario.ca website header
 
 ## About the Jamstack Approach
