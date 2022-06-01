@@ -1,8 +1,7 @@
-var core = require( "./core/core-globals");
-var app = require("./app/app-globals");
+var core = require('./core/core-globals');
+var app = require('./app/app-globals');
 
-module.exports = function() {
-
+module.exports = function () {
   var env = core().env;
 
   var siteRoot = app().siteRootEnvs[env];
@@ -17,8 +16,8 @@ module.exports = function() {
     environment: env,
     siteRoot: siteRoot,
     userFriendlyEnvString: app().userFriendlyEnvString[env],
-    useApplicationHeader: app().useApplicationHeader
-  }
+    useApplicationHeader: app().useApplicationHeader,
+  };
 
   return globals;
-}
+};

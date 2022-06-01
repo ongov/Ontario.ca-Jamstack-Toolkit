@@ -1,26 +1,25 @@
-﻿module.exports = function() {
+﻿module.exports = function () {
+  var userFriendlyEnvString = {
+    dev: 'development',
+    stage: 'staging',
+    prod: 'production',
+  };
 
-    var userFriendlyEnvString = {
-        dev: "development",
-        stage: "staging",
-        prod: "production"
-      };
+  var siteRootEnvs = {
+    dev: '',
+    stage: '',
+    prod: '',
+  };
 
-      var siteRootEnvs = {
-        dev: "",
-        stage: "",
-        prod: ""
-      };
+  var useApplicationHeader = false;
 
-    var useApplicationHeader = false;
+  // Relative to siteRoot
+  var assetsPath = '/jamstack-toolkit/assets';
 
-    // Relative to siteRoot
-    var assetsPath = "/jamstack-toolkit/assets";
-
-      return {
-          userFriendlyEnvString: userFriendlyEnvString,
-          useApplicationHeader: useApplicationHeader,
-          siteRootEnvs: siteRootEnvs,
-          assetsPath: assetsPath
-      }
-}
+  return {
+    userFriendlyEnvString: userFriendlyEnvString,
+    useApplicationHeader: useApplicationHeader,
+    siteRootEnvs: siteRootEnvs,
+    assetsPath: assetsPath,
+  };
+};
