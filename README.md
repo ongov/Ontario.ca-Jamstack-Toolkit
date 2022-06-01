@@ -2,10 +2,11 @@
 
 ## Release History
 
+- 0.8.0 (2022-06-01): Add the `prettier` code formatter
 - 0.7.0 (2022-05-30): Enhance localeStrings to allow nesting of keys for better content organization, and to allow markdown in the localeStrings. README.md contains more details.
-- r0.6.0 (2022-05-20): Added `update-jamstack-toolkit.sh` script
-- r0.5.0 (2022-05-19): Moved site root configuration into `src/_data/app/app-globals.js` from `src/_data/core/core-globals.js`
-- r0.4.0 (2022-05-17): Add option to use the application header from the Ontario Design System instead of the main Ontario.ca website header
+- 0.6.0 (2022-05-20): Added `update-jamstack-toolkit.sh` script
+- 0.5.0 (2022-05-19): Moved site root configuration into `src/_data/app/app-globals.js` from `src/_data/core/core-globals.js`
+- 0.4.0 (2022-05-17): Add option to use the application header from the Ontario Design System instead of the main Ontario.ca website header
 
 ## About the Jamstack Approach
 
