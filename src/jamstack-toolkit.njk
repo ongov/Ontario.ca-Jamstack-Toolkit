@@ -6,7 +6,7 @@ date: git Last Modified
 published_date: 2022-05-07
 ---
 <h2>{{ "homePage.title" | localeString}}</h2>
-{{ "homePage.welcome" | localeString | markdown | safe}}
+<p>{{ "homePage.welcome" | localeString | markdown | safe}}</p>
 <div>
-  {{ "homePage.environment.firstHalf" | localeString}}<strong>{{ globals.userFriendlyEnvString }}</strong>{{ "homePage.environment.secondHalf" | localeString}}
+  <p>{{ "homePage.environment.firstHalf" | localeString}}<strong>{{ globals.userFriendlyEnvString }}</strong>{{ "homePage.environment.secondHalf" | localeString}}</p>
 </div>
