@@ -1,6 +1,7 @@
 @import '../../vendor/ontario-design-system/styles/ds-theme.css';
 /* Resets */
-html, body {
+html,
+body {
   height: 100%;
 }
 

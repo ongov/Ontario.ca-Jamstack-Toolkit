@@ -2,6 +2,7 @@
 
 ## Release History
 
+- 0.8.2 (2022-06-06): Make page content full-height even when content is short
 - 0.8.1 (2022-06-06): Fix a bug related to some files being encoded `UTF-8 with BOM` instead of just `UTF-8`
 - 0.8.0 (2022-06-01): Add the `prettier` code formatter
 - 0.7.0 (2022-05-30): Enhance localeStrings to allow nesting of keys for better content organization, and to allow markdown in the localeStrings. README.md contains more details.
