@@ -1,4 +1,4 @@
-﻿module.exports = function () {
+module.exports = function () {
   var userFriendlyEnvString = {
     dev: 'development',
     stage: 'staging',

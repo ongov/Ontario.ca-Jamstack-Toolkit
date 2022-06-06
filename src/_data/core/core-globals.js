@@ -1,4 +1,4 @@
-﻿module.exports = function () {
+module.exports = function () {
   var env = process.env.ELEVENTY_ENV || 'dev';
 
   // Relative to assetsRoot (see app-globals.js)

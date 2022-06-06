@@ -1,4 +1,4 @@
-﻿#!/bin/sh
+#!/bin/sh
 
 # Change to the tagged release or branch version of
 # https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit.git
