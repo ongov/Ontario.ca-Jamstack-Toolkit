@@ -9,14 +9,7 @@
 
     {% include "core/_icon_definitions.njk" %}
     {% include "core/_header.njk" %}
-    <div class="ontario-row maincontent__container">
-        <div class="ontario-column ontario-small-12">
-            {{ content | safe }}
-        </div>
-        <div class="ontario-column ontario-small-12">
-            {% include "core/components/_page_dates.njk" %}
-        </div>
-    </div>
+    {% include "app/_main_content.njk" %}
     {% include "core/_footer.njk" %}
     </body>
 </html>
