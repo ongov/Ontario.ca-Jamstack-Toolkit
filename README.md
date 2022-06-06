@@ -70,7 +70,8 @@ The project divide resources into `core` and `app` directories in various places
 
 - Avoid modfiying `core` files if you want an easier process of bringing in future improvements from new versions of the toolkit
 - `app` files are starting points for customizations your own product will need, especially when intersecting with `core` components
-  - Example: `src/_includes/app/_head_custom.njk` allows the insertion of additional tags into the `<head>` portion of your templates.
+  - `src/_includes/app/_head_custom.njk` allows the insertion of additional tags into the `<head>` portion of your templates
+  - `src/_includes/app/_main_content.njk` allows you to customize layout and otherwise in the main content area between the standard Ontario Design System header and footer components
 
 ### Setting the Header Style
 
