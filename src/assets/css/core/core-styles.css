@@ -1,1 +1,16 @@
 @import '../../vendor/ontario-design-system/styles/ds-theme.css';
+/* Resets */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Fill the page */
+.maincontent__container {
+  flex-grow: 1;
+}
