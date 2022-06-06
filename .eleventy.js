@@ -14,7 +14,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter('markdown', (content) => {
-    return md.render(content);
+    return md.renderInline(content);
   });
 
   eleventyConfig.addFilter('localeString', function (key) {
