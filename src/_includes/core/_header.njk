@@ -1,0 +1,11 @@
+{% if lang === 'fr' %}
+    {% include "core/_header_fr.njk" %}
+{% else %}
+    {% include "core/_header_en.njk" %}
+{% endif %}
+
+<div class="ontario-overlay"></div>
+
+<script src="{{ globals.siteRoot }}{{ globals.designSystemRoot }}/scripts/ontario-a11y.js"></script>
+<script src="{{ globals.siteRoot }}{{ globals.designSystemRoot }}/scripts/ontario-header.js"></script>
+<script src="{{ globals.siteRoot }}{{ globals.designSystemRoot }}/scripts/ontario-search.js"></script>
