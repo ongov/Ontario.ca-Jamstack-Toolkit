@@ -1,5 +1,15 @@
 {
   "header": {
+    "links": {
+      "home": {
+        "en": "https://www.ontario.ca/page/government-ontario",
+        "fr": "https://www.ontario.ca/fr/page/gouvernement-de-lontario"
+      }
+    },
+    "onGov": {
+      "en": "Government of Ontario",
+      "fr": "Gouvernement de l’Ontario"
+    },
     "submit": {
       "en": "Submit",
       "fr": "Soumission"
