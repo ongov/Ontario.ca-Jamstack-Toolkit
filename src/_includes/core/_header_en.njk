@@ -5,7 +5,7 @@
             <div class="ontario-row">
                 <div class="ontario-columns ontario-small-6 ontario-application-header__logo">
                     <a href="{{ 'header.links.home' | localeString }}">
-                        <img src="{{ globals.siteRoot }}{{ globals.designSystemRoot }}/logos/ontario-logo--desktop.svg" alt="Government of Ontario" />
+                        <img src="{{ globals.siteRoot }}{{ globals.designSystemRoot }}/logos/ontario-logo--desktop.svg" alt="{{ 'header.onGov' | localeString }}" />
                     </a>
                 </div>
                 <div class="ontario-columns ontario-small-6 ontario-application-header__lang-toggle">
@@ -27,13 +27,13 @@
             <div class="ontario-row">
                 <div class="ontario-header__logo-container ontario-columns ontario-small-2 ontario-medium-4 ontario-large-3">
                     <a href="{{ 'header.links.home' | localeString }}">
-                        <img class="ontario-show-for-medium" src="{{ globals.siteRoot }}{{ globals.designSystemRoot }}/logos/ontario-logo--desktop.svg" alt="Government of Ontario" />
-                        <img class="ontario-show-for-small-only" src="{{ globals.siteRoot }}{{ globals.designSystemRoot }}/logos/ontario-logo--mobile.svg" alt="Government of Ontario" />
+                        <img class="ontario-show-for-medium" src="{{ globals.siteRoot }}{{ globals.designSystemRoot }}/logos/ontario-logo--desktop.svg" alt="{{ 'header.onGov' | localeString }}" />
+                        <img class="ontario-show-for-small-only" src="{{ globals.siteRoot }}{{ globals.designSystemRoot }}/logos/ontario-logo--mobile.svg" alt="{{ 'header.onGov' | localeString }}" />
                     </a>
                 </div>
 
                 <form name="searchForm" id="ontario-search-form-container" onsubmit="return false" class="ontario-header__search-container ontario-columns ontario-small-10 ontario-medium-offset-3 ontario-medium-6 ontario-large-offset-0 ontario-large-6" novalidate>
-                    <label for="ontario-search-input-field" class="ontario-show-for-sr">Search</label>
+                    <label for="ontario-search-input-field" class="ontario-show-for-sr">{{ 'header.search' | localeString }}</label>
                     <input type="text" name="search" id="ontario-search-input-field" autocomplete="off" aria-autocomplete="none" class="ontario-input ontario-header__search-input" required />
                     <input class="ontario-header__search-reset" id="ontario-search-reset" type="reset" value="" aria-label="Clear field" />
                     <button class="ontario-header__search-submit" id="ontario-search-submit" type="submit" onclick="doSearch()">
