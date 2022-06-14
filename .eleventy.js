@@ -1,5 +1,6 @@
+const globalLocaleStrings = require('./src/_data/core/core-locale-strings.json');
 const appLocaleStrings = require('./src/_data/app/app-locale-strings.json');
-const localeStrings = appLocaleStrings;
+const localeStrings = { ...globalLocaleStrings, ...appLocaleStrings };
 
 const fs = require('fs');
 const matter = require('gray-matter');

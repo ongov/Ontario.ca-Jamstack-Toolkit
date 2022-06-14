@@ -10,11 +10,11 @@
                 </div>
                 <div class="ontario-columns ontario-small-6 ontario-application-header__lang-toggle">
                     <a href="{{ globals.siteRoot }}{{ fr_page_url }}" class="ontario-header__language-toggler ontario-header-button ontario-header-button--without-outline">
-                        <abbr title="Français" class="ontario-show-for-small-only">
-                            FR
+                        <abbr title="{{ 'header.langToggle.langFull' | localeString }}" class="ontario-show-for-small-only">
+                            {{ 'header.langToggle.langAbbr' | localeString }}
                         </abbr>
                         <span class="ontario-show-for-medium">
-                            Français
+                            {{ 'header.langToggle.langFull' | localeString }}
                         </span>
                     </a>
                 </div>
@@ -37,7 +37,7 @@
                     <input type="text" name="search" id="ontario-search-input-field" autocomplete="off" aria-autocomplete="none" class="ontario-input ontario-header__search-input" required />
                     <input class="ontario-header__search-reset" id="ontario-search-reset" type="reset" value="" aria-label="Clear field" />
                     <button class="ontario-header__search-submit" id="ontario-search-submit" type="submit" onclick="doSearch()">
-                        <span class="ontario-show-for-sr">Submit</span>
+                        <span class="ontario-show-for-sr">{{ 'header.submit' | localeString }}</span>
                         <svg class="ontario-icon" focusable="false" sol:category="primary" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
                             <use xlink:href="#ontario-icon-search"></use>
                         </svg>
@@ -45,11 +45,11 @@
                 </form>
                 <div class="ontario-header__nav-right-container ontario-columns ontario-small-10 ontario-medium-8 ontario-large-3">
                     <a href="{{ globals.siteRoot }}{{ fr_page_url }}" class="ontario-header__language-toggler ontario-header-button ontario-header-button--without-outline">
-                        <abbr title="Français" class="ontario-show-for-small-only">
-                            FR
+                        <abbr title="{{ 'header.langToggle.langFull' | localeString }}" class="ontario-show-for-small-only">
+                            {{ 'header.langToggle.langAbbr' | localeString }}
                         </abbr>
                         <span class="ontario-show-for-medium">
-                            Français
+                            {{ 'header.langToggle.langFull' | localeString }}
                         </span>
                     </a>
 

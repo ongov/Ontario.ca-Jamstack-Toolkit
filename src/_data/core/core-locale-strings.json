@@ -1,0 +1,18 @@
+{
+  "header": {
+    "submit": {
+      "en": "Submit",
+      "fr": "Soumission"
+    },
+    "langToggle": {
+      "langFull": {
+        "en": "Français",
+        "fr": "English"
+      },
+      "langAbbr": {
+        "en": "FR",
+        "fr": "EN"
+      }
+    }
+  }
+}
