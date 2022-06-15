@@ -83,6 +83,10 @@ For full details on the two header styles available in the Ontario Design System
 - [Ontario.ca header](https://designsystem.ontario.ca/components/detail/ontario-header.html) - _mandatory for all pages that are part of the main ontario.ca website_
 - [Application header](https://designsystem.ontario.ca/components/detail/application-header.html) - _for applications and subsites outside of the main ontario.ca website_
 
+If you need to set the `useApplicationHeader` option only for specific pages, you can specify it in the YAML front matter of the page:
+
+> `useApplicationHeader: true`
+
 ### Translation
 
 The toolkit includes features to support building in both official languages of Ontario.ca.
