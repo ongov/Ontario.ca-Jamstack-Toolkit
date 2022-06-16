@@ -10,13 +10,15 @@
       "en": "Government of Ontario",
       "fr": "Gouvernement de l’Ontario"
     },
-    "search": {
-      "en": "Search",
-      "fr": "Rechercher"
-    },
-    "submit": {
-      "en": "Submit",
-      "fr": "Soumission"
+    "labels": {
+      "search": {
+        "en": "Search",
+        "fr": "Rechercher"
+      },
+      "submit": {
+        "en": "Submit",
+        "fr": "Soumission"
+      }
     },
     "langToggle": {
       "langFull": {
