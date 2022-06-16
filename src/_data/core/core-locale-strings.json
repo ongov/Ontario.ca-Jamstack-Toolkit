@@ -18,6 +18,22 @@
       "submit": {
         "en": "Submit",
         "fr": "Soumission"
+      },
+      "clearField": {
+        "en": "Clear field",
+        "fr": "Vider le champ"
+      },
+      "openMenu": {
+        "en": "open menu",
+        "fr": "ouvrir les sujets"
+      },
+      "closeSearchBar": {
+        "en": "close search bar",
+        "fr": "fermer la barre de recherche"
+      },
+      "close": {
+        "en": "close",
+        "fr": "fermer"
       }
     },
     "langToggle": {
