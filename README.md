@@ -87,6 +87,10 @@ If you need to set the `useApplicationHeader` option only for specific pages, yo
 
 > `useApplicationHeader: true`
 
+#### Links in the Design System Application Subheader
+
+Link text and URL can be configured using the locale file `/src/_data/app/app-locale-strings.js`, under the `applicationHeader.navMenu` key.
+
 ### Translation
 
 The toolkit includes features to support building in both official languages of Ontario.ca.
