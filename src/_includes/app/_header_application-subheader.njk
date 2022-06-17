@@ -22,7 +22,7 @@
                                 {% endfor %}
                             </ul>
 
-                            <button class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline" id="ontario-header-menu-toggler" aria-controls="ontario-navigation" aria-label="open menu" type="button">
+                            <button class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline" id="ontario-header-menu-toggler" aria-controls="ontario-navigation" aria-label="{{ 'header.labels.openMenu' | localeString }}" type="button">
                                 <svg class="ontario-icon" focusable="false" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
                                     <use xlink:href="#ontario-icon-menu"></use>
                                 </svg>
@@ -33,7 +33,7 @@
                 </div>
             </section>
             <nav class="ontario-navigation" id="ontario-navigation">
-                <button type="button" class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline" id="ontario-header-nav-toggler" aria-controls="ontario-navigation" aria-label="close">
+                <button type="button" class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline" id="ontario-header-nav-toggler" aria-controls="ontario-navigation" aria-label="{{ 'header.labels.close' | localeString }}">
                     <svg class="ontario-icon" focusable="false" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
                         <use xlink:href="#ontario-icon-close"></use>
                     </svg>
