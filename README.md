@@ -2,6 +2,7 @@
 
 ## Release History
 
+- 0.10.0 (2022-06-22): Total refactoring of header to take advantage of locale features and eliminate the need for separate English and French templates
 - 0.9.0 (2022-06-06): New `_main_content.njk` file in `src/_includes/app` to allow customization of main content area outside of `core`
 - 0.8.2 (2022-06-06): Make page content full-height even when content is short
 - 0.8.1 (2022-06-06): Fix a bug related to some files being encoded `UTF-8 with BOM` instead of just `UTF-8`
