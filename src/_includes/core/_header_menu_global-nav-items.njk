@@ -1,0 +1,5 @@
+{% for itemKey, navMenuItem in core["core-locale-strings"].header.navMenu %}
+<li class="ontario-header-navigation__menu-item">
+    <a href="{{ ('header.navMenu.' + itemKey + '.text') | localeString }}">{{ ('header.navMenu.' + itemKey + '.text') | localeString }}</a>
+</li>
+{% endfor %}

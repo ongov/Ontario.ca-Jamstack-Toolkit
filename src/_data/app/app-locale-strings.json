@@ -1,0 +1,110 @@
+{
+  "homePage": {
+    "title": {
+      "en": "Home Page",
+      "fr": "Page d'accueil"
+    },
+    "welcome": {
+      "en": "Welcome to the Ontario.ca <a href=\"https://jamstack.org/\">Jamstack</a> Application Toolkit.",
+      "fr": "Bienvenue à la trousse d'outils d'application <a href=\"https://jamstack.org/\">Jamstack</a> d'Ontario.ca."
+    },
+    "environment": {
+      "firstHalf": {
+        "en": "This site was built for the ",
+        "fr": "Ce site a été construit pour l'environnement de "
+      },
+      "secondHalf": {
+        "en": " environment.",
+        "fr": "."
+      }
+    }
+  },
+  "applicationHeader": {
+    "applicationName": {
+      "en": "Application name",
+      "fr": "Nom de l'application"
+    },
+    "navMenu": {
+      "link1": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 1",
+          "fr": "Lien 1"
+        }
+      },
+      "link2": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 2",
+          "fr": "Lien 2"
+        }
+      },
+      "link3": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 3",
+          "fr": "Lien 3"
+        }
+      },
+      "link4": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 4",
+          "fr": "Lien 4"
+        }
+      },
+      "link5": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 5",
+          "fr": "Lien 5"
+        }
+      },
+      "link6": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 6",
+          "fr": "Lien 6"
+        }
+      },
+      "link7": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 7",
+          "fr": "Lien 7"
+        }
+      },
+      "link8": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 8",
+          "fr": "Lien 8"
+        }
+      }
+    }
+  }
+}
