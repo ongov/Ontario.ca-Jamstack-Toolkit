@@ -2,6 +2,7 @@
 
 ## Release History
 
+- 0.10.0 (2022-06-22): Total refactoring of header to take advantage of locale features and eliminate the need for separate English and French templates
 - 0.9.0 (2022-06-06): New `_main_content.njk` file in `src/_includes/app` to allow customization of main content area outside of `core`
 - 0.8.2 (2022-06-06): Make page content full-height even when content is short
 - 0.8.1 (2022-06-06): Fix a bug related to some files being encoded `UTF-8 with BOM` instead of just `UTF-8`
@@ -82,6 +83,14 @@ For full details on the two header styles available in the Ontario Design System
 
 - [Ontario.ca header](https://designsystem.ontario.ca/components/detail/ontario-header.html) - _mandatory for all pages that are part of the main ontario.ca website_
 - [Application header](https://designsystem.ontario.ca/components/detail/application-header.html) - _for applications and subsites outside of the main ontario.ca website_
+
+If you need to set the `useApplicationHeader` option only for specific pages, you can specify it in the YAML front matter of the page:
+
+> `useApplicationHeader: true`
+
+#### Links in the Design System Application Subheader
+
+Link text and URLs for the application menu can be configured using the locale file `/src/_data/app/app-locale-strings.js`, under the `applicationHeader.navMenu` key.
 
 ### Translation
 
