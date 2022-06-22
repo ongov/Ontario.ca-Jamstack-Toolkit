@@ -89,7 +89,7 @@ If you need to set the `useApplicationHeader` option only for specific pages, yo
 
 #### Links in the Design System Application Subheader
 
-Link text and URL can be configured using the locale file `/src/_data/app/app-locale-strings.js`, under the `applicationHeader.navMenu` key.
+Link text and URLs for the application menu can be configured using the locale file `/src/_data/app/app-locale-strings.js`, under the `applicationHeader.navMenu` key.
 
 ### Translation
 
