@@ -1,3 +1,11 @@
+{% set numMenuItems = app["app-locale-strings"].applicationHeader.navMenu | length %}
+{% if numMenuItems > 0 and numMenuItems <=2 %}
+    {% set menuShowClass = "ontario-show-for-small-only" %}
+{% elif numMenuItems > 0 and numMenuItems <=5 %}
+    {% set menuShowClass = "ontario-hide-for-large" %}
+{% else %}
+    {% set menuShowClass = "" %}
+{% endif %}
 <div class="ontario-application-subheader-menu__container">
             <section class="ontario-application-subheader">
                 <div class="ontario-row">
@@ -7,6 +15,9 @@
                         </p>
 
                         <div class="ontario-application-subheader__menu-container">
+
+                            {# Display the visible menu items if any exist #}
+                            {% if numMenuItems > 0 %}
                             <ul class="ontario-application-subheader__menu ontario-show-for-large">
                                 {% for itemKey, navMenuItem in app["app-locale-strings"].applicationHeader.navMenu %}
                                     {% if loop.index <= 5 %}
@@ -21,8 +32,9 @@
                                     {% endif %}
                                 {% endfor %}
                             </ul>
+                            {% endif %}
 
-                            <button class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline" id="ontario-header-menu-toggler" aria-controls="ontario-navigation" aria-label="{{ 'header.labels.openMenu' | localeString }}" type="button">
+                            <button class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline {{ menuShowClass }}" id="ontario-header-menu-toggler" aria-controls="ontario-navigation" aria-label="{{ 'header.labels.openMenu' | localeString }}" type="button">
                                 <svg class="ontario-icon" focusable="false" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
                                     <use xlink:href="#ontario-icon-menu"></use>
                                 </svg>
@@ -33,7 +45,7 @@
                 </div>
             </section>
             <nav class="ontario-navigation" id="ontario-navigation">
-                <button type="button" class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline" id="ontario-header-nav-toggler" aria-controls="ontario-navigation" aria-label="{{ 'header.labels.close' | localeString }}">
+                <button type="button" class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline {{ menuShowClass }}" id="ontario-header-nav-toggler" aria-controls="ontario-navigation" aria-label="{{ 'header.labels.close' | localeString }}">
                     <svg class="ontario-icon" focusable="false" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
                         <use xlink:href="#ontario-icon-close"></use>
                     </svg>
@@ -41,21 +53,27 @@
                 </button>
                 <div class="ontario-navigation__container">
                     <ul>
-                        {% for itemKey, navMenuItem in app["app-locale-strings"].applicationHeader.navMenu %}
-                            {% if loop.index <= 2 %}
-                            <li class="ontario-show-for-small-only"><a href="#">{{ ('applicationHeader.navMenu.' + itemKey + '.text') | localeString }}</a></li>
-                            {% endif %}
-                        {% endfor %}
-                        {% for itemKey, navMenuItem in app["app-locale-strings"].applicationHeader.navMenu %}
-                            {% if loop.index >=3 and loop.index <= 5 %}
-                            <li class="ontario-hide-for-large"><a href="#">{{ ('applicationHeader.navMenu.' + itemKey + '.text') | localeString }}</a></li>
-                            {% endif %}
-                        {% endfor %}
-                        {% for itemKey, navMenuItem in app["app-locale-strings"].applicationHeader.navMenu %}
-                            {% if loop.index >=6 and loop.index <= 8 %}
-                                <li><a href="#">{{ ('applicationHeader.navMenu.' + itemKey + '.text') | localeString }}</a></li>
-                            {% endif %}
-                        {% endfor %}
+                        {% if numMenuItems > 0 %}
+                            {% for itemKey, navMenuItem in app["app-locale-strings"].applicationHeader.navMenu %}
+                                {% if loop.index <= 2 %}
+                                <li class="ontario-show-for-small-only"><a href="#">{{ ('applicationHeader.navMenu.' + itemKey + '.text') | localeString }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                        {% if numMenuItems >= 3 %}
+                            {% for itemKey, navMenuItem in app["app-locale-strings"].applicationHeader.navMenu %}
+                                {% if loop.index >=3 and loop.index <= 5 %}
+                                <li class="ontario-hide-for-large"><a href="#">{{ ('applicationHeader.navMenu.' + itemKey + '.text') | localeString }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                        {% if numMenuItems >= 3 %}
+                            {% for itemKey, navMenuItem in app["app-locale-strings"].applicationHeader.navMenu %}
+                                {% if loop.index >=6 and loop.index <= 8 %}
+                                    <li><a href="#">{{ ('applicationHeader.navMenu.' + itemKey + '.text') | localeString }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
                     </ul>
                 </div>
             </nav>
