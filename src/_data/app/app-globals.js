@@ -13,12 +13,15 @@ module.exports = function () {
 
   var useApplicationHeader = false;
 
+  var footerType = 'default';
+
   // Relative to siteRoot
   var assetsPath = '/jamstack-toolkit/assets';
 
   return {
     userFriendlyEnvString: userFriendlyEnvString,
     useApplicationHeader: useApplicationHeader,
+    footerType: footerType,
     siteRootEnvs: siteRootEnvs,
     assetsPath: assetsPath,
   };
