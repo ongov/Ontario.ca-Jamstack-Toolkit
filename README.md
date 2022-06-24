@@ -88,6 +88,12 @@ If you need to set the `useApplicationHeader` option only for specific pages, yo
 
 > `useApplicationHeader: true`
 
+### Setting the Footer Style
+
+The following footer styles are supported:
+
+For full details and guidelines on the footer styles available in the Ontario Design System, consult the [Ontario.ca footer](https://designsystem.ontario.ca/components/detail/footers.html).
+
 #### Links in the Design System Application Subheader
 
 Link text and URLs for the application menu can be configured using the locale file `/src/_data/app/app-locale-strings.js`, under the `applicationHeader.navMenu` key.

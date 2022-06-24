@@ -233,10 +233,6 @@
           }
         }
       }
-    },
-    "partnershipText": {
-      "en": "In partnership with the <span class=\"ontario-nbsp\">Government of Ontario</span>",
-      "fr": "En partenariat avec le <span class=\"ontario-nbsp\">gouvernement de l&#x27;Ontario</span>"
     }
   }
 }

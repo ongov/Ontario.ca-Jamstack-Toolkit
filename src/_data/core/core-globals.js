@@ -6,7 +6,6 @@ module.exports = function () {
 
   var allowedFooterTypes = {
     default: 'default',
-    partnership: 'partnership',
     expandedGeneral: 'expandedGeneral',
     expandedMinistry: 'expandedMinistry',
   };
