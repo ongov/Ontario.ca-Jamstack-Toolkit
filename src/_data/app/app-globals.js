@@ -13,7 +13,7 @@ module.exports = function () {
 
   var useApplicationHeader = false;
 
-  var footerType = 'expandedGeneral';
+  var footerType = 'expanded';
 
   // Relative to siteRoot
   var assetsPath = '/jamstack-toolkit/assets';

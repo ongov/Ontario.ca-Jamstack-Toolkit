@@ -20,8 +20,6 @@ module.exports = function () {
     footerType: core().allowedFooterTypes[app().footerType],
   };
 
-  console.log(app().footerType, globals.footerType);
-
   if (!globals.footerType) {
     throw new Error(`'${app().footerType}' is not an allowed footer type`);
   }

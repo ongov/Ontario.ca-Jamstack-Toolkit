@@ -90,9 +90,14 @@ If you need to set the `useApplicationHeader` option only for specific pages, yo
 
 ### Setting the Footer Style
 
-The following footer styles are supported:
+Two footer styles are supported:
 
-For full details and guidelines on the footer styles available in the Ontario Design System, consult the [Ontario.ca footer](https://designsystem.ontario.ca/components/detail/footers.html).
+- `default`, the standard Ontario.ca footer.
+- `expanded`, a footer including the standard content that can also be customized with additional content.
+
+The footer style is set in `src/_data/app/app-globals.js`.
+
+For full details and guidelines on footer styles in the Ontario Design System, consult the [Ontario.ca footer](https://designsystem.ontario.ca/components/detail/footers.html).
 
 #### Links in the Design System Application Subheader
 
