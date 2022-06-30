@@ -88,6 +88,10 @@ To set the `useApplicationHeader` option differently for specific pages from the
 
 > `useApplicationHeader: true`
 
+#### Links in the Design System Application Subheader
+
+Link text and URLs for the application menu can be configured using the locale file `/src/_data/app/app-locale-strings.js`, under the `applicationHeader.navMenu` key.
+
 ### Setting the Footer Style
 
 Two footer styles are supported:
@@ -102,10 +106,6 @@ For full details and guidelines on footer styles in the Ontario Design System, c
 To set the footer style differently for specific pages from the global config, you can specify it in the YAML front matter of the page:
 
 > `footerType: expanded`
-
-#### Links in the Design System Application Subheader
-
-Link text and URLs for the application menu can be configured using the locale file `/src/_data/app/app-locale-strings.js`, under the `applicationHeader.navMenu` key.
 
 ### Translation
 
