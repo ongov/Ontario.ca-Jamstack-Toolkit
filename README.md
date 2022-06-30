@@ -84,7 +84,7 @@ For full details on the two header styles available in the Ontario Design System
 - [Ontario.ca header](https://designsystem.ontario.ca/components/detail/ontario-header.html) - _mandatory for all pages that are part of the main ontario.ca website_
 - [Application header](https://designsystem.ontario.ca/components/detail/application-header.html) - _for applications and subsites outside of the main ontario.ca website_
 
-If you need to set the `useApplicationHeader` option only for specific pages, you can specify it in the YAML front matter of the page:
+To set the `useApplicationHeader` option differently for specific pages from the global config, you can specify it in the YAML front matter of the page:
 
 > `useApplicationHeader: true`
 
@@ -93,11 +93,15 @@ If you need to set the `useApplicationHeader` option only for specific pages, yo
 Two footer styles are supported:
 
 - `default`, the standard Ontario.ca footer.
-- `expanded`, a footer including the standard content that can also be customized with additional content.
+- `expanded`, a footer including the standard content that can also be customized with additional content using the template in `src/_includes/app/_footer_expanded.njk`.
 
 The footer style is set in `src/_data/app/app-globals.js`.
 
-For full details and guidelines on footer styles in the Ontario Design System, consult the [Ontario.ca footer](https://designsystem.ontario.ca/components/detail/footers.html).
+For full details and guidelines on footer styles in the Ontario Design System, consult the [documentation on Ontario.ca footers](https://designsystem.ontario.ca/components/detail/footers.html).
+
+To set the footer style differently for specific pages from the global config, you can specify it in the YAML front matter of the page:
+
+> `footerType: expanded`
 
 #### Links in the Design System Application Subheader
 
