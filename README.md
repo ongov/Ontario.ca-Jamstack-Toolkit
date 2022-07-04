@@ -97,7 +97,7 @@ Link text and URLs for the application menu can be configured using the locale f
 Two footer styles are supported:
 
 - `default`, the standard Ontario.ca footer.
-- `expanded`, a footer including the standard content that can also be customized with additional content using the template in `src/_includes/app/_footer_expanded.njk`.
+- `expanded`, a footer including the standard content that can also be customized with additional content using the template in `src/_includes/app/_footer_expanded.njk`. The additional content included is an example only.
 
 The footer style is set in `src/_data/app/app-globals.js`.
 
