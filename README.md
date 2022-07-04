@@ -232,9 +232,14 @@ Jamstack sites deployed to Ontario.ca will need to configure a site root based o
 
 ### Build Output Configuration
 
-Eleventy can be configured to build site outputs that are different from the source input by modifying options in the `.eleventy.js` configuration file. The default state of the toolkit shows some examples of this approach that aligns with deploying Jamstack sites to Ontario.ca:
+Eleventy can be configured to build site outputs that are different from the source input by modifying options in the `.eleventy.js` configuration file, which is made up of a combination of configuration functions and options in two files:
 
-- The `addPassthroughCopy` statement copies the root-level `assets` folder in `src` to the `jamstack-toolkit` folder of the built site
-- The `assetsRoot` variable from `src/_data/globals.js` is used to reference the build location of the assets folder in the templates
+- `.app-eleventy.js` (a point for your application's configuration)
+- `.core-eleventy.js` (core configuration, do not modify)
+
+The default state of the toolkit shows some examples of this approach that aligns with deploying Jamstack sites to Ontario.ca:
+
+- The `addPassthroughCopy` statement in `.app-eleventy.js` copies the root-level `assets` folder in `src` to the `jamstack-toolkit` folder of the built site
+- The `assetsPath` variable from `src/_data/app/app-globals.js` is used to reference the build location of the assets folder in the templates
 
 This configuration simplifies deployment to Ontario.ca by requiring only two routes to be configured, one for each language, with an assets directory shared between the two.
