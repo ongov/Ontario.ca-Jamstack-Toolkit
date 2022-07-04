@@ -7,10 +7,6 @@ const matter = require('gray-matter');
 const markdownIt = require('markdown-it');
 
 coreConfigFunc = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({
-    'src/assets': 'jamstack-toolkit/assets',
-  });
-
   const md = new markdownIt({
     html: true,
   });
@@ -42,7 +38,9 @@ coreConfigFunc = function (eleventyConfig) {
   });
 };
 
-coreConfigObj = {};
+coreConfigObj = {
+  pathPrefix: '/',
+};
 
 module.exports = {
   configFunc: coreConfigFunc,

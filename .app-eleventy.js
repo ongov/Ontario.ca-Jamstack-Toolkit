@@ -1,7 +1,10 @@
-appConfigFunc = function (eleventyConfig) {};
+appConfigFunc = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy({
+    'src/assets': 'jamstack-toolkit/assets',
+  });
+};
 
 appConfigObj = {
-  pathPrefix: '/',
   dir: {
     input: 'src',
     output: 'dist',
