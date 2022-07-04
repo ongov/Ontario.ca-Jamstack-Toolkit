@@ -2,14 +2,9 @@ const core = require('./.core-eleventy.js');
 const app = require('./.app-eleventy.js');
 
 module.exports = function (eleventyConfig) {
-  core.config(eleventyConfig);
+  core.configFunc(eleventyConfig);
+  app.configFunc(eleventyConfig);
 
   // Return your Object options:
-  return {
-    pathPrefix: '/',
-    dir: {
-      input: 'src',
-      output: 'dist',
-    },
-  };
+  return { ...core.configObj, ...app.configObj };
 };

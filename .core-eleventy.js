@@ -42,6 +42,9 @@ coreConfigFunc = function (eleventyConfig) {
   });
 };
 
+coreConfigObj = {};
+
 module.exports = {
-  config: coreConfigFunc,
+  configFunc: coreConfigFunc,
+  configObj: coreConfigObj,
 };
