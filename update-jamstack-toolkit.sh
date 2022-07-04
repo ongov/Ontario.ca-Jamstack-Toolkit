@@ -19,6 +19,7 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
     cp -r $tmp_dir/src/_includes/core/ ./src/_includes/core
     cp -r $tmp_dir/src/assets/css/core/ ./src/assets/css/core
     cp -r $tmp_dir/src/assets/vendor/ ./src/assets/vendor
+    cp -r $tmp_dir/.core-eleventy.js ./.core-eleventy.js
     echo "Removing temp directory in $tmp_dir"
     rm -rf $tmp_dir
 else
