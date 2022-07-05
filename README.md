@@ -84,13 +84,28 @@ For full details on the two header styles available in the Ontario Design System
 - [Ontario.ca header](https://designsystem.ontario.ca/components/detail/ontario-header.html) - _mandatory for all pages that are part of the main ontario.ca website_
 - [Application header](https://designsystem.ontario.ca/components/detail/application-header.html) - _for applications and subsites outside of the main ontario.ca website_
 
-If you need to set the `useApplicationHeader` option only for specific pages, you can specify it in the YAML front matter of the page:
+To set the `useApplicationHeader` option differently for specific pages from the global config, you can specify it in the YAML front matter of the page:
 
 > `useApplicationHeader: true`
 
 #### Links in the Design System Application Subheader
 
 Link text and URLs for the application menu can be configured using the locale file `/src/_data/app/app-locale-strings.js`, under the `applicationHeader.navMenu` key.
+
+### Setting the Footer Style
+
+Two footer styles are supported:
+
+- `default`, the standard Ontario.ca footer.
+- `expanded`, a footer including the standard content that can also be customized with additional content using the template in `src/_includes/app/_footer_expanded.njk`. The additional content included is an example only.
+
+The footer style is set in `src/_data/app/app-globals.js`.
+
+For full details and guidelines on footer styles in the Ontario Design System, consult the [documentation on Ontario.ca footers](https://designsystem.ontario.ca/components/detail/footers.html).
+
+To set the footer style differently for specific pages from the global config, you can specify it in the YAML front matter of the page:
+
+> `footerType: expanded`
 
 ### Translation
 
@@ -217,9 +232,14 @@ Jamstack sites deployed to Ontario.ca will need to configure a site root based o
 
 ### Build Output Configuration
 
-Eleventy can be configured to build site outputs that are different from the source input by modifying options in the `.eleventy.js` configuration file. The default state of the toolkit shows some examples of this approach that aligns with deploying Jamstack sites to Ontario.ca:
+Eleventy can be configured to build site outputs that are different from the source input by modifying options in the `.eleventy.js` configuration file, which is made up of a combination of configuration functions and options in two files:
 
-- The `addPassthroughCopy` statement copies the root-level `assets` folder in `src` to the `jamstack-toolkit` folder of the built site
-- The `assetsRoot` variable from `src/_data/globals.js` is used to reference the build location of the assets folder in the templates
+- `.app-eleventy.js` (a point for your application's configuration)
+- `.core-eleventy.js` (core configuration, do not modify)
+
+The default state of the toolkit shows some examples of this approach that aligns with deploying Jamstack sites to Ontario.ca:
+
+- The `addPassthroughCopy` statement in `.app-eleventy.js` copies the root-level `assets` folder in `src` to the `jamstack-toolkit` folder of the built site
+- The `assetsPath` variable from `src/_data/app/app-globals.js` is used to reference the build location of the assets folder in the templates
 
 This configuration simplifies deployment to Ontario.ca by requiring only two routes to be configured, one for each language, with an assets directory shared between the two.

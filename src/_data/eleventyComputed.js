@@ -1,37 +1,4 @@
-module.exports = {
-  enDateFormatPublished: function () {
-    return Intl.DateTimeFormat('en-CA', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      timeZone: 'UTC',
-    }).format;
-  },
+var core = require('./core/core-eleventyComputed.js');
+var app = require('./app/app-eleventyComputed.js');
 
-  enDateFormatUpdated: function () {
-    return Intl.DateTimeFormat('en-CA', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      timeZone: 'America/Toronto',
-    }).format;
-  },
-
-  frDateFormatPublished: function () {
-    return Intl.DateTimeFormat('fr-CA', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      timeZone: 'UTC',
-    }).format;
-  },
-
-  frDateFormatUpdated: function () {
-    return Intl.DateTimeFormat('fr-CA', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      timeZone: 'America/Toronto',
-    }).format;
-  },
-};
+module.exports = { ...core, ...app };

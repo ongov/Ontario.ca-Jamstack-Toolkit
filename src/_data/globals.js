@@ -17,7 +17,18 @@ module.exports = function () {
     siteRoot: siteRoot,
     userFriendlyEnvString: app().userFriendlyEnvString[env],
     useApplicationHeader: app().useApplicationHeader,
+    footerType: core().allowedFooterTypes[app().footerType],
   };
+
+  if (!globals.footerType) {
+    throw new Error(
+      `'${
+        app().footerType
+      }' is not an allowed footer type; allowed types are ${JSON.stringify(
+        Object.keys(core().allowedFooterTypes)
+      )}`
+    );
+  }
 
   return globals;
 };

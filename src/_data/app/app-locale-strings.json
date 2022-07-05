@@ -19,6 +19,28 @@
       }
     }
   },
+  "expandedFooter": {
+    "ontarioGovernment": {
+      "en": "Ontario Government",
+      "fr": "Gouvernement de l'Ontario"
+    },
+    "ontarioGovernmentDescription": {
+      "en": "The Government of Ontario includes 24 ministries as well as agencies and Crown corporations.  Learn about <a href=\"#\">how the government works.</a>",
+      "fr": "Le gouvernement de l’Ontario inclut 24 ministères ainsi que organismes et sociétés de la Couronne. En savoir plus <a href=\"#\">sur le fonctionnement du gouvernement.</a>"
+    },
+    "contactUs": {
+      "en": "Contact us",
+      "fr": "Contactez-nous"
+    },
+    "contactUsDescription": {
+      "en": "You can contact us through a ministry or send us an email.",
+      "fr": "Vous pouvez nous contacter par un ministère ou envoyez-nous un courrier électronique"
+    },
+    "findAMinistry": {
+      "en": "Find a ministry",
+      "fr": "Trouvez un ministère"
+    }
+  },
   "applicationHeader": {
     "applicationName": {
       "en": "Application name",
