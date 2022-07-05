@@ -21,7 +21,13 @@ module.exports = function () {
   };
 
   if (!globals.footerType) {
-    throw new Error(`'${app().footerType}' is not an allowed footer type`);
+    throw new Error(
+      `'${
+        app().footerType
+      }' is not an allowed footer type; allowed types are ${JSON.stringify(
+        Object.keys(core().allowedFooterTypes)
+      )}`
+    );
   }
 
   return globals;
