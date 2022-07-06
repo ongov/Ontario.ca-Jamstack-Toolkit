@@ -2,7 +2,7 @@
 
 ## Release History
 
-- 0.11.0 (2022-07-05): Total refactoring of footer to take advantage of locale features and eliminate the need for separate English and French templates, refactoring config files into `core` and `app` pattern
+- 0.11.0 (2022-07-05): Total refactoring of footer to take advantage of locale features and eliminate the need for separate English and French templates, refactoring config files into `core` and `app`
 - 0.10.0 (2022-06-22): Total refactoring of header to take advantage of locale features and eliminate the need for separate English and French templates
 - 0.9.0 (2022-06-06): New `_main_content.njk` file in `src/_includes/app` to allow customization of main content area outside of `core`
 - 0.8.2 (2022-06-06): Make page content full-height even when content is short
@@ -20,8 +20,6 @@
 ## About this Toolkit
 
 This toolkit provides a straightforward and flexible starting point for building Jamstack applications that conform to the requirements for integration with [Ontario.ca](https://ontario.ca). Specifically, it focuses on providing a quick means of getting started building a statically-served web front end that can be enriched by back-end APIs.
-
-The separate [Jamstack backing services](https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-backing-services) project provides some example back-end services to demonstrate various patterns.
 
 Existing applications built with the toolkit include:
 
@@ -59,7 +57,7 @@ You can use the `update-jamstack-toolkit.sh` script to pull in certain changes f
 - Any `core` files in `src` - see **Modifying Code, Components, and Styles** for more details
 - The `src/assets/vendor` directory that contains the Ontario Design System files and other third-party dependencies
 
-You should [refer to the Jamstack Application Toolkit repo](https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit) for available release tags and modify the script to use the appropriate one using the `tag` variable.
+You should [refer to the Jamstack Application Toolkit repo](https://github.com/ongov/Ontario.ca-Jamstack-Application-Toolkit) for available release tags and modify the script to use the appropriate one using the `tag` variable.
 
 ## Development
 
