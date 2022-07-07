@@ -2,7 +2,7 @@
 
 ## Release History
 
-- 0.11.0 (2022-07-05): Total refactoring of footer to take advantage of locale features and eliminate the need for separate English and French templates, refactoring config files into `core` and `app`
+- 0.11.0 (2022-07-05): Total refactoring of footer to take advantage of locale features and eliminate the need for separate English and French templates, refactoring config files into `core` and `app` pattern
 - 0.10.0 (2022-06-22): Total refactoring of header to take advantage of locale features and eliminate the need for separate English and French templates
 - 0.9.0 (2022-06-06): New `_main_content.njk` file in `src/_includes/app` to allow customization of main content area outside of `core`
 - 0.8.2 (2022-06-06): Make page content full-height even when content is short
@@ -13,27 +13,38 @@
 - 0.5.0 (2022-05-19): Moved site root configuration into `src/_data/app/app-globals.js` from `src/_data/core/core-globals.js`
 - 0.4.0 (2022-05-17): Add option to use the application header from the Ontario Design System instead of the main Ontario.ca website header
 
-## About the Jamstack Approach
+## The Jamstack Application Architecture and Ontario.ca
 
-"Jamstack" refers to an approach to developing web applications based on decoupled patterns. [Jamstack.org](https://jamstack.org/) is a good starting point for learning about this pattern.
+The "Jamstack" approach to web applications is a modern architecture based on decoupled patterns. The user-facing parts of the application are deployed as client-side browser code and needed features that cannot be supported by client-side code are provided by back-end APIs. This allows user interfaces to be deployed using static web servers, cloud-based storage buckets, or specialized platforms such as [Netlify](https://www.netlify.com/).
+
+The pattern emphasizes security, resilience, scale, and separation of concerns, and is well-suited to one of the main challenges of web development for Ontario.ca, which is to deliver a cohesive, best in class user experience while supporting the wide range of back-end systems, programming languages and approaches used throughout the Government of Ontario.
+
+[Jamstack.org](https://jamstack.org/) is a good starting point for learning more about this pattern. In particular, we recommend you start by reading:
+
+- [What is Jamstack](https://jamstack.org/what-is-jamstack/), a detailed overview of the architectural pattern
+- [Why Jamstack?](https://jamstack.org/why-jamstack/), an explanation of the benefits of the pattern for areas including security, maintainability and developer experience
 
 ## About this Toolkit
 
-This toolkit provides a straightforward and flexible starting point for building Jamstack applications that conform to the requirements for integration with [Ontario.ca](https://ontario.ca). Specifically, it focuses on providing a quick means of getting started building a statically-served web front end that can be enriched by back-end APIs.
+This toolkit provides a straightforward and flexible starting point for building Jamstack applications meeting the requirements for integration with [Ontario.ca](https://ontario.ca). It focuses on providing a quick means to start building a statically-served web front end that can be enriched by back-end APIs.
 
-Existing applications built with the toolkit include:
+The [Ontario Digital Service](https://www.ontario.ca/page/ontario-digital-service) actively uses the Jamstack Toolkit for our own application development for Ontario.ca. Deployed applications built with the toolkit include:
 
-- Public Sector Salary Disclosure
+- [The 2021 Public Sector Salary Disclosure](https://www.ontario.ca/public-sector-salary-disclosure/2021/all-sectors-and-seconded-employees/)
 
-### Tech Used and Rationale
+### Technical Foundations of the Jamstack Toolkit
 
-We have tried to be relatively framework neutral in our choices, in order to provide a skeleton that can be supplemented if necessary with a team's front-end framework of choice.
+The toolkit is designed to integrate well with more complex client-side frameworks a delivery team may want to use, such as [Angular](https://angular.io/) or [React](https://reactjs.org/). We have therefore emphasized lightweight foundations and tried to avoid too many assumptions or framework dependencies. Specifically:
 
-Specifically:
+- We use the [Eleventy](https://www.11ty.dev/) static site generator for handling composition and build, and the [Nunjucks](https://www.11ty.dev/docs/languages/nunjucks/) templating language for building page templates, layouts and reusable components
+- We use the work of the [Ontario Design System](https://designsystem.ontario.ca/) to allow the quick construction of applications that match the [Ontario.ca](http://ontario.ca/) guidelines for look and feel, behaviour, and overall user experience
+- We use plain Javascript or the lightweight [Alpine.js](https://alpinejs.dev/) framework for any Javascript usage
 
-- We use the [Eleventy](https://www.11ty.dev/) static site generator for handling composition and build
-- We use the lightweight [Alpine.js](https://alpinejs.dev/) framework or plain Javascript for any Javascript usage
-- We use the work of the [Ontario Design System](https://designsystem.ontario.ca/) to allow the quick construction of applications that match the [Ontario.ca](http://ontario.ca/) look and feel guidelines
+### Learning to Use the Jamstack Toolkit
+
+An understanding of modern browser-side technologies (HTML, CSS and Javascript) is a starting point for working with the Jamstack toolkit. It is also helpful to have some experienced in Javascript development generally using [Node.js](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/).
+
+Because Eleventy is a major foundation of the toolkit, we [recommend Eleventy's documentation as a starting point](https://www.11ty.dev/docs/) for understanding Eleventy's conventions specifically, and more generally the use of static site generators to precompile user interfaces. The toolkit follows Eleventy's defaults wherever possible.
 
 ## Prerequisites and Installation
 
@@ -57,7 +68,7 @@ You can use the `update-jamstack-toolkit.sh` script to pull in certain changes f
 - Any `core` files in `src` - see **Modifying Code, Components, and Styles** for more details
 - The `src/assets/vendor` directory that contains the Ontario Design System files and other third-party dependencies
 
-You should [refer to the Jamstack Application Toolkit repo](https://github.com/ongov/Ontario.ca-Jamstack-Application-Toolkit) for available release tags and modify the script to use the appropriate one using the `tag` variable.
+You should [refer to the Jamstack Application Toolkit repo](https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit) for available release tags and modify the script to use the appropriate one using the `tag` variable.
 
 ## Development
 
