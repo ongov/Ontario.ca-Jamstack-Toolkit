@@ -42,9 +42,9 @@ The toolkit is designed to integrate well with more complex client-side framewor
 
 ### Learning to Use the Jamstack Toolkit
 
-An understanding of modern browser-side technologies (HTML, CSS and Javascript) is a starting point for working with the Jamstack toolkit. It is also helpful to have some experienced in Javascript development generally using [Node.js](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/).
+An understanding of modern browser-side technologies (HTML, CSS and Javascript) is a starting point for working with the Jamstack toolkit. It is also helpful to have experience in Javascript development generally using [Node.js](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/).
 
-Because Eleventy is a major foundation of the toolkit, we [recommend Eleventy's documentation as a starting point](https://www.11ty.dev/docs/) for understanding Eleventy's conventions specifically, and more generally the use of static site generators to precompile user interfaces. The toolkit follows Eleventy's defaults wherever possible.
+Because Eleventy is a major foundation of the toolkit, we [recommend Eleventy's documentation as a starting point](https://www.11ty.dev/docs/) for understanding Eleventy's conventions, and more generally the use of static site generators to precompile user interfaces. The toolkit follows Eleventy's default behaviour wherever possible.
 
 ## Prerequisites and Installation
 
