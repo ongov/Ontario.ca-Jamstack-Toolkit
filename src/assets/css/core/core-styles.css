@@ -1,4 +1,4 @@
-@import '../../vendor/ontario-design-system/styles/ds-theme.css';
+@import '../../vendor/ontario-design-system/styles/ds-theme.min.css';
 /* Resets */
 html,
 body {
