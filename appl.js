@@ -29,9 +29,8 @@ program
   .argument('<tag>', 'tag to update to')
   .action((tag, options) => {
     const tmpDirName = uuidv4();
-    console.log(`tag: ${tag}`);
+    console.log(`Updating to branch/tag: ${tag}`);
     console.log(`options: ${options}`);
-    console.log(`tmpDirName: ${tmpDirName}`);
 
     var coreFileList = [
       [`./${tmpDirName}/src/_data/core`, './src/_data/core'],
@@ -46,6 +45,9 @@ program
       tmpDirName,
       { '--depth': 1, '--branch': `${tag}` },
       function () {
+        console.log(
+          `Checked out tag/branch ${tag} to temporary directory ${tmpDirName}`
+        );
         coreFileList.forEach((filePathStruct, idx) => {
           console.log(
             `Replacing ${filePathStruct[1]} with ${filePathStruct[0]}`
