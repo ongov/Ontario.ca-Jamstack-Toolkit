@@ -1,6 +1,6 @@
 {
   "name": "jamstack-application-toolkit",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "The Ontario.ca Service Integration Jamstack application toolkit.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "htmlValidateSrc": "html-validate src/**/*.njk",
     "htmlValidateDist": "html-validate dist/**/*.html",
     "formatCode": "npx prettier --write .",
-    "installDesignSystem": "export DS_VERSION=0.12.8 && export DS_ZIP_NAME=ontario-design-system.zip && export VEN_DIR=src/assets/vendor && export DS_UNZIP_DIR=$VEN_DIR/ontario-design-system && curl https://designsystem.ontario.ca/dist/ontario-design-system-dist-$DS_VERSION.zip > $VEN_DIR/$DS_ZIP_NAME && unzip -o $VEN_DIR/$DS_ZIP_NAME -d $DS_UNZIP_DIR && rm $VEN_DIR/$DS_ZIP_NAME && rm $DS_UNZIP_DIR/version-release-notes-*.* && rm -rf $DS_UNZIP_DIR/html-samples && rm $DS_UNZIP_DIR/index.html && rm $DS_UNZIP_DIR/package.json && rm -rf $DS_UNZIP_DIR/styles/components && rm -rf $DS_UNZIP_DIR/styles/sass"
+    "installDesignSystem": "export DS_VERSION=0.12.10 && export DS_ZIP_NAME=ontario-design-system.zip && export VEN_DIR=src/assets/vendor && export DS_UNZIP_DIR=$VEN_DIR/ontario-design-system && curl https://designsystem.ontario.ca/dist/ontario-design-system-dist-$DS_VERSION.zip > $VEN_DIR/$DS_ZIP_NAME && unzip -o $VEN_DIR/$DS_ZIP_NAME -d $DS_UNZIP_DIR && rm $VEN_DIR/$DS_ZIP_NAME && rm $DS_UNZIP_DIR/version-release-notes-*.* && rm -rf $DS_UNZIP_DIR/html-samples && rm $DS_UNZIP_DIR/index.html && rm $DS_UNZIP_DIR/package.json && rm -rf $DS_UNZIP_DIR/styles/components && rm -rf $DS_UNZIP_DIR/styles/sass && rm -rf $DS_UNZIP_DIR/fonts/ds-fonts.zip"
   },
   "author": "Ontario Digital Service",
   "license": "Apache 2.0",
