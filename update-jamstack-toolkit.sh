@@ -3,7 +3,9 @@
 # Change to the tagged release or branch version of
 # https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit.git
 # that you want to update to
-tag="r0.11.0"
+tag="r0.12.0"
+
+echo "*** NOTE ***: this script is deprecated, please use jamon.js instead"
 
 echo "Ontario.ca Jamstack Toolkit - Update to $tag"
 echo "This will replace the 'core' and 'vendor' directory contents of the current project; continue (y/N)?"
