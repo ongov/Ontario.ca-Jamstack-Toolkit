@@ -15,6 +15,7 @@ program
   .command('update')
   .description('Update an existing Ontario.ca Jamstack project')
   .argument('<tagOrBranch>', 'tag or branch to update to')
+  .option('-r, --repo <repo>', 'repo URL to use')
   .action((tagOrBranch, options) => {
     console.log(
       `This will replace the 'core' and 'vendor' directories/files of the current project to the versions in Jamstack Toolkit version ${tagOrBranch}`
@@ -42,11 +43,20 @@ program
           [`./${tmpDirName}/.core-eleventy.js`, './.core-eleventy.js'],
         ];
 
+        var defaultRepoUrl =
+          'https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit';
+        var repoUrl = options.repo ? options.repo : defaultRepoUrl;
+
         git().clone(
-          'https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit',
+          repoUrl,
           tmpDirName,
           { '--depth': 1, '--branch': `${tagOrBranch}` },
-          function () {
+          function (error) {
+            if (error) {
+              console.log('Error cloning specified repo');
+              console.log(error);
+              process.exit();
+            }
             console.log(
               `Checked out tag/branch ${tagOrBranch} to temporary directory ${tmpDirName}`
             );
