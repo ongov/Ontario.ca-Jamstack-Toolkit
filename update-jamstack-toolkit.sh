@@ -5,7 +5,7 @@
 # that you want to update to
 tag="r0.12.0"
 
-echo "*** NOTE ***: this script is deprecated, please use jamon.js instead"
+echo "*** NOTE ***: this script is deprecated, please use jam-on.mjs instead"
 
 echo "Ontario.ca Jamstack Toolkit - Update to $tag"
 echo "This will replace the 'core' and 'vendor' directory contents of the current project; continue (y/N)?"
