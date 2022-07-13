@@ -27,10 +27,10 @@ program
 program
   .command('update')
   .description('Update an existing Ontario.ca Jamstack project')
-  .argument('<tag>', 'tag to update to')
-  .action((tag, options) => {
+  .argument('<tagOrBranch>', 'tag or branch to update to')
+  .action((tagOrBranch, options) => {
     console.log(
-      `This will replace the 'core' and 'vendor' directories/files of the current project to the versions in Jamstack Toolkit version ${tag}`
+      `This will replace the 'core' and 'vendor' directories/files of the current project to the versions in Jamstack Toolkit version ${tagOrBranch}`
     );
     inquirer
       .prompt({
@@ -45,7 +45,7 @@ program
           process.exit();
         }
         const tmpDirName = uuidv4();
-        console.log(`Updating to branch/tag: ${tag}`);
+        console.log(`Updating to branch/tag: ${tagOrBranch}`);
 
         var coreFileList = [
           [`./${tmpDirName}/src/_data/core`, './src/_data/core'],
@@ -58,10 +58,10 @@ program
         git().clone(
           'https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit',
           tmpDirName,
-          { '--depth': 1, '--branch': `${tag}` },
+          { '--depth': 1, '--branch': `${tagOrBranch}` },
           function () {
             console.log(
-              `Checked out tag/branch ${tag} to temporary directory ${tmpDirName}`
+              `Checked out tag/branch ${tagOrBranch} to temporary directory ${tmpDirName}`
             );
             coreFileList.forEach((filePathStruct, idx) => {
               console.log(
