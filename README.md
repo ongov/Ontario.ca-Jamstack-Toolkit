@@ -73,6 +73,33 @@ You should [refer to the Jamstack Application Toolkit repo](https://git.ontariog
 
 ## Development
 
+### Toolkit File Structure
+
+- `src` [folder]
+  - `_data` [folder]
+  - `_includes` [folder]
+  - `assets` [folder]
+  - `example-pages` [folder]
+  - `pages-dexemple` [folder]
+  - `index.njk`
+- `test` [folder]
+  - `test.js`
+- `.app-eleventy.js`
+- `.core-eleventy.js`
+- `.eleventy.js`
+- `.gitignore`
+- `.htmlvalidate.json`
+- `.htmlvalidateingore`
+- `.nvmrc`
+- `.pre-commit-config.yaml`
+- `.prettierignore`
+- `.prettierrc.json`
+- `CONTRIBUTING.md`
+- `LICENSE.txt`
+- `package-lock.json`
+- `package.json`
+- `update-jamstack-toolkit.sh`
+
 ### Serving and Rebuilding the Application
 
 `npm run serve` will serve the generated application locally, updating and rebuilding as changes are made - the generated files will appear in the `dist` directory.
