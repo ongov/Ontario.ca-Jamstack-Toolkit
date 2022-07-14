@@ -1,7 +1,8 @@
 const assert = require('assert');
 const fs = require('fs');
 
-const odsDir = 'dist/example-pages/jamstack-toolkit/assets/vendor/ontario-design-system';
+const odsDir =
+  'dist/example-pages/jamstack-toolkit/assets/vendor/ontario-design-system';
 
 describe('Site generation', function () {
   describe('Top-level redirect page present', function () {
@@ -17,7 +18,9 @@ describe('Site generation', function () {
   describe('French-language example page present', function () {
     it('should generate a French-language example page', function () {
       assert(
-        fs.existsSync('dist/example-pages/boite-a-outils-dapplication-jamstack/index.html')
+        fs.existsSync(
+          'dist/pages-dexemple/boite-a-outils-dapplication-jamstack/index.html'
+        )
       );
     });
   });
@@ -37,7 +40,11 @@ describe('Site generation', function () {
   });
   describe('Site CSS file present', function () {
     it('Should copy over the site CSS file', function () {
-      assert(fs.existsSync('dist/example-pages/jamstack-toolkit/assets/css/style.css'));
+      assert(
+        fs.existsSync(
+          'dist/example-pages/jamstack-toolkit/assets/css/style.css'
+        )
+      );
     });
   });
 });
