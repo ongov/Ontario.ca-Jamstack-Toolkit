@@ -89,9 +89,25 @@ You should [refer to the Jamstack Application Toolkit repo](https://git.ontariog
     - `globals.js`
   - `_includes` [folder]
     - `app` [folder]
-      - ...
+      - `components` [folder]
+        - `_example_page_list.njk`
+      - `_footer_expanded_content.njk`
+      - `_head_custom.njk`
+      - `_main_content.njk`
     - `core` [folder]
-      - ...
+      - `components` [folder]
+        - `_page_dates.njk`
+      - `_footer_default.njk`
+      - `_footer_expanded.njk`
+      - `_footer_standard_links.njk`
+      - `_footer.njk`
+      - `_header_application-subheader.njk`
+      - `_header_menu_global-nav-items.njk`
+      - `_header_menu_lang-toggle.njk`
+      - `_header_menu.njk`
+      - `_header.njk`
+      - `_icon_definitions.njk`
+      - `layout.njk`
   - `assets` [folder]
     - ...
   - `example-pages` [folder]
