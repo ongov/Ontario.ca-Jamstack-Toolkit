@@ -4,6 +4,7 @@
     "void-style": "off",
     "prefer-button": "off",
     "svg-focusable": "off",
-    "no-trailing-whitespace": "off"
+    "no-trailing-whitespace": "off",
+    "long-title": "off"
   }
 }

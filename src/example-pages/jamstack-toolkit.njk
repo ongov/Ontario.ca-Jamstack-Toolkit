@@ -1,4 +1,6 @@
 ---
+tags: example page
+example_page_sort_order: 1
 layout: core/layout.njk
 title: "Ontario.ca Jamstack Application Toolkit"
 fr_page_url: "/pages-dexemple/boite-a-outils-dapplication-jamstack"
@@ -10,3 +12,5 @@ published_date: 2022-05-07
 <div>
   <p>{{ "homePage.environment.firstHalf" | localeString}}<strong>{{ globals.userFriendlyEnvString }}</strong>{{ "homePage.environment.secondHalf" | localeString}}</p>
 </div>
+
+{%- include "app/components/_example_page_list.njk" -%}
