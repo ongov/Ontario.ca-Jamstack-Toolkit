@@ -77,10 +77,23 @@ You should [refer to the Jamstack Application Toolkit repo](https://git.ontariog
 
 - `src` [folder]
   - `_data` [folder]
+    - `app` [folder]
+      - ...
+    - `core` [folder]
+      - ...
+    - `eleventyComputed.js`
+    - `globals.js`
   - `_includes` [folder]
+    - `app` [folder]
+      - ...
+    - `core` [folder]
+      - ...
   - `assets` [folder]
+    - ...
   - `example-pages` [folder]
+    - ...
   - `pages-dexemple` [folder]
+    - ...
   - `index.njk`
 - `test` [folder]
   - `test.js`
