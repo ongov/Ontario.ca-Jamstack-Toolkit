@@ -118,9 +118,11 @@ You should [refer to the Jamstack Application Toolkit repo](https://git.ontariog
     - `vendor` [folder]
       - `ontario-design-system` [folder]
   - `example-pages` [folder]
-    - ...
+    - `jamstack-toolkit-app-header.njk`
+    - `jamstack-toolkit.njk`
   - `pages-dexemple` [folder]
-    - ...
+    - `boite-a-outils-dapplication-jamstack-app-header.njk`
+    - `boite-a-outils-dapplication-jamstack.njk`
   - `index.njk`
 - `test` [folder]
   - `test.js`
