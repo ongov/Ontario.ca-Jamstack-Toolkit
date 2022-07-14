@@ -78,9 +78,13 @@ You should [refer to the Jamstack Application Toolkit repo](https://git.ontariog
 - `src` [folder]
   - `_data` [folder]
     - `app` [folder]
-      - ...
+      - `app-eleventyComputed.js`
+      - `app-globals.js`
+      - `app-locale-strings.json`
     - `core` [folder]
-      - ...
+      - `core-eleventyComputed.js`
+      - `core-globals.js`
+      - `core-locale-strings.json`
     - `eleventyComputed.js`
     - `globals.js`
   - `_includes` [folder]
