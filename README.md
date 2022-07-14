@@ -109,7 +109,14 @@ You should [refer to the Jamstack Application Toolkit repo](https://git.ontariog
       - `_icon_definitions.njk`
       - `layout.njk`
   - `assets` [folder]
-    - ...
+    - `css` [folder]
+      - `app` [folder]
+        - `app-styles.css`
+      - `core` [folder]
+        - `core-styles.css`
+      - `style.css`
+    - `vendor` [folder]
+      - `ontario-design-system` [folder]
   - `example-pages` [folder]
     - ...
   - `pages-dexemple` [folder]
