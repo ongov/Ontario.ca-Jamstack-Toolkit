@@ -1,6 +1,6 @@
 appConfigFunc = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
-    'src/assets': 'example-pages/jamstack-toolkit/assets',
+    'src/assets': 'example-pages/assets',
   });
 };
 

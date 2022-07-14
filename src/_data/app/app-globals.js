@@ -16,7 +16,7 @@ module.exports = function () {
   var footerType = 'default';
 
   // Relative to siteRoot
-  var assetsPath = '/example-pages/jamstack-toolkit/assets';
+  var assetsPath = '/example-pages/assets';
 
   return {
     userFriendlyEnvString: userFriendlyEnvString,
