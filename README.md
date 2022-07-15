@@ -122,36 +122,37 @@ A freshly cloned repository includes the following:
   - `assets` [folder] - folder for assets such as CSS, client-side Javascript and images that will be copied to the built application without processing by Eleventy.
     - `css` [folder] - folder for CSS
       - `app` [folder] - folder for application-specific CSS
-        - `app-styles.css` - CSS file for application-specific CSS
-      - `core` [folder]
-        - `core-styles.css`
-      - `style.css`
-    - `vendor` [folder]
-      - `ontario-design-system` [folder]
-  - `example-pages` [folder]
-    - `jamstack-toolkit-app-header.njk`
-    - `jamstack-toolkit.njk`
-  - `pages-dexemple` [folder]
-    - `boite-a-outils-dapplication-jamstack-app-header.njk`
-    - `boite-a-outils-dapplication-jamstack.njk`
-  - `index.njk`
-- `test` [folder]
-  - `test.js`
-- `.app-eleventy.js`
-- `.core-eleventy.js`
-- `.eleventy.js`
-- `.gitignore`
-- `.htmlvalidate.json`
-- `.htmlvalidateingore`
-- `.nvmrc`
-- `.pre-commit-config.yaml`
-- `.prettierignore`
-- `.prettierrc.json`
-- `CONTRIBUTING.md`
-- `LICENSE.txt`
-- `package-lock.json`
-- `package.json`
-- `update-jamstack-toolkit.sh`
+        - `app-styles.css` - file for application-specific CSS
+      - `core` [folder] - folder for Jamstack Toolkit core CSS
+        - `core-styles.css` - file for Jamstack Toolkit core CSS (including Ontario Design System CSS import)
+      - `style.css` - CSS file made up of `app-styles.css` and `core-styles.css`. Included in the header section of the layout template
+    - `vendor` [folder] - folder for vendor/third party assets
+      - `ontario-design-system` [folder] - [Ontario Design System](https://designsystem.ontario.ca/) assets used by the Jamstack Toolkit (file contents not detailed in full, refer to Ontario Design System documentation)
+  - `example-pages` [folder] - English-language folder of example pages
+    - `jamstack-toolkit-app-header.njk` - example page using the application header and expanded footer
+    - `jamstack-toolkit.njk` - exampe page using the standard header and footer
+  - `pages-dexemple` [folder] - French-language folder of example pages
+    - `boite-a-outils-dapplication-jamstack-app-header.njk` - example page using the application header and expanded footer
+    - `boite-a-outils-dapplication-jamstack.njk` - exampe page using the standard header and footer
+  - `index.njk` - redirect page from site root to `/jamstack-toolkit` page
+- `test` [folder] - folder for holding tests
+  - `test.js` - example test file using the [Mocha](https://mochajs.org/) test framework
+- `.app-eleventy.js` - application-level Eleventy configuration file
+- `.core-eleventy.js` - Jamstack Toolkit core Eleventy configuration file
+- `.eleventy.js` - [Eleventy configuration file](https://www.11ty.dev/docs/config/) made up of `.app-eleventy.js` and `.core-eleventy.js`
+- `.gitignore` - project [Git Ignore](https://git-scm.com/docs/gitignore) configuration file
+- `.htmlvalidate.json` - [html-validate](https://www.npmjs.com/package/html-validate) configuration file
+- `.htmlvalidateingore` - ignore file for `html-validate`
+- `.nvmrc` - [Node Version Manager](https://github.com/nvm-sh/nvm) config file
+- `.pre-commit-config.yaml` - [pre-commit](https://pre-commit.com/) config file
+- `.prettierignore` - ignore file for Prettier code formatter
+- `.prettierrc.json` - [Prettier](https://prettier.io/) code formatter config file
+- `CONTRIBUTING.md` - contribution guidelines
+- `LICENSE.txt` - project open source license
+- `package-lock.json` - [NPM lock file](https://docs.npmjs.com/cli/v8/configuring-npm/package-lock-json)
+- `package.json` - [NPM configuration file](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
+- `README.md` - main product README file (you are reading this right now)
+- `update-jamstack-toolkit.sh` - update script for updating Jamstack Toolkit core to a newer version
 
 ### Serving and Rebuilding the Application
 
