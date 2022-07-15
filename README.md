@@ -119,10 +119,10 @@ A freshly cloned repository includes the following:
       - `_header.njk` - header layouts wrapper
       - `_icon_definitions.njk` - Ontario Design System icon definitions
       - `layout.njk` - overall layout template
-  - `assets` [folder]
-    - `css` [folder]
-      - `app` [folder]
-        - `app-styles.css`
+  - `assets` [folder] - folder for assets such as CSS, client-side Javascript and images that will be copied to the built application without processing by Eleventy.
+    - `css` [folder] - folder for CSS
+      - `app` [folder] - folder for application-specific CSS
+        - `app-styles.css` - CSS file for application-specific CSS
       - `core` [folder]
         - `core-styles.css`
       - `style.css`
