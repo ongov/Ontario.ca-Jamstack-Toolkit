@@ -2,6 +2,7 @@
 
 ## Release History
 
+- 0.13.0 (2022-07-15): Add documentation of the file structure, reorganize the example pages, add an example app-level component
 - 0.12.0 (2022-07-12): Update to latest version of Ontario Design System
 - 0.11.0 (2022-07-05): Total refactoring of footer to take advantage of locale features and eliminate the need for separate English and French templates, refactoring config files into `core` and `app` pattern
 - 0.10.0 (2022-06-22): Total refactoring of header to take advantage of locale features and eliminate the need for separate English and French templates
@@ -69,27 +70,97 @@ You can use the `jam-on.mjs` command line tool to pull in certain changes from t
 
 Specifically, this script will update:
 
-- Any `core` files in `src` - see **Modifying Code, Components, and Styles** for more details
-- The `src/assets/vendor` directory that contains the Ontario Design System files and any other third-party dependencies
-
-The scripts
+- Any `core` files or folders in `src` - see **Modifying Code, Components, and Styles** for more details
+- The `src/assets/vendor` directory that contains the Ontario Design System files and other third-party dependencies
 
 You should [refer to the Jamstack Application Toolkit repo](https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit) for available release tags.
 
 ## Development
 
+### `core` and `app`
+
+The project divide resources into `core` and `app` directories and files.
+
+- Avoid modifiying `core` files and directories to make it easier to bring future improvements from new versions of the Jamstack Toolkit into your application.
+- `app` files and directories are starting points for customizations your own product will need, especially when intersecting with `core` components
+  - `src/_includes/app/_head_custom.njk` allows the insertion of additional tags into the `<head>` portion of your templates
+  - `src/_includes/app/_main_content.njk` allows you to customize layout and otherwise in the main content area between the standard Ontario Design System header and footer components
+
+### Understanding the Toolkit File Structure
+
+A freshly cloned repository includes the following:
+
+- `src` [folder] - source code folder for the static user interface.
+  - `_data` [folder] - [Eleventy global data files folder](https://www.11ty.dev/docs/data-global/)
+    - `app` [folder] - data files folder for the application
+      - `app-eleventyComputed.js` - [Eleventy computed properties](https://www.11ty.dev/docs/data-computed/) for the application
+      - `app-globals.js` - globals data file for the application
+      - `app-locale-strings.json` - locale strings for the application
+    - `core` [folder] - data files folder for the Jamstack Toolkit core
+      - `core-eleventyComputed.js` - Eleventy computed properties for the Jamstack Toolkit core
+      - `core-globals.js` - globals data file for the Jamstack Toolkit core
+      - `core-locale-strings.json` - locale strings for the Jamstack Toolkit core
+    - `eleventyComputed.js` - combined computed properties from `app-eleventyComputed.js` and `core-eleventyComputed.js`
+    - `globals.js` - combined globals data file from `app-globals.js` and `core-globals.js`
+  - `_includes` [folder] - folder for [reusable templates used by Eleventy](https://www.11ty.dev/docs/templates/)
+    - `app` [folder] - folder for application-specific templates
+      - `components` [folder] - folder for reusable component templates
+        - `_example_page_list.njk` - example component that outputs a list of site pages and links
+      - `_footer_expanded_content.njk` - customizable expanded footer content template
+      - `_head_custom.njk` - customizable template to insert additional tags in the `<head>` section of pages
+      - `_main_content.njk` - customizable template for layout of the main content area between the header and footer
+    - `core` [folder] - folder for templates used in the Jamstack Toolkit core
+      - `components` [folder] - folder for components used in the Jamstack toolkit core
+        - `_page_dates.njk` - component for managing page publication and modified dates
+      - `_footer_default.njk` - default footer layout
+      - `_footer_expanded.njk` - expanded footer layout
+      - `_footer_standard_links.njk` - standard links used in the footer
+      - `_footer.njk` - footer layouts wrapper
+      - `_header_application-subheader.njk` - application subheader layout
+      - `_header_menu_global-nav-items.njk` - global navigation items for the standard header menu
+      - `_header_menu_lang-toggle.njk` - header menu language toggle
+      - `_header_menu.njk` - header menu layouts
+      - `_header.njk` - header layouts wrapper
+      - `_icon_definitions.njk` - Ontario Design System icon definitions
+      - `layout.njk` - overall layout template
+  - `assets` [folder] - folder for assets such as CSS, client-side Javascript and images that will be copied to the built application without processing by Eleventy.
+    - `css` [folder] - folder for CSS
+      - `app` [folder] - folder for application-specific CSS
+        - `app-styles.css` - file for application-specific CSS
+      - `core` [folder] - folder for Jamstack Toolkit core CSS
+        - `core-styles.css` - file for Jamstack Toolkit core CSS (including Ontario Design System CSS import)
+      - `style.css` - CSS file made up of `app-styles.css` and `core-styles.css`. Included in the header section of the layout template
+    - `vendor` [folder] - folder for vendor/third party assets
+      - `ontario-design-system` [folder] - [Ontario Design System](https://designsystem.ontario.ca/) assets used by the Jamstack Toolkit (file contents not detailed in full, refer to Ontario Design System documentation)
+  - `example-pages` [folder] - English-language folder of example pages
+    - `jamstack-toolkit-app-header.njk` - example page using the application header and expanded footer
+    - `jamstack-toolkit.njk` - exampe page using the standard header and footer
+  - `pages-dexemple` [folder] - French-language folder of example pages
+    - `boite-a-outils-dapplication-jamstack-app-header.njk` - example page using the application header and expanded footer
+    - `boite-a-outils-dapplication-jamstack.njk` - exampe page using the standard header and footer
+  - `index.njk` - redirect page from site root to `/jamstack-toolkit` page
+- `test` [folder] - folder for holding tests
+  - `test.js` - example test file using the [Mocha](https://mochajs.org/) test framework
+- `.app-eleventy.js` - application-level Eleventy configuration file
+- `.core-eleventy.js` - Jamstack Toolkit core Eleventy configuration file
+- `.eleventy.js` - [Eleventy configuration file](https://www.11ty.dev/docs/config/) made up of `.app-eleventy.js` and `.core-eleventy.js`
+- `.gitignore` - project [Git Ignore](https://git-scm.com/docs/gitignore) configuration file
+- `.htmlvalidate.json` - [html-validate](https://www.npmjs.com/package/html-validate) configuration file
+- `.htmlvalidateingore` - ignore file for `html-validate`
+- `.nvmrc` - [Node Version Manager](https://github.com/nvm-sh/nvm) config file
+- `.pre-commit-config.yaml` - [pre-commit](https://pre-commit.com/) config file
+- `.prettierignore` - ignore file for Prettier code formatter
+- `.prettierrc.json` - [Prettier](https://prettier.io/) code formatter config file
+- `CONTRIBUTING.md` - contribution guidelines
+- `LICENSE.txt` - project open source license
+- `package-lock.json` - [NPM lock file](https://docs.npmjs.com/cli/v8/configuring-npm/package-lock-json)
+- `package.json` - [NPM configuration file](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
+- `README.md` - main product README file (you are reading this right now)
+- `update-jamstack-toolkit.sh` - update script for updating Jamstack Toolkit core to a newer version
+
 ### Serving and Rebuilding the Application
 
 `npm run serve` will serve the generated application locally, updating and rebuilding as changes are made - the generated files will appear in the `dist` directory.
-
-### Modifying Code, Components, and Styles
-
-The project divide resources into `core` and `app` directories in various places.
-
-- Avoid modfiying `core` files if you want an easier process of bringing in future improvements from new versions of the toolkit
-- `app` files are starting points for customizations your own product will need, especially when intersecting with `core` components
-  - `src/_includes/app/_head_custom.njk` allows the insertion of additional tags into the `<head>` portion of your templates
-  - `src/_includes/app/_main_content.njk` allows you to customize layout and otherwise in the main content area between the standard Ontario Design System header and footer components
 
 ### Setting the Header Style
 

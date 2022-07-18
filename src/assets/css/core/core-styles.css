@@ -15,3 +15,11 @@ body {
 .maincontent__container {
   flex-grow: 1;
 }
+
+.right {
+  text-align: right;
+}
+
+.small {
+  font-size: small;
+}

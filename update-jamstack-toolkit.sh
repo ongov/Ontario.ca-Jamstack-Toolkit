@@ -3,7 +3,7 @@
 # Change to the tagged release or branch version of
 # https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit.git
 # that you want to update to
-tag="r0.12.0"
+tag="r0.13.0"
 
 echo "*** NOTE ***: this script is deprecated, please use jam-on.mjs instead"
 
