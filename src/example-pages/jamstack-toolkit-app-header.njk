@@ -1,0 +1,18 @@
+---
+tags: example page
+example_page_sort_order: 3
+layout: core/layout.njk
+title: "Ontario.ca Jamstack Application Toolkit (App Header and Extended Footer)"
+fr_page_url: "/pages-dexemple/boite-a-outils-dapplication-jamstack-app-header"
+date: git Last Modified
+published_date: 2022-06-16
+useApplicationHeader: true
+footerType: expanded
+---
+<h2>{{ "homePage.title" | localeString}}</h2>
+<p>{{ "homePage.welcome" | localeString | markdown | safe}}</p>
+<div>
+  <p>{{ "homePage.environment.firstHalf" | localeString}}<strong>{{ globals.userFriendlyEnvString }}</strong>{{ "homePage.environment.secondHalf" | localeString}}</p>
+</div>
+
+{%- include "app/components/_example_page_list.njk" -%}
