@@ -2,6 +2,7 @@
 
 ## Release History
 
+- 0.14.0 (2022-07-21): Convert update script from shell to Node-based (`jam-on.mjs`)
 - 0.13.0 (2022-07-15): Add documentation of the file structure, reorganize the example pages, add an example app-level component
 - 0.12.0 (2022-07-12): Update to latest version of Ontario Design System
 - 0.11.0 (2022-07-05): Total refactoring of footer to take advantage of locale features and eliminate the need for separate English and French templates, refactoring config files into `core` and `app` pattern
@@ -65,12 +66,15 @@ At this time, we recommend the following steps:
 
 ### Updating Your Project from Future Development of the Jamstack Application Toolkit
 
-You can use the `update-jamstack-toolkit.sh` script to pull in certain changes from the Jamstack Application toolkit repo. Specifically, this script will update:
+You can use the `jam-on.mjs` command line tool to pull in certain changes from the Jamstack Application toolkit repo, using this command:
+`node jam-on.mjs update [desired tag or branch]`
+
+Specifically, this script will update:
 
 - Any `core` files or folders in `src` - see **Modifying Code, Components, and Styles** for more details
 - The `src/assets/vendor` directory that contains the Ontario Design System files and other third-party dependencies
 
-You should [refer to the Jamstack Application Toolkit repo](https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit) for available release tags and modify the script to use the appropriate one using the `tag` variable.
+You should [refer to the Jamstack Application Toolkit repo](https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit) for available release tags.
 
 ## Development
 
