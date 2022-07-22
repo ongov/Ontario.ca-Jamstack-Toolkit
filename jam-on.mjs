@@ -15,7 +15,10 @@ program
   .command('update')
   .description('Update an existing Ontario.ca Jamstack project')
   .argument('<tagOrBranch>', 'tag or branch to update to (required)')
-  .option('-r, --repo <repo>', 'repo URL to use (optional)')
+  .option(
+    '-r, --repo <repo>',
+    'repo URL to use, defaults to ODS GitLab (optional)'
+  )
   .action((tagOrBranch, options) => {
     console.log(
       `This will replace the 'core' and 'vendor' directories/files of the current project to the versions in Jamstack Toolkit version ${tagOrBranch}`
