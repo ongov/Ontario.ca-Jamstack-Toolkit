@@ -12,6 +12,34 @@ program
   .version('0.2.0');
 
 program
+  .command('new')
+  .description(
+    'put newly cloned toolkit project into a ready state for development'
+  )
+  .action(() => {
+    console.log(
+      'This will remove all existing .git information and the example pages'
+    );
+    inquirer
+      .prompt({
+        type: 'confirm',
+        name: 'doNew',
+        default: false,
+        message: 'Proceed?',
+      })
+      .then((answers) => {
+        if (!answers.doNew) {
+          console.log('Farewell!');
+          process.exit();
+        }
+        console.log('Doing new project...');
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
+
+program
   .command('update')
   .description('Update an existing Ontario.ca Jamstack project')
   .argument('<tagOrBranch>', 'tag or branch to update to (required)')
