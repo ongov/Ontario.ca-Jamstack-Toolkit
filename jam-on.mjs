@@ -32,7 +32,15 @@ program
           console.log('Farewell!');
           process.exit();
         }
-        console.log('Doing new project...');
+        console.log('Creating new project...');
+        const exampleFilesList = [
+          'src/_includes/app/components/_example_page_list.njk',
+          'src/example-pages',
+          'src/pages-dexemple',
+        ];
+        exampleFilesList.forEach((filePath, index) => {
+          fs.removeSync(filePath);
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -66,7 +74,7 @@ program
         const tmpDirName = uuidv4();
         console.log(`Updating to branch/tag: ${tagOrBranch}`);
 
-        var coreFileList = [
+        const coreFileList = [
           [`./${tmpDirName}/src/_data/core`, './src/_data/core'],
           [`./${tmpDirName}/src/_includes/core`, './src/_includes/core'],
           [`./${tmpDirName}/src/assets/css/core`, './src/assets/css/core'],
@@ -74,9 +82,9 @@ program
           [`./${tmpDirName}/.core-eleventy.js`, './.core-eleventy.js'],
         ];
 
-        var defaultRepoUrl =
+        const defaultRepoUrl =
           'https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit';
-        var repoUrl = options.repo ? options.repo : defaultRepoUrl;
+        const repoUrl = options.repo ? options.repo : defaultRepoUrl;
 
         git().clone(
           repoUrl,
