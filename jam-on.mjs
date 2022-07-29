@@ -14,11 +14,11 @@ program
 program
   .command('new')
   .description(
-    'put newly cloned toolkit project into a ready state for development'
+    'put a newly cloned toolkit project into a ready state for development'
   )
   .action(() => {
     console.log(
-      'This will remove all existing .git information and the example pages'
+      'This will remove all existing .git information, and the example pages and components'
     );
     inquirer
       .prompt({

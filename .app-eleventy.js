@@ -1,6 +1,12 @@
+const cc = require('config-chain');
+
+var conf = cc(cc.find('.jam-on.json'));
+
+console.log(conf.get('assetsDestination'));
+
 appConfigFunc = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
-    'src/assets': 'example-pages/assets',
+    'src/assets': conf.get('assetsDestination'),
   });
 };
 

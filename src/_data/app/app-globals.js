@@ -1,3 +1,7 @@
+const cc = require('config-chain');
+
+var conf = cc(cc.find('.jam-on.json'));
+
 module.exports = function () {
   var userFriendlyEnvString = {
     dev: 'development',
@@ -16,7 +20,7 @@ module.exports = function () {
   var footerType = 'default';
 
   // Relative to siteRoot
-  var assetsPath = '/example-pages/assets';
+  var assetsPath = `/${conf.get('assetsDestination')}`;
 
   return {
     userFriendlyEnvString: userFriendlyEnvString,
