@@ -6,7 +6,7 @@ import fs from 'fs-extra';
 import nunjucks from 'nunjucks';
 
 const program = new Command();
-nunjucks.configure('.jam-on/templates');
+nunjucks.configure('.jam-on/core/templates');
 
 const outputStarterFile = function (path, content, successMessage) {
   fs.outputFile(path, content, (err) => {
@@ -97,9 +97,9 @@ const newAction = function () {
           };
 
           outputStarterFile(
-            '.jam-on/conf.json',
+            '.jam-on/app/conf.json',
             JSON.stringify(newConf),
-            'Wrote new config file to .jam-on/conf.json'
+            'Wrote new config file to .jam-on/app/conf.json'
           );
 
           const enFileContent = nunjucks.render('en.njk', newConf);
