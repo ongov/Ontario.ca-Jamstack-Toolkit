@@ -91,6 +91,9 @@ The project divide resources into `core` and `app` directories and files.
 
 A freshly cloned repository includes the following:
 
+- `.jam-on` [folder] - folder used by the `jam-on.mjs` command line tool
+  - app [folder] - folder for app-specific configuration produced by the command line tool
+  - core [folder] - folder for core files used by the command line tool (do not modify)
 - `src` [folder] - source code folder for the static user interface.
   - `_data` [folder] - [Eleventy global data files folder](https://www.11ty.dev/docs/data-global/)
     - `app` [folder] - data files folder for the application
@@ -153,11 +156,11 @@ A freshly cloned repository includes the following:
 - `.prettierignore` - ignore file for Prettier code formatter
 - `.prettierrc.json` - [Prettier](https://prettier.io/) code formatter config file
 - `CONTRIBUTING.md` - contribution guidelines
+- `jam-on.mjs` - command-line tool for setting up and updating projects
 - `LICENSE.txt` - project open source license
 - `package-lock.json` - [NPM lock file](https://docs.npmjs.com/cli/v8/configuring-npm/package-lock-json)
 - `package.json` - [NPM configuration file](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
 - `README.md` - main product README file (you are reading this right now)
-- `update-jamstack-toolkit.sh` - update script for updating Jamstack Toolkit core to a newer version
 
 ### Serving and Rebuilding the Application
 
