@@ -20,8 +20,19 @@ const outputStarterFile = function (path, content, successMessage) {
 
 const newAction = function () {
   console.log(
-    'This will remove all existing .git information, and the example pages and components'
+    'This will remove all local Git information, and the example pages and components'
   );
+
+  var gitIsClean;
+
+  git().status({}, function (error, status) {
+    if (error) {
+      console.log('Error in git().status() command: ', error);
+    } else {
+      gitIsClean = status.isClean();
+    }
+  });
+
   inquirer
     .prompt({
       type: 'confirm',
@@ -35,6 +46,16 @@ const newAction = function () {
         process.exit();
       }
       console.log('Creating new project...');
+
+      if (gitIsClean) {
+        console.log('Local Git repo is clean, removing local .git folder');
+      } else {
+        console.log(
+          'Your local Git repo has modifications; please ensure the local git repo is clean and unmodified before running this command'
+        );
+        console.log('Farewell!');
+        process.exit();
+      }
 
       console.log('Removing example files...');
 
