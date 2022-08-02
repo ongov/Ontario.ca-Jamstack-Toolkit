@@ -49,6 +49,7 @@ const newAction = function () {
 
       if (gitIsClean) {
         console.log('Local Git repo is clean, removing local .git folder');
+        fs.removeSync('.git');
       } else {
         console.log(
           'Your local Git repo has modifications; please ensure the local git repo is clean and unmodified before running this command'
