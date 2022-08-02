@@ -28,6 +28,7 @@ const newAction = function () {
   git().status({}, function (error, status) {
     if (error) {
       console.log('Error in git().status() command: ', error);
+      process.exit();
     } else {
       gitIsClean = status.isClean();
     }
@@ -45,7 +46,6 @@ const newAction = function () {
         console.log('Farewell!');
         process.exit();
       }
-      console.log('Creating new project...');
 
       if (gitIsClean) {
         console.log('Local Git repo is clean, removing local .git folder');
@@ -57,6 +57,8 @@ const newAction = function () {
         console.log('Farewell!');
         process.exit();
       }
+
+      console.log('Creating new project...');
 
       console.log('Removing example files...');
 
