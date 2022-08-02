@@ -89,6 +89,12 @@ program
           }
         });
 
+        fs.outputFile('.jam-on/conf.json', JSON.stringify(newConf), (err) => {
+          if (err) {
+            console.error(err);
+          }
+        });
+
         console.log(enFileContent, frFileContent);
       })
       .catch((error) => {
