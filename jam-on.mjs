@@ -8,6 +8,16 @@ import nunjucks from 'nunjucks';
 const program = new Command();
 nunjucks.configure('.jam-on/templates');
 
+const outputStarterFile = function (path, content, successMessage) {
+  fs.outputFile(path, content, (err) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log(successMessage);
+    }
+  });
+};
+
 const newAction = function () {
   console.log(
     'This will remove all existing .git information, and the example pages and components'
@@ -62,13 +72,11 @@ const newAction = function () {
             createDate: new Date().toISOString(),
           };
 
-          fs.outputFile('.jam-on/conf.json', JSON.stringify(newConf), (err) => {
-            if (err) {
-              console.error(err);
-            } else {
-              console.log('Wrote new config file to .jam-on/conf.json');
-            }
-          });
+          outputStarterFile(
+            '.jam-on/conf.json',
+            JSON.stringify(newConf),
+            'Wrote new config file to .jam-on/conf.json'
+          );
 
           const enFileContent = nunjucks.render('en.njk', newConf);
 
@@ -76,31 +84,23 @@ const newAction = function () {
 
           const redirectFileContent = nunjucks.render('redirect.njk', newConf);
 
-          fs.outputFile(
+          outputStarterFile(
             `src/${newConf.englishRoot}.njk`,
             enFileContent,
-            (err) => {
-              if (err) {
-                console.error(err);
-              }
-            }
+            `Wrote English-side starter file at src/${newConf.englishRoot}.njk`
           );
 
-          fs.outputFile(
+          outputStarterFile(
             `src/${newConf.frenchRoot}.njk`,
             frFileContent,
-            (err) => {
-              if (err) {
-                console.error(err);
-              }
-            }
+            `Wrote French-side starter file at src/${newConf.frenchRoot}.njk`
           );
 
-          fs.outputFile(`src/index.njk`, redirectFileContent, (err) => {
-            if (err) {
-              console.error(err);
-            }
-          });
+          outputStarterFile(
+            'src/index.njk',
+            redirectFileContent,
+            `Wrote root-level redirect file at src/index.njk`
+          );
         });
     })
     .catch((error) => {
