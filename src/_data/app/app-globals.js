@@ -1,6 +1,6 @@
 const cc = require('config-chain');
 
-var conf = cc(cc.find('.jam-on.json'));
+var conf = cc(cc.find('.jam-on/conf.json'));
 
 module.exports = function () {
   var userFriendlyEnvString = {
