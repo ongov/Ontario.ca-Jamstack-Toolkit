@@ -157,6 +157,7 @@ const updateAction = function (tagOrBranch, options) {
         [`./${tmpDirName}/src/assets/css/core`, './src/assets/css/core'],
         [`./${tmpDirName}/src/assets/vendor`, './src/assets/vendor'],
         [`./${tmpDirName}/.core-eleventy.js`, './.core-eleventy.js'],
+        [`./${tmpDirName}/.jam-on/core`, './.jam-on/core'],
       ];
 
       const defaultRepoUrl =
