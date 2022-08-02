@@ -38,13 +38,16 @@ program
         console.log('Creating new project...');
 
         console.log('Removing example files...');
+
         const exampleFilesList = [
           'src/_includes/app/components/_example_page_list.njk',
           'src/example-pages',
           'src/pages-dexemple',
+          'src/index.njk',
           'src/example-pages.njk',
           'src/pages-dexemple.njk',
         ];
+
         exampleFilesList.forEach((filePath, index) => {
           fs.removeSync(filePath);
         });
@@ -54,7 +57,7 @@ program
         const newConf = {
           assetsDestination: 'example-pages/assets',
           englishRoot: 'example-pages/jamstack-toolkit',
-          frenchRoot: 'pages-dexemple/',
+          frenchRoot: 'pages-dexemple/boite-a-outils-dapplication-jamstack',
           createDate: new Date().toISOString(),
         };
 
@@ -62,13 +65,25 @@ program
 
         const frFileContent = nunjucks.render('fr.njk', newConf);
 
-        fs.writeFile(`src/${newConf.englishRoot}.njk`, enFileContent, (err) => {
+        const redirectFileContent = nunjucks.render('redirect.njk', newConf);
+
+        fs.outputFile(
+          `src/${newConf.englishRoot}.njk`,
+          enFileContent,
+          (err) => {
+            if (err) {
+              console.error(err);
+            }
+          }
+        );
+
+        fs.outputFile(`src/${newConf.frenchRoot}.njk`, frFileContent, (err) => {
           if (err) {
             console.error(err);
           }
         });
 
-        fs.writeFile(`src/${newConf.frenchRoot}.njk`, frFileContent, (err) => {
+        fs.outputFile(`src/index.njk`, redirectFileContent, (err) => {
           if (err) {
             console.error(err);
           }
