@@ -1,3 +1,5 @@
 {
-  "assetsDestination": "example-pages/assets"
+  "assetsDestination": "example-pages/assets",
+  "englishRoot": "example-pages",
+  "frenchRoot": "pages-dexemple"
 }

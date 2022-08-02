@@ -3,8 +3,11 @@ import { Command } from 'commander';
 import { simpleGit as git } from 'simple-git';
 import inquirer from 'inquirer';
 import fs from 'fs-extra';
+import nunjucks from 'nunjucks';
 
 const program = new Command();
+
+nunjucks.configure('.jam-on/templates');
 
 program
   .name('jam-on')
@@ -33,14 +36,45 @@ program
           process.exit();
         }
         console.log('Creating new project...');
+
+        console.log('Removing example files...');
         const exampleFilesList = [
           'src/_includes/app/components/_example_page_list.njk',
           'src/example-pages',
           'src/pages-dexemple',
+          'src/example-pages.njk',
+          'src/pages-dexemple.njk',
         ];
         exampleFilesList.forEach((filePath, index) => {
           fs.removeSync(filePath);
         });
+
+        console.log('Creating starter files...');
+
+        const newConf = {
+          assetsDestination: 'example-pages/assets',
+          englishRoot: 'example-pages/jamstack-toolkit',
+          frenchRoot: 'pages-dexemple/',
+          createDate: new Date().toISOString(),
+        };
+
+        const enFileContent = nunjucks.render('en.njk', newConf);
+
+        const frFileContent = nunjucks.render('fr.njk', newConf);
+
+        fs.writeFile(`src/${newConf.englishRoot}.njk`, enFileContent, (err) => {
+          if (err) {
+            console.error(err);
+          }
+        });
+
+        fs.writeFile(`src/${newConf.frenchRoot}.njk`, frFileContent, (err) => {
+          if (err) {
+            console.error(err);
+          }
+        });
+
+        console.log(enFileContent, frFileContent);
       })
       .catch((error) => {
         console.log(error);
