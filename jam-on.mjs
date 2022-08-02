@@ -41,46 +41,69 @@ const newAction = function () {
         fs.removeSync(filePath);
       });
 
-      console.log('Creating starter files...');
+      inquirer
+        .prompt([
+          {
+            type: 'input',
+            name: 'enRoot',
+            message: 'What is the English-language subfolder for deployment?',
+          },
+          {
+            type: 'input',
+            name: 'frRoot',
+            message: 'What is the French-language subfolder for deployment?',
+          },
+        ])
+        .then((answers) => {
+          console.log('Creating starter files...');
 
-      const newConf = {
-        assetsDestination: 'example-pages/assets',
-        englishRoot: 'example-pages/jamstack-toolkit',
-        frenchRoot: 'pages-dexemple/boite-a-outils-dapplication-jamstack',
-        createDate: new Date().toISOString(),
-      };
+          const newConf = {
+            assetsDestination: `${answers.enRoot}/assets`,
+            englishRoot: answers.enRoot,
+            frenchRoot: answers.frRoot,
+            createDate: new Date().toISOString(),
+          };
 
-      const enFileContent = nunjucks.render('en.njk', newConf);
+          fs.outputFile('.jam-on/conf.json', JSON.stringify(newConf), (err) => {
+            if (err) {
+              console.error(err);
+            } else {
+              console.log('Wrote new config file to .jam-on/conf.json');
+            }
+          });
 
-      const frFileContent = nunjucks.render('fr.njk', newConf);
+          const enFileContent = nunjucks.render('en.njk', newConf);
 
-      const redirectFileContent = nunjucks.render('redirect.njk', newConf);
+          const frFileContent = nunjucks.render('fr.njk', newConf);
 
-      fs.outputFile(`src/${newConf.englishRoot}.njk`, enFileContent, (err) => {
-        if (err) {
-          console.error(err);
-        }
-      });
+          const redirectFileContent = nunjucks.render('redirect.njk', newConf);
 
-      fs.outputFile(`src/${newConf.frenchRoot}.njk`, frFileContent, (err) => {
-        if (err) {
-          console.error(err);
-        }
-      });
+          fs.outputFile(
+            `src/${newConf.englishRoot}.njk`,
+            enFileContent,
+            (err) => {
+              if (err) {
+                console.error(err);
+              }
+            }
+          );
 
-      fs.outputFile(`src/index.njk`, redirectFileContent, (err) => {
-        if (err) {
-          console.error(err);
-        }
-      });
+          fs.outputFile(
+            `src/${newConf.frenchRoot}.njk`,
+            frFileContent,
+            (err) => {
+              if (err) {
+                console.error(err);
+              }
+            }
+          );
 
-      fs.outputFile('.jam-on/conf.json', JSON.stringify(newConf), (err) => {
-        if (err) {
-          console.error(err);
-        }
-      });
-
-      console.log(enFileContent, frFileContent);
+          fs.outputFile(`src/index.njk`, redirectFileContent, (err) => {
+            if (err) {
+              console.error(err);
+            }
+          });
+        });
     })
     .catch((error) => {
       console.log(error);
