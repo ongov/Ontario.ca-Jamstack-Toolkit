@@ -33,8 +33,6 @@ const newAction = function () {
         'src/example-pages',
         'src/pages-dexemple',
         'src/index.njk',
-        'src/example-pages.njk',
-        'src/pages-dexemple.njk',
       ];
 
       exampleFilesList.forEach((filePath, index) => {
