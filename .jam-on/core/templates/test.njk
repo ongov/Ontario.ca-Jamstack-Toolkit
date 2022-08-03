@@ -41,7 +41,7 @@ describe('Site generation', function () {
   });
   describe('Site CSS file present', function () {
     it('Should copy over the site CSS file', function () {
-      assert(fs.existsSync('dist/example-pages/assets/css/style.css'));
+      assert(fs.existsSync(`dist/${assetsDestination}/css/style.css`));
     });
   });
 });
