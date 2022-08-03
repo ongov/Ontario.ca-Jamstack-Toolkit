@@ -54,7 +54,7 @@ const newAction = function (options) {
       if (gitIsClean && !options.keepGit) {
         console.log('Local Git repo is clean, removing local .git folder');
         fs.removeSync('.git');
-      } else {
+      } else if (!options.keepGit) {
         console.log(
           'Your local Git repo has modifications; please ensure the local git repo is clean and unmodified before running this command'
         );
@@ -92,7 +92,15 @@ const newAction = function (options) {
           {
             type: 'input',
             name: 'projectName',
-            message: 'What is a short name for this project?',
+            message:
+              'What is the NPM package.json name for this project (use lowercase, hyphens and underscores only)?',
+            default: 'new-jam-on-project',
+          },
+          {
+            type: 'input',
+            name: 'projectDescription',
+            message: 'What is a short description for this project?',
+            default: 'new-jam-on-project',
           },
         ])
         .then((answers) => {
@@ -102,6 +110,8 @@ const newAction = function (options) {
             assetsDestination: `${answers.enRoot}/assets`,
             englishRoot: answers.enRoot,
             frenchRoot: answers.frRoot,
+            projectName: answers.projectName,
+            projectDescription: answers.projectDescription,
             createDate: new Date().toISOString(),
           };
 
