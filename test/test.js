@@ -2,6 +2,10 @@ const assert = require('assert');
 const fs = require('fs');
 
 const odsDir = 'dist/example-pages/assets/vendor/ontario-design-system';
+const enPageLocation = 'dist/example-pages/jamstack-toolkit/index.html';
+const frPageLocation =
+  'dist/pages-dexemple/boite-a-outils-dapplication-jamstack/index.html';
+const expectedNoDsFiles = 5;
 
 describe('Site generation', function () {
   describe('Top-level redirect page present', function () {
@@ -11,16 +15,12 @@ describe('Site generation', function () {
   });
   describe('English-language example page present', function () {
     it('should generate an English-language example page', function () {
-      assert(fs.existsSync('dist/example-pages/jamstack-toolkit/index.html'));
+      assert(fs.existsSync(enPageLocation));
     });
   });
   describe('French-language example page present', function () {
     it('should generate a French-language example page', function () {
-      assert(
-        fs.existsSync(
-          'dist/pages-dexemple/boite-a-outils-dapplication-jamstack/index.html'
-        )
-      );
+      assert(fs.existsSync(frPageLocation));
     });
   });
   describe('Ontario design system inclusion', function () {
@@ -30,7 +30,7 @@ describe('Site generation', function () {
         'Expected directory for design system not found'
       );
       const actualLength = fs.readdirSync(odsDir).length;
-      const expectedLength = 5;
+      const expectedLength = expectedNoDsFiles;
       assert(
         actualLength === expectedLength,
         `The expected number of files in design system directory were not found, expected ${expectedLength}, got ${actualLength}`
