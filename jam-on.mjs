@@ -18,10 +18,14 @@ const outputStarterFile = function (path, content, successMessage) {
   });
 };
 
-const newAction = function () {
-  console.log(
-    'This will remove all local Git information, and the example pages and components'
-  );
+const newAction = function (options) {
+  if (options.keepGit) {
+    console.log('This will remove the example pages and components');
+  } else {
+    console.log(
+      'This will remove all local Git information, and the example pages and components'
+    );
+  }
 
   var gitIsClean;
 
@@ -47,7 +51,7 @@ const newAction = function () {
         process.exit();
       }
 
-      if (gitIsClean) {
+      if (gitIsClean && !options.keepGit) {
         console.log('Local Git repo is clean, removing local .git folder');
         fs.removeSync('.git');
       } else {
@@ -84,6 +88,11 @@ const newAction = function () {
             type: 'input',
             name: 'frRoot',
             message: 'What is the French-language subfolder for deployment?',
+          },
+          {
+            type: 'input',
+            name: 'projectName',
+            message: 'What is a short name for this project?',
           },
         ])
         .then((answers) => {
@@ -132,6 +141,14 @@ const newAction = function () {
             'test/test.js',
             testFileContent,
             `Wrote starter test file at test/test.js`
+          );
+
+          const packageFileContent = nunjucks.render('package.njk', newConf);
+
+          outputStarterFile(
+            'package.json',
+            packageFileContent,
+            `Wrote updated NPM package.json file at package.json`
           );
         });
     })
@@ -212,7 +229,8 @@ program
   .description(
     'put a newly cloned toolkit project into a ready state for development'
   )
-  .action(() => newAction());
+  .option('--keepGit', 'Do not delete the local .git folder (optional)')
+  .action((options) => newAction(options));
 
 program
   .command('update')
