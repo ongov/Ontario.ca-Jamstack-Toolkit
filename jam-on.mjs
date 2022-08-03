@@ -130,7 +130,7 @@ const newAction = function () {
 
           outputStarterFile(
             'test/test.js',
-            redirectFileContent,
+            testFileContent,
             `Wrote starter test file at test/test.js`
           );
         });
