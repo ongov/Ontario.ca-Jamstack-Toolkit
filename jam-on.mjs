@@ -125,6 +125,14 @@ const newAction = function () {
             redirectFileContent,
             `Wrote root-level redirect file at src/index.njk`
           );
+
+          const testFileContent = nunjucks.render('test.njk', newConf);
+
+          outputStarterFile(
+            'test/test.js',
+            redirectFileContent,
+            `Wrote starter test file at test/test.js`
+          );
         });
     })
     .catch((error) => {
