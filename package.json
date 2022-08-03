@@ -4,7 +4,7 @@
   "description": "The Ontario.ca Service Integration Jamstack application toolkit.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "npm run build && mocha",
     "lint": "rm -rf dist && eleventy & npm run htmlValidateDist",
     "build": "rm -rf dist && eleventy",
     "serve": "eleventy --serve",
