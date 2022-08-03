@@ -1,10 +1,11 @@
 const assert = require('assert');
 const fs = require('fs');
 
+const enRoot = 'example-pages/jamstack-toolkit/';
+const frRoot = 'example-pages/jamstack-toolkit/';
 const odsDir = 'dist/example-pages/assets/vendor/ontario-design-system';
-const enPageLocation = 'dist/example-pages/jamstack-toolkit/index.html';
-const frPageLocation =
-  'dist/pages-dexemple/boite-a-outils-dapplication-jamstack/index.html';
+const enPageLocation = `dist/${enRoot}/index.html`;
+const frPageLocation = `dist/${frRoot}/index.html`;
 const expectedNoDsFiles = 5;
 
 describe('Site generation', function () {
