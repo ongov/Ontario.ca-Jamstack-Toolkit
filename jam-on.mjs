@@ -4,8 +4,10 @@ import { simpleGit as git } from 'simple-git';
 import inquirer from 'inquirer';
 import fs from 'fs-extra';
 import nunjucks from 'nunjucks';
+import validate from 'validate-npm-package-name';
 
 const program = new Command();
+
 nunjucks.configure('.jam-on/core/templates');
 
 const outputStarterFile = function (path, content, successMessage) {
@@ -95,12 +97,20 @@ const newAction = function (options) {
             message:
               'What is the NPM package.json name for this project (use lowercase, hyphens and underscores only)?',
             default: 'new-jam-on-project',
+            validate: function (userInput) {
+              const validName = validate(userInput).validForNewPackages;
+              if (validName) {
+                return true;
+              } else {
+                return 'Invalid package name';
+              }
+            },
           },
           {
             type: 'input',
             name: 'projectDescription',
             message: 'What is a short description for this project?',
-            default: 'new-jam-on-project',
+            default: 'New Ontario.ca Jamstack Toolkit project',
           },
         ])
         .then((answers) => {
