@@ -1,6 +1,6 @@
 {
   "name": "jamstack-application-toolkit",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "description": "The Ontario.ca Service Integration Jamstack application toolkit.",
   "main": "index.js",
   "scripts": {
