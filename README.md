@@ -1,5 +1,7 @@
 # Ontario.ca Service Integration: Jamstack Application Toolkit
 
+[[_TOC_]]
+
 ## Release History
 
 - 0.14.0 (2022-07-21): Convert update script from shell to Node-based (`jam-on.mjs`)
