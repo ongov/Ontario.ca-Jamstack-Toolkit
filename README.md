@@ -57,14 +57,23 @@ Because Eleventy is a major foundation of the toolkit, we [recommend Eleventy's 
 
 From a fresh checkout, `npm install` will install all dependencies.
 
+## Exploring the Examples
+
+A fresh checkout contains some example pages and components that can give you more of a sense of how the toolkit works. These can be removed using the steps below under _Using as the Base for a New Project_.
+
 ## Using as the Base for a New Project
 
-At this time, we recommend the following steps:
+From a fresh checkout and after running `npm install`, you can use the `jam-on.mjs` command line tool to start a new project:
 
-- `git clone` the project
-- Delete the `.git` folder to remove the history
-- `git init` and make an initial commit
-  - Note that the use of `git Last Modified` for page dates (see below under **Publication and Updated Dates for Pages**) means the example site will fail to build without an initial commit. Change the use of `git Last Modified` in the page date if you need to work without git or with another version control system.
+`node jam-on.mjs new`
+
+This will:
+
+- delete the local `.git` folder to remove the version control history
+- remove various example files
+- prompt you for the English and French-side subfolders to use for your app, create starter files based on your answers, and update the site configuration in other places
+
+You can then use `git init` and make initial commit.
 
 ### Updating Your Project from Future Development of the Jamstack Application Toolkit
 
@@ -73,8 +82,9 @@ You can use the `jam-on.mjs` command line tool to pull in certain changes from t
 
 Specifically, this script will update:
 
-- Any `core` files or folders in `src` - see **Modifying Code, Components, and Styles** for more details
+- Any `core` files or folders in `src` or `.jam-on` - see **Modifying Code, Components, and Styles** for more details
 - The `src/assets/vendor` directory that contains the Ontario Design System files and other third-party dependencies
+- the `jam-on.mjs` command line tool itself
 
 You should [refer to the Jamstack Application Toolkit repo](https://git.ontariogovernment.ca/service-integration/application-development-toolkit/jamstack-application-toolkit) for available release tags.
 
@@ -93,6 +103,9 @@ The project divide resources into `core` and `app` directories and files.
 
 A freshly cloned repository includes the following:
 
+- `.jam-on` [folder] - folder used by the `jam-on.mjs` command line tool
+  - app [folder] - folder for app-specific configuration produced by the command line tool
+  - core [folder] - folder for core files used by the command line tool (do not modify)
 - `src` [folder] - source code folder for the static user interface.
   - `_data` [folder] - [Eleventy global data files folder](https://www.11ty.dev/docs/data-global/)
     - `app` [folder] - data files folder for the application
@@ -155,11 +168,11 @@ A freshly cloned repository includes the following:
 - `.prettierignore` - ignore file for Prettier code formatter
 - `.prettierrc.json` - [Prettier](https://prettier.io/) code formatter config file
 - `CONTRIBUTING.md` - contribution guidelines
+- `jam-on.mjs` - command-line tool for setting up and updating projects
 - `LICENSE.txt` - project open source license
 - `package-lock.json` - [NPM lock file](https://docs.npmjs.com/cli/v8/configuring-npm/package-lock-json)
 - `package.json` - [NPM configuration file](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
 - `README.md` - main product README file (you are reading this right now)
-- `update-jamstack-toolkit.sh` - update script for updating Jamstack Toolkit core to a newer version
 
 ### Serving and Rebuilding the Application
 

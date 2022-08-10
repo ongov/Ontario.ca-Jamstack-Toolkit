@@ -1,9 +1,9 @@
 const assert = require('assert');
 const fs = require('fs');
 
-const enRoot = 'example-pages/jamstack-toolkit';
-const frRoot = 'example-pages/jamstack-toolkit';
-const assetsDestination = 'example-pages/assets';
+const enRoot = '{{ englishRoot }}';
+const frRoot = '{{ frenchRoot }}';
+const assetsDestination = '{{ assetsDestination }}';
 const odsDir = `dist/${assetsDestination}/vendor/ontario-design-system`;
 const enPageLocation = `dist/${enRoot}/index.html`;
 const frPageLocation = `dist/${frRoot}/index.html`;
@@ -41,7 +41,7 @@ describe('Site generation', function () {
   });
   describe('Site CSS file present', function () {
     it('Should copy over the site CSS file', function () {
-      assert(fs.existsSync('dist/example-pages/assets/css/style.css'));
+      assert(fs.existsSync(`dist/${assetsDestination}/css/style.css`));
     });
   });
 });
