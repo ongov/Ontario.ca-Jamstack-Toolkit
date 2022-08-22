@@ -4,7 +4,7 @@
 
 ## Release History
 
-- 0.15.1 (2022-08-22): Fix a bug in project starter automation when local `.git` directory does not exist, as will be the case in releases not cloned from Git
+- 0.15.1 (2022-08-22): Fix a bug in `jam-on.mjs` project starter script when local `.git` directory does not exist, as will be the case in releases not cloned from Git
 - 0.15.0 (2022-08-10): Add project starter automation to `jam-on.mjs`
 - 0.14.0 (2022-07-21): Convert update script from shell to Node-based (`jam-on.mjs`)
 - 0.13.0 (2022-07-15): Add documentation of the file structure, reorganize the example pages, add an example app-level component
