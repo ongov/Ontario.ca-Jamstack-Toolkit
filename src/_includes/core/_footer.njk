@@ -1,0 +1,6 @@
+{% set footerType = footerType or globals.footerType %}
+{% if footerType === "default" %}
+{% include "core/_footer_default.njk" %}
+{% elif footerType === "expanded" %}
+{% include "core/_footer_expanded.njk" %}
+{% endif %}

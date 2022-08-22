@@ -1,0 +1,238 @@
+{
+  "header": {
+    "links": {
+      "home": {
+        "en": "https://www.ontario.ca/page/government-ontario",
+        "fr": "https://www.ontario.ca/fr/page/gouvernement-de-lontario"
+      }
+    },
+    "onGov": {
+      "en": "Government of Ontario",
+      "fr": "Gouvernement de l’Ontario"
+    },
+    "labels": {
+      "search": {
+        "en": "Search",
+        "fr": "Rechercher"
+      },
+      "submit": {
+        "en": "Submit",
+        "fr": "Soumission"
+      },
+      "clearField": {
+        "en": "Clear field",
+        "fr": "Vider le champ"
+      },
+      "openMenu": {
+        "en": "open menu",
+        "fr": "ouvrir les sujets"
+      },
+      "closeSearchBar": {
+        "en": "close search bar",
+        "fr": "fermer la barre de recherche"
+      },
+      "close": {
+        "en": "close",
+        "fr": "fermer"
+      }
+    },
+    "langToggle": {
+      "langFull": {
+        "en": "Français",
+        "fr": "English"
+      },
+      "langAbbr": {
+        "en": "FR",
+        "fr": "EN"
+      }
+    },
+    "navMenu": {
+      "link1": {
+        "url": {
+          "en": "/page/arts-and-culture",
+          "fr": "/fr/page/affaires-et-economie"
+        },
+        "text": {
+          "en": "Arts and culture",
+          "fr": "Affaires et économie"
+        }
+      },
+      "link2": {
+        "url": {
+          "en": "/page/business-and-economy",
+          "fr": "/fr/page/arts-et-culture"
+        },
+        "text": {
+          "en": "Business and economy",
+          "fr": "Arts et culture"
+        }
+      },
+      "link3": {
+        "url": {
+          "en": "/covid",
+          "fr": "/fr/page/conduite-et-routes"
+        },
+        "text": {
+          "en": "COVID-19",
+          "fr": "Conduite et routes"
+        }
+      },
+      "link4": {
+        "url": {
+          "en": "/page/driving-and-roads",
+          "fr": "/covid-fr"
+        },
+        "text": {
+          "en": "Driving and roads",
+          "fr": "COVID-19"
+        }
+      },
+      "link5": {
+        "url": {
+          "en": "/page/education-and-training",
+          "fr": "/fr/page/domicile-et-communaute"
+        },
+        "text": {
+          "en": "Education and training",
+          "fr": "Domicile et communauté"
+        }
+      },
+      "link6": {
+        "url": {
+          "en": "/page/environment-and-energy",
+          "fr": "/fr/page/education-et-formation"
+        },
+        "text": {
+          "en": "Environment and energy",
+          "fr": "Éducation et formation"
+        }
+      },
+      "link7": {
+        "url": {
+          "en": "/page/government",
+          "fr": "/fr/page/environnement-et-energie"
+        },
+        "text": {
+          "en": "Government",
+          "fr": "Environnement et énergie"
+        }
+      },
+      "link8": {
+        "url": {
+          "en": "/page/health-care-ontario",
+          "fr": "/fr/page/gouvernement"
+        },
+        "text": {
+          "en": "Health and wellness",
+          "fr": "Gouvernement"
+        }
+      },
+      "link9": {
+        "url": {
+          "en": "/page/home-and-community",
+          "fr": "/fr/page/impots-et-avantages-fiscaux"
+        },
+        "text": {
+          "en": "Home and community",
+          "fr": "Impôts et avantages fiscaux"
+        }
+      },
+      "link10": {
+        "url": {
+          "en": "/page/jobs-and-employment",
+          "fr": "/fr/page/lois-et-securite"
+        },
+        "text": {
+          "en": "Jobs and employment",
+          "fr": "Lois et sécurité"
+        }
+      },
+      "link11": {
+        "url": {
+          "en": "/page/law-and-safety",
+          "fr": "/fr/page/regions-rurales-et-du-nord"
+        },
+        "text": {
+          "en": "Law and safety",
+          "fr": "Régions rurales et du Nord"
+        }
+      },
+      "link12": {
+        "url": {
+          "en": "/page/rural-and-north",
+          "fr": "/fr/page/les-soins-de-sante-en-ontario"
+        },
+        "text": {
+          "en": "Rural and north",
+          "fr": "Santé et bien-être"
+        }
+      },
+      "link13": {
+        "url": {
+          "en": "/page/taxes-and-benefits",
+          "fr": "/fr/page/travail-et-emploi"
+        },
+        "text": {
+          "en": "Taxes and benefits",
+          "fr": "Travail et emploi"
+        }
+      },
+      "link14": {
+        "url": {
+          "en": "/page/travel-and-recreation",
+          "fr": "/fr/page/voyage-et-loisirs"
+        },
+        "text": {
+          "en": "Travel and recreation",
+          "fr": "Voyage et loisirs"
+        }
+      }
+    }
+  },
+  "footer": {
+    "standard": {
+      "links": {
+        "accessibility": {
+          "url": {
+            "en": "https://www.ontario.ca/page/accessibility",
+            "fr": "https://www.ontario.ca/fr/page/accessibilite"
+          },
+          "text": {
+            "en": "Accessibility",
+            "fr": "Accessibilité"
+          }
+        },
+        "privacy": {
+          "url": {
+            "en": "https://www.ontario.ca/page/privacy-statement",
+            "fr": "https://www.ontario.ca/fr/page/declaration-concernant-la-protection-de-la-vie-privee"
+          },
+          "text": {
+            "en": "Privacy",
+            "fr": "Confidentialité"
+          }
+        },
+        "contactUs": {
+          "url": {
+            "en": "https://www.ontario.ca/feedback/contact-us",
+            "fr": "https://www.ontario.ca/fr/commentaires/pour-nous-joindre"
+          },
+          "text": {
+            "en": "Contact Us",
+            "fr": "Contactez-nous"
+          }
+        },
+        "copyright": {
+          "url": {
+            "en": "https://www.ontario.ca/page/copyright-information-c-queens-printer-ontario",
+            "fr": "https://www.ontario.ca/fr/page/droits-dauteur-imprimeur-de-la-reine-pour-lontarioc"
+          },
+          "text": {
+            "en": "Queen’s Printer for Ontario",
+            "fr": "Imprimeur de la Reine pour l’Ontario"
+          }
+        }
+      }
+    }
+  }
+}
