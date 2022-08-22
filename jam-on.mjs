@@ -25,20 +25,31 @@ const newAction = function (options) {
     console.log('This will remove the example pages and components');
   } else {
     console.log(
-      'This will remove all local Git information, and the example pages and components'
+      'This will remove any local Git information, and the example pages and components'
     );
   }
 
+  var hasGit;
   var gitIsClean;
 
-  git().status({}, function (error, status) {
-    if (error) {
-      console.log('Error in git().status() command: ', error);
-      process.exit();
-    } else {
-      gitIsClean = status.isClean();
-    }
-  });
+  try {
+    fs.statSync('.git');
+    hasGit = true;
+  } catch (e) {
+    hasGit = false;
+    gitIsClean = true;
+  }
+
+  if (hasGit) {
+    git().status({}, function (error, status) {
+      if (error) {
+        console.log('Error in git().status() command: ', error);
+        process.exit();
+      } else {
+        gitIsClean = status.isClean();
+      }
+    });
+  }
 
   inquirer
     .prompt({
@@ -54,7 +65,9 @@ const newAction = function (options) {
       }
 
       if (gitIsClean && !options.keepGit) {
-        console.log('Local Git repo is clean, removing local .git folder');
+        console.log(
+          'Local Git repo is clean or does not exist, removing any Git information'
+        );
         fs.removeSync('.git');
       } else if (!options.keepGit) {
         console.log(
