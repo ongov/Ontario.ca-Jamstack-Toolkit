@@ -270,18 +270,28 @@ You can create localization strings for shared components or similar uses in `sr
 
 Insert any needed custom tags for the `<head></head>` portion of the site layout in `src/_includes/core/_head_custom.njk`.
 
-### Publication and Updated Dates for Pages
+### Optional Component: Publication and Updated Dates for Pages
 
-The default layout includes a component to make handling publication and updated dates for pages easier that matches the style of pages published with the Ontario.ca CMS.
+The toolkit incudes a component to make handling publication and updated dates for pages easier that matches the style of pages published with the Ontario.ca CMS.
 
-Any pages using it should include the following in their YAML front matter:
+Any pages using it should include the following in their [front matter](https://www.11ty.dev/docs/data-frontmatter/):
 
 ```
 date: git Last Modified
 published_date: {YYYY-MM-DD formatted date for initial publication}
 ```
 
+And the following markup in their layout, immediately before the footer:
+
+```
+<div class="ontario-column ontario-small-12">
+    {% include "core/components/_page_dates.njk" %}
+</div>
+```
+
 By using `git Last Modified`, pages will receive their update time from Git version control when the application is built. [This feature is described in more detail in Eleventy's documentation](https://www.11ty.dev/docs/dates/#setting-a-content-date-in-front-matter).
+
+**Note**: using this component on a page not committed to Git will cause build errors.
 
 ### Automated Tests
 
