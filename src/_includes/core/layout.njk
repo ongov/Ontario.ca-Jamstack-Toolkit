@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ lang or 'en' }}">
+    <head>
+    <title>{{ title }}</title>
+    <link href="{{ globals.assetsRoot }}/css/style.css" rel="stylesheet" />
+    {% include "app/_head_custom.njk" %}
+    </head>
+    <body>
+
+    {% include "core/_icon_definitions.njk" %}
+    {% include "core/_header.njk" %}
+    {% include "app/_main_content.njk" %}
+    {% include "core/_footer.njk" %}
+    </body>
+</html>
