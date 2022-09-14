@@ -4,6 +4,7 @@
 
 ## Release History
 
+- 0.17.0 (2022-09-14): Update to the latest version of the Ontario Design System
 - 0.16.0 (2022-08-31): Remove use of `_page_dates.njk` component in example pages, and update the README
 - 0.15.1 (2022-08-22): Fix a bug in `jam-on.mjs` project starter script when local `.git` directory does not exist, as will be the case in releases not cloned from Git
 - 0.15.0 (2022-08-10): Add project starter automation to `jam-on.mjs`
