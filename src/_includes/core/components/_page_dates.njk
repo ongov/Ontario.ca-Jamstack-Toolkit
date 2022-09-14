@@ -1,0 +1,9 @@
+<p class="right small">
+{% if lang === "fr" %}
+Mis &agrave; jour: {{ frDateFormatUpdated(page.date) }}<br/>
+Date de publication: {{ frDateFormatPublished(published_date, 'UTC') }}
+{% else %}
+Updated: {{ enDateFormatUpdated(page.date) }}<br/>
+Published: {{ enDateFormatPublished(published_date, 'UTC') }}
+{% endif %}
+</p>
