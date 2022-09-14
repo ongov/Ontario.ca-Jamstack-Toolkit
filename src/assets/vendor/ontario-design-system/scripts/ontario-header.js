@@ -101,9 +101,7 @@ function deferInFn(fn) {
     }
 
     function onClickHandler(e) {
-        var isNavPanel = e.target === currentDomEl;
-        var isElementInsideNav = currentDomEl.contains(e.target);
-        if (!isNavPanel && !isElementInsideNav) hideNavPanel();
+       hideNavPanel();
     }
 
     function onKeyboardHandler(e) {
