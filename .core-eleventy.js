@@ -15,6 +15,15 @@ coreConfigFunc = function (eleventyConfig) {
     return md.renderInline(content);
   });
 
+  eleventyConfig.addShortcode(
+    'currentYear',
+    () => `${String(new Date().getFullYear())}`
+  );
+  eleventyConfig.addShortcode(
+    'currentShortYear',
+    () => `${String(new Date().getFullYear()).slice(-2)}`
+  );
+
   eleventyConfig.addFilter('localeString', function (key) {
     // Solution for accessing page front matter from https://stackoverflow.com/a/67746326
 

@@ -1,9 +1,4 @@
 module.exports = {
-  currentYear: function () {
-    var now = new Date();
-    return String(now.getFullYear());
-  },
-
   enDateFormatPublished: function () {
     return Intl.DateTimeFormat('en-CA', {
       year: 'numeric',
