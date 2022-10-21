@@ -229,9 +229,7 @@ This structure above allows the language switcher link to be appropriately gener
 
 #### Maintaining Locale Files
 
-Maintenance is much easier when content is separate from presentation and code, so we abstract out the content.
-
-Content is added to `src/_data/localeStrings.json` and the localized string gets injected into the page with a custom filter, `localeString`, according to the current page language.
+For translating components used on both English and French pages, we use locale files. You can add items to `src/_data/app/app-locale-strings.json` and the localized string gets injected into the page with a custom filter, `localeString`, according to the current page language.
 
 Content can be organized using nested keys. As seen below, you can group by page, section, element, and so-forth.
 
