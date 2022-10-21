@@ -224,12 +224,12 @@
         },
         "copyright": {
           "url": {
-            "en": "https://www.ontario.ca/page/copyright-information-c-queens-printer-ontario",
-            "fr": "https://www.ontario.ca/fr/page/droits-dauteur-imprimeur-de-la-reine-pour-lontarioc"
+            "en": "https://www.ontario.ca/page/copyright-information",
+            "fr": "https://www.ontario.ca/fr/page/droits-dauteur"
           },
           "text": {
-            "en": "Queen’s Printer for Ontario",
-            "fr": "Imprimeur de la Reine pour l’Ontario"
+            "en": "King's Printer for Ontario",
+            "fr": "Imprimeur du Roi pour l’Ontario"
           }
         }
       }
