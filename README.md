@@ -4,6 +4,7 @@
 
 ## Release History
 
+- 0.19.0 (2022-11-04): Update template for generated `package.json` file when starting a new project
 - 0.18.0 (2022-10-21): Update copyright to King's Printer language and links, update to latest Ontario Design System
 - 0.17.0 (2022-09-14): Update to the latest version of the Ontario Design System
 - 0.16.0 (2022-08-31): Remove use of `_page_dates.njk` component in example pages, and update the README
