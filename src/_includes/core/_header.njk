@@ -1,0 +1,16 @@
+{% include "core/_header_menu.njk" %}
+
+<div class="ontario-overlay"></div>
+
+<script src="{{ globals.siteRoot }}{{ globals.designSystemRoot }}/scripts/ontario-a11y.js"></script>
+<script src="{{ globals.siteRoot }}{{ globals.designSystemRoot }}/scripts/ontario-header.js"></script>
+<script src="{{ globals.siteRoot }}{{ globals.designSystemRoot }}/scripts/ontario-search.js"></script>
+<script src="{{ globals.siteRoot }}{{ globals.assetsRoot }}/js/core/global-content.js"></script>
+<script src="{{ globals.siteRoot }}{{ globals.assetsRoot }}/js/core/global-content-nav-menu.js"></script>
+
+{# Globals from Eleventy needed by client-side Javascript can be consolidated here #}
+<script>
+window.eleventyGlobals = {
+    pageLang: "{{ lang or 'en' }}"
+};
+</script>
