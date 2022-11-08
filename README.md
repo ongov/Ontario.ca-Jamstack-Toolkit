@@ -272,6 +272,14 @@ You can create localization strings for shared components or similar uses in `sr
 
 Insert any needed custom tags for the `<head></head>` portion of the site layout in `src/_includes/core/_head_custom.njk`.
 
+### Shared Ontario.ca Global Navigation Menu
+
+When using the standard Ontario.ca header, the toolkit loads the global navigation dropdown menu in the upper right from the Ontario.ca content management system at page load in the browser, eliminating the need to update it in applications created from the toolkit should it change.
+
+If unable to reach the Ontario.ca CMS, the application will fall back to a locally stored version of the menu. When developing locally, [CORS policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) will prevent loading. If you need to test this functionality locally, you will need to turn off CORS in your browser temporarily.
+
+Future components will provide similar synchronization for other global elements of Ontario.ca.
+
 ### Optional Component: Publication and Updated Dates for Pages
 
 The toolkit incudes a component to make handling publication and updated dates for pages easier that matches the style of pages published with the Ontario.ca CMS.
