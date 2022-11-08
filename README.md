@@ -4,6 +4,7 @@
 
 ## Release History
 
+- 0.20.0 (2022-11-08): Add synchronization of header global navigation menu from the Ontario.ca CMS.
 - 0.19.0 (2022-11-04): Update template for generated `package.json` file when starting a new project
 - 0.18.0 (2022-10-21): Update copyright to King's Printer language and links, update to latest Ontario Design System
 - 0.17.0 (2022-09-14): Update to the latest version of the Ontario Design System
