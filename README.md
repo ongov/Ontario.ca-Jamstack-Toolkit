@@ -47,7 +47,7 @@ Don't have access to Teams? Contact [service.integration@ontario.ca](mailto:serv
 
 ## Contributions
 
-We welcome suggestions for improving the toolkit. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for our guide on contributing to this repository.
+We welcome suggestions for improving the toolkit. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for our guide on contributing to this project.
 
 ---
 
