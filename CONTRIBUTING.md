@@ -1,10 +1,8 @@
-# Contribution Guidelines
+# Contributing to the Ontario.ca Jamstack Toolkit
 
-## Commit Messages
+## Commit messages
 
-- Please use the https://www.conventionalcommits.org/ standard
-
-Your commit messages should look like the following (body is optional, if any extended explanation is useful):
+Please use the [Conventional Commits](https://www.conventionalcommits.org) standard. Your commit messages should read:
 
 ```
 feat: add basic layout file
@@ -14,35 +12,37 @@ Convert to using a standard Eleventy layout file.
 JIRA-Ref: OSI-29
 ```
 
-## Branch Names
+ Adding a commit body is optional, but useful if your commit requires an extended explanation.
 
-- Please name branches in this style: `{issue id}_{branch description}` (this lets our Git hooks determine the issue ID and insert it automatically in commit messages)
+## Branch names
 
-## Hooks
+- Please name branches in this style: `{issue id}_{branch description}`. This format allows our Git hooks to determine the issue ID and insert it automatically in commit messages.
 
-- This project uses [`pre-commit`](https://pre-commit.com/) to manage needed hooks. After installing `pre-commit` on your system, use the following to install the project's hooks.
+## Git hooks
+
+- This project uses [pre-commit](https://pre-commit.com/) to manage its git hooks. After installing pre-commit on your system, use the following commands to install the project's hooks:
   - `pre-commit autoupdate`
   - `pre-commit install`
   - `pre-commit install --hook-type prepare-commit-msg`
 
-## Design System Updates
+## Ontario Design System updates
 
-Do not update the [Ontario Design System](https://designsystem.ontario.ca/docs/documentation/for-developers.html) manually. Instead:
+Do not update the [Ontario Design System](https://designsystem.ontario.ca/docs/documentation/for-developers.html) yourself. Instead:
 
-- Update the `installDesignSystem` script in `package.json` to the current design system version by changing the `DS_VERSION` variable
-- Run that script
-- Run `npm build` to update the `dist` directory with the built site
-- Run `npm run test` and update the tests for `Ontario design system inclusion` as necessary
+- Change the `DS_VERSION` variable in the `installDesignSystem` script in `package.json` to the current version of the Ontario Design System
+- Run `npm run installDesignSystem`
+- Run `npm build` to build a new version of your application using the updated design system
+- Run `npm run test` and update the tests for `Ontario Design System inclusion` as necessary
 
-The general purpose of this script is to automate the update of the design system and remove example files and others that are unnecessary for deployment.
+The general purpose of this script is to automate the update of the Ontario Design System and remove example files and others that are not required for deployment.
 
 ## Releases
 
-New or updated features should be managed as a release as follows:
+New or updated features should be managed as a release.
 
-- In the merge request, ideally immediately before merge:
-  - Bump the version number where appropriate in `package.json`, `README.md` and similar
-  - Add the version number and a short release note to `README.md`
-  - Bump the tag used in `update-jamstack-toolkit.sh` to match that version number
-- Once merged:
-  - Add a tag in the style `r[x].[y].[z]` (same as the existing ones) to match that version number
+In the merge request, ideally immediately before merge:
+- Bump the version number where appropriate in `package.json`, `README.md` and similar
+- Add the version number and a short release note to `README.md`
+- Bump the tag used in `update-jamstack-toolkit.sh` to match that version number
+
+Once merged, add a tag formatted as `r[x].[y].[z]` to match that version number.
