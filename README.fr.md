@@ -33,7 +33,7 @@ Vous pouvez faire fonctionner une nouvelle application Jamstack Ontario.ca dans 
 
 4.	**Ouvrez le code source et commencez à faire des modifications.**
 
-Votre application fonctionne maintenant à l’adresse `http://localhost:8080`. Ouvrez le répertoire `jamstack-application-toolkit` dans l’éditeur de code de votre choix pour commencer à faire des modifications.
+      Votre application fonctionne maintenant à l’adresse `http://localhost:8080`. Ouvrez le répertoire     `jamstack-application-toolkit` dans l’éditeur de code de votre choix pour commencer à faire des modifications.
 
 Vous avez maintenant une application Jamstack Ontario.ca fonctionnelle qui fonctionne localement.
 
