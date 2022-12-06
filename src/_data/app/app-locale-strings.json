@@ -5,8 +5,8 @@
       "fr": "Page d'accueil"
     },
     "welcome": {
-      "en": "Welcome to the Ontario.ca <a href=\"https://jamstack.org/\">Jamstack</a> Application Toolkit.",
-      "fr": "Bienvenue à la trousse d'outils d'application <a href=\"https://jamstack.org/\">Jamstack</a> d'Ontario.ca."
+      "en": "Welcome to the Ontario.ca Jamstack Toolkit.",
+      "fr": "Bienvenue à la boîte à outils Jamstack Ontario.ca."
     },
     "environment": {
       "firstHalf": {
