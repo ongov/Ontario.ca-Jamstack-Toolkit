@@ -1,4 +1,5 @@
 # Ontario.ca Jamstack Toolkit
+[Available in French](README.fr.md)
 
 The best way to start building applications for Ontario.ca.
 
@@ -11,7 +12,7 @@ You can get a new Ontario.ca Jamstack application running in your local dev envi
 1. **Clone this repository.**
 
    ```shell
-   git clone https://github.com/ongov/Ontario.ca-Jamstack-Application-Toolkit
+   git clone https://github.com/ongov/Ontario.ca-Jamstack-Toolkit
    ```
 
 2. **Configure your application details.**
@@ -35,21 +36,15 @@ You can get a new Ontario.ca Jamstack application running in your local dev envi
 
 You now have a functioning Ontario.ca Jamstack application running locally.
 
----
-
 ## Learning to use the toolkit
 
 Join the **Ontario.ca Jamstack Toolkit** team on Microsoft Teams to find documentation on working with the toolkit, as well as support and release notes.
 
 Don't have access to Teams? Contact [service.integration@ontario.ca](mailto:service.integration@ontario.ca) for support alternatives.
 
----
-
 ## Contributions
 
 We welcome suggestions for improving the toolkit. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for our guide on contributing to this project.
-
----
 
 ## License
 
