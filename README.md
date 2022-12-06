@@ -3,7 +3,7 @@
 
 The best way to start building applications for Ontario.ca.
 
-This Ontario.ca Jamstack Toolkit is designed for teams that want to create maintainable, performant and dynamic user experiences for the public that integrate with Ontario.ca. Quickly start building a front-end application using the [Ontario Design System](https://designsystem.ontario.ca/) and enrich it with back-end APIs.
+This Ontario.ca Jamstack Toolkit is designed for teams that want to create maintainable, performant and dynamic user experiences for the public that integrate with Ontario.ca. Quickly start building a frontend application using the [Ontario Design System](https://designsystem.ontario.ca/) and enrich it with backend APIs.
 
 ## Get started using the toolkit
 
