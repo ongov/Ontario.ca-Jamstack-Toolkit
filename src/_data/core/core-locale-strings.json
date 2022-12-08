@@ -192,16 +192,6 @@
   "footer": {
     "standard": {
       "links": {
-        "aboutOntario": {
-          "url": {
-            "en": "https://www.ontario.ca/page/about-ontario",
-            "fr": "https://www.ontario.ca/fr/page/lontario-en-bref"
-          },
-          "text": {
-            "en": "About Ontario",
-            "fr": "L'Ontario en bref"
-          }
-        },
         "accessibility": {
           "url": {
             "en": "https://www.ontario.ca/page/accessibility",
@@ -210,16 +200,6 @@
           "text": {
             "en": "Accessibility",
             "fr": "Accessibilité"
-          }
-        },
-        "news": {
-          "url": {
-            "en": "https://news.ontario.ca/newsroom/en",
-            "fr": "https://news.ontario.ca/fr"
-          },
-          "text": {
-            "en": "News",
-            "fr": "Nouvelles"
           }
         },
         "privacy": {

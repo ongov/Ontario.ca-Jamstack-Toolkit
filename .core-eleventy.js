@@ -24,17 +24,6 @@ coreConfigFunc = function (eleventyConfig) {
     () => `${String(new Date().getFullYear()).slice(-2)}`
   );
 
-  // This fixes an issue when using nunjucks with 11ty where
-  // if an array has only one item, the for loop will treat the string
-  // as an array of characters.
-  // https://github.com/11ty/eleventy/issues/1611#issuecomment-768831405
-  eleventyConfig.addFilter('toArray', function (value) {
-    if (Array.isArray(value)) {
-      return value;
-    }
-    return [value];
-  });
-
   eleventyConfig.addFilter('localeString', function (key) {
     // Solution for accessing page front matter from https://stackoverflow.com/a/67746326
 
