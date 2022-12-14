@@ -43,6 +43,12 @@ coreConfigFunc = function (eleventyConfig) {
     } else {
       var localeString = localeStrings[key];
     }
+    if (Array.isArray(localeString)) {
+      localeString = localeString.map((str) => {
+        return str[lang];
+      });
+      return localeString;
+    }
     return `${localeString[lang]}`;
   });
 };
