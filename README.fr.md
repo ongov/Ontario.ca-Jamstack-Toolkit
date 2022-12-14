@@ -1,4 +1,5 @@
 # Boîte à outils Jamstack Ontario.ca
+
 [Disponible en anglais](README.md)
 
 La meilleure façon de commencer à créer des applications pour Ontario.ca.
@@ -10,30 +11,30 @@ Commencez rapidement à bâtir une application frontale se servant du Système d
 
 Vous pouvez faire fonctionner une nouvelle application Jamstack Ontario.ca dans votre environnement de conception local en suivant ces étapes :
 
-1.	**Clonez ce répertoire.**
+1. **Clonez ce répertoire.**
 
-   ```shell
-   git clone https://github.com/ongov/Ontario.ca-Jamstack-Toolkit
-   ```
+```shell
+git clone https://github.com/ongov/Ontario.ca-Jamstack-Toolkit
+```
 
-2.	**Configurez les détails de votre application.**
+2. **Configurez les détails de votre application.**
 
-    Déplacez-vous dans le répertoire nouvellement cloné et saisissez la commande de configuration du nouveau projet :
+   Déplacez-vous dans le répertoire nouvellement cloné et saisissez la commande de configuration du nouveau projet :
 
-   ```shell
-   cd jamstack-application-toolkit
-   node jam-on.mjs new
-   ```
+```shell
+cd jamstack-application-toolkit
+node jam-on.mjs new
+```
 
-3.	**Lancez l’application en mode conception.**
+3. **Lancez l’application en mode conception.**
 
-   ```shell
-   npm run serve
-   ```
+```shell
+npm run serve
+```
 
-4.	**Ouvrez le code source et commencez à faire des modifications.**
+4. **Ouvrez le code source et commencez à faire des modifications.**
 
-      Votre application fonctionne maintenant à l’adresse `http://localhost:8080`. Ouvrez le répertoire     `jamstack-application-toolkit` dans l’éditeur de code de votre choix pour commencer à faire des modifications.
+   Votre application fonctionne maintenant à l’adresse `http://localhost:8080`. Ouvrez le répertoire `jamstack-application-toolkit` dans l’éditeur de code de votre choix pour commencer à faire des modifications.
 
 Vous avez maintenant une application Jamstack Ontario.ca fonctionnelle qui fonctionne localement.
 
