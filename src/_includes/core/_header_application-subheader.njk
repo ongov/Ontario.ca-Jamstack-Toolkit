@@ -1,4 +1,9 @@
-{% set numMenuItems = app["app-locale-strings"].applicationHeader.navMenu | length %}
+{% if menuItems %}
+    {% set menuItems = app["app-locale-strings"].applicationHeader.navMenu %}
+{% else %}
+    {% set menuItems = core["core-locale-strings"].applicationHeader.navMenu %}
+{% endif %}
+{% set numMenuItems = menuItems | length %}
 {% if numMenuItems > 0 and numMenuItems <=2 %}
     {% set menuShowClass = "ontario-show-for-small-only" %}
 {% elif numMenuItems > 0 and numMenuItems <=5 %}
@@ -19,7 +24,7 @@
                             {# Display the visible menu items if any exist #}
                             {% if numMenuItems > 0 %}
                             <ul class="ontario-application-subheader__menu ontario-show-for-large">
-                                {% for itemKey, navMenuItem in app["app-locale-strings"].applicationHeader.navMenu %}
+                                {% for itemKey, navMenuItem in menuItems %}
                                     {% if loop.index <= 5 %}
                                     <li><a href="#">{{ ('applicationHeader.navMenu.' + itemKey + '.text') | localeString }}</a></li>
                                     {% endif %}
@@ -54,21 +59,21 @@
                 <div class="ontario-navigation__container">
                     <ul>
                         {% if numMenuItems > 0 %}
-                            {% for itemKey, navMenuItem in app["app-locale-strings"].applicationHeader.navMenu %}
+                            {% for itemKey, navMenuItem in menuItems %}
                                 {% if loop.index <= 2 %}
                                 <li class="ontario-show-for-small-only"><a href="#">{{ ('applicationHeader.navMenu.' + itemKey + '.text') | localeString }}</a></li>
                                 {% endif %}
                             {% endfor %}
                         {% endif %}
                         {% if numMenuItems >= 3 %}
-                            {% for itemKey, navMenuItem in app["app-locale-strings"].applicationHeader.navMenu %}
+                            {% for itemKey, navMenuItem in menuItems %}
                                 {% if loop.index >=3 and loop.index <= 5 %}
                                 <li class="ontario-hide-for-large"><a href="#">{{ ('applicationHeader.navMenu.' + itemKey + '.text') | localeString }}</a></li>
                                 {% endif %}
                             {% endfor %}
                         {% endif %}
                         {% if numMenuItems >= 3 %}
-                            {% for itemKey, navMenuItem in app["app-locale-strings"].applicationHeader.navMenu %}
+                            {% for itemKey, navMenuItem in menuItems %}
                                 {% if loop.index >=6 %}
                                     <li><a href="#">{{ ('applicationHeader.navMenu.' + itemKey + '.text') | localeString }}</a></li>
                                 {% endif %}

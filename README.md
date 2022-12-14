@@ -1,4 +1,5 @@
 # Ontario.ca Jamstack Toolkit
+
 [Available in French](README.fr.md)
 
 The best way to start building applications for Ontario.ca.
