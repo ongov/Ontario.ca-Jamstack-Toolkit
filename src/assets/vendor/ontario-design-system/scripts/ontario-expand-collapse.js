@@ -115,13 +115,15 @@
         expanders.forEach(function (item, index) {
             item.addEventListener("click", function () {
                 item.parentNode.classList.toggle("ontario-expander--active");
-                var content = item.parentNode.querySelector(
+                var content = item.parentNode.parentNode.querySelector(
                     "[data-toggle='ontario-expander-content']"
                 );
+
                 content.classList.toggle("ontario-expander__content--opened");
                 content.classList.contains("ontario-expander__content--opened")
                     ? content.setAttribute("aria-hidden", "false")
                     : content.setAttribute("aria-hidden", "true");
+
                 this.parentNode.classList.contains("ontario-expander--active")
                     ? this.setAttribute("aria-expanded", "true")
                     : this.setAttribute("aria-expanded", "false");
@@ -144,7 +146,7 @@
                 var accordionContainer = this.parentNode.parentNode;
                 var accordionExpandAllButton = this;
                 var accordionItems = Array.prototype.slice.call(
-                    accordionContainer.querySelectorAll(".ontario-accordion")
+                    accordionContainer.querySelectorAll(".ontario-accordion-heading")
                 );
 
                 toggleExpandAllButton(accordionExpandAllButton);
