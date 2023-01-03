@@ -1,0 +1,26 @@
+{
+  "homePage": {
+    "title": {
+      "en": "Home Page",
+      "fr": "Page d'accueil"
+    },
+    "welcome": {
+      "en": "Welcome to the Ontario.ca Jamstack Toolkit.",
+      "fr": "Bienvenue à la boîte à outils Jamstack Ontario.ca."
+    },
+    "environment": {
+      "firstHalf": {
+        "en": "This site was built for the ",
+        "fr": "Ce site a été construit pour l'environnement de "
+      },
+      "secondHalf": {
+        "en": " environment.",
+        "fr": "."
+      }
+    },
+    "examplePages": {
+      "en": "Example Pages",
+      "fr": "Pages d'exemple"
+    }
+  }
+}
