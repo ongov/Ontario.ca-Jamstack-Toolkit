@@ -1,0 +1,7 @@
+
+<h3>{{ "homePage.examplePages" | localeString }}</h3>
+<ul>
+{%- for currentPage in collections["example page"] | sort(attribute='data.example_page_sort_order') -%}
+<li><a href="{{ currentPage.url }}">{{ currentPage.data.title }}</a></li>
+{%- endfor -%}
+</ul>
