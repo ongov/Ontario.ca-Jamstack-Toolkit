@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% set lang = lang or 'en' %}
+<html lang="{{ lang }}">
+    <head>
+    <title>{{ title }}{% if not globals.useApplicationHeader and not useApplicationHeader%} | Ontario.ca
+{% endif %}</title>
+    <link href="{{ globals.assetsRoot }}/css/style.css" rel="stylesheet" />
+    {% if not app['app-globals'].excludeDefaultHeadTagTemplates.favicons  %}
+        {% include "core/_head_defaults_favicons.njk" %}
+    {% endif %}
+    {% if not app['app-globals'].excludeDefaultHeadTagTemplates.charsetMeta  %}
+        {% include "core/_head_defaults_meta_charset.njk" %}
+    {% endif %}
+        {% if not app['app-globals'].excludeDefaultHeadTagTemplates.viewportMeta  %}
+        {% include "core/_head_defaults_meta_viewport.njk" %}
+    {% endif %}
+    {% if not app['app-globals'].excludeDefaultHeadTagTemplates.language  %}
+        {% include "core/_head_defaults_language.njk" %}
+    {% endif %}
+    {% if not app['app-globals'].excludeDefaultHeadTagTemplates.socialMeta  %}
+        {% include "core/_head_defaults_meta_social.njk" %}
+    {% endif %}
+    {% include "app/_head_custom.njk" %}
+    </head>
+    <body>
+
+    {% include "core/_icon_definitions.njk" %}
+    {% include "core/_header.njk" %}
+    {% include "core/components/_ontarioca_breadcrumbs.njk" %}
+    {% include "app/_main_content.njk" %}
+    {% include "core/_footer.njk" %}
+    </body>
+</html>

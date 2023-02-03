@@ -1,0 +1,12 @@
+<a href="{{ globals.siteRoot }}{{ en_page_url if lang === 'fr' else fr_page_url }}" class="ontario-header__language-toggler ontario-header-button ontario-header-button--without-outline">
+    <abbr title="{{ 'header.langToggle.langFull' | localeString }}" class="ontario-show-for-small-only">
+        {% if useApplicationHeader %}
+        {{ 'header.langToggle.langFull' | localeString }}
+        {% else %}
+        {{ 'header.langToggle.langAbbr' | localeString }}
+        {% endif %}
+    </abbr>
+    <span class="ontario-show-for-medium">
+        {{ 'header.langToggle.langFull' | localeString }}
+    </span>
+</a>

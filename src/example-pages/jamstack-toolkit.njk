@@ -1,0 +1,18 @@
+---
+tags: example page
+example_page_sort_order: 1
+layout: core/layout.njk
+title: "Ontario.ca Jamstack Toolkit"
+description: "The best way to start building applications for Ontario.ca."
+fr_page_url: "/pages-dexemple/boite-a-outils-jamstack"
+ontarioca_breadcrumbs:
+  - ["Government", "https://www.ontario.ca/page/government"]
+  - ["Ontario Digital Service", "https://www.ontario.ca/page/ontario-digital-service"]
+---
+<h2>{{ "homePage.title" | localeString}}</h2>
+<p>{{ "homePage.welcome" | localeString | markdown | safe}}</p>
+<div>
+  <p>{{ "homePage.environment.firstHalf" | localeString}}<strong>{{ globals.userFriendlyEnvString }}</strong>{{ "homePage.environment.secondHalf" | localeString}}</p>
+</div>
+
+{%- include "app/components/_example_page_list.njk" -%}
