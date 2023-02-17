@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% set lang = lang or 'en' %}
+<html lang="{{ lang }}">
+    <head>
+    <title>{{ title }}{% if not globals.useApplicationHeader and not useApplicationHeader%} | Ontario.ca
+{% endif %}</title>
+    <link href="{{ globals.assetsRoot }}/css/style.css" rel="stylesheet" />
+    {% include "core/_layout_standard_head_tags.njk" %}
+    {% include "app/_head_custom.njk" %}
+    </head>
+    <body>
+
+    {% include "core/_layout_standard_body_above_main_content.njk" %}
+    {% include "app/_main_content.njk" %}
+    {% include "core/_footer.njk" %}
+    {% include "core/_back_to_top.njk" %}
+    </body>
+</html>

@@ -1,0 +1,16 @@
+{% if not app['app-globals'].excludeDefaultHeadTagTemplates.favicons  %}
+    {% include "core/_head_defaults_favicons.njk" %}
+{% endif %}
+{% if not app['app-globals'].excludeDefaultHeadTagTemplates.charsetMeta  %}
+    {% include "core/_head_defaults_meta_charset.njk" %}
+{% endif %}
+    {% if not app['app-globals'].excludeDefaultHeadTagTemplates.viewportMeta  %}
+    {% include "core/_head_defaults_meta_viewport.njk" %}
+{% endif %}
+{% if not app['app-globals'].excludeDefaultHeadTagTemplates.language  %}
+    {% include "core/_head_defaults_language.njk" %}
+{% endif %}
+{% if not app['app-globals'].excludeDefaultHeadTagTemplates.socialMeta  %}
+    {% include "core/_head_defaults_meta_social.njk" %}
+{% endif %}
+{% include "core/_head_generated_by.njk" %}
