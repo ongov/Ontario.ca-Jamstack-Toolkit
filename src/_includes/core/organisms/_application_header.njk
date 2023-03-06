@@ -1,0 +1,12 @@
+<header class="ontario-application-header ontario-header" id="ontario-header">
+  <div class="ontario-row">
+    <div class="ontario-columns ontario-small-6 ontario-application-header__logo">
+      {% import "core/atoms/_home_link.macro.njk" as logo with context %}
+      {# render(isDefault), send false because this is for app header #}
+      {{ logo.render(false) }}
+    </div>
+    <div class="ontario-columns ontario-small-6 ontario-application-header__lang-toggle">
+      {% include "core/atoms/_header_lang_toggle.njk" %}
+    </div>
+  </div>
+</header>
