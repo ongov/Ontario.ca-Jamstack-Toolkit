@@ -1,0 +1,28 @@
+<div class="ontario-header__container">
+  <header class="ontario-header" id="ontario-header">
+    <div class="ontario-row">
+      <div class="ontario-header__logo-container ontario-columns ontario-small-2 ontario-medium-4 ontario-large-3">
+        {% import "core/atoms/_home_link.macro.njk" as logo with context %}
+        {{ logo.render(true) }}
+      </div>
+      {% include "core/molecules/_header_search_form.njk" %}
+      <div
+        class="ontario-header__nav-right-container ontario-columns ontario-small-10 ontario-medium-8 ontario-large-3">
+        {% include "core/atoms/_header_lang_toggle.njk" %}
+
+        {% include "core/atoms/_header_search_button.njk" %}
+
+        {% include "core/atoms/_header_menu_open_button.njk" %}
+      </div>
+      <div class="ontario-header__search-close-container ontario-columns ontario-small-2 ontario-medium-3">
+      {% include "core/atoms/_header_search_close_button.njk" %}
+      </div>
+    </div>
+  </header>
+  <nav class="ontario-navigation" id="ontario-navigation">
+    {% include "core/atoms/_header_menu_close_button.njk" %}
+    <div class="ontario-navigation__container">
+      {% include "core/molecules/_default_header_nav.njk" %}
+    </div>
+  </nav>
+</div>

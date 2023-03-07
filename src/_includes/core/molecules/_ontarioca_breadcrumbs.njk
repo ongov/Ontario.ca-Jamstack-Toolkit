@@ -1,0 +1,15 @@
+{% if ontarioca_breadcrumbs | length > 0 %}
+<nav>
+  <div class="ontario-row">
+    <div class="ontario-small-12 ontario-columns">
+      <ul class="ontario-breadcrumbs">
+        <li class="pb-0"><a href="{{ 'ontarioCaBreadcrumbs.home.url' | localeString }}">{{
+            'ontarioCaBreadcrumbs.home.text' | localeString }}</a></li>
+        {% for title, url in ontarioca_breadcrumbs %}
+        <li class="pb-0"><a href="{{ url }}">{{ title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endif %}
