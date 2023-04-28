@@ -1,0 +1,30 @@
+{# formerly 'globals', set here for use by templates #}
+{% set templateGlobals =
+{
+    assetsRoot: app["app-globals"].assetsPath,
+    designSystemRoot: app["app-globals"].assetsPath + core["core-globals"].designSystemPath,
+    useApplicationHeader: app["app-globals"].useApplicationHeader,
+    footerType: core["core-globals"].allowedFooterTypes[app["app-globals"].footerType],
+    env: core["core-globals"].env
+}
+%}
+<!DOCTYPE html>
+{% set lang = lang or 'en' %}
+<html lang="{{ lang }}">
+{% include "core/organisms/_head.njk" %}
+
+<body>  
+  {# Tag Manager should be first element in body #}
+  {% include "core/atoms/_google_tag_manager_noscript.njk" %}
+  {% include "core/atoms/_skip_to_main.njk" %}
+  {% include "core/atoms/_ontario_icon_svgs.njk" %}
+  {% include "core/templates/_header.njk" %}
+  {% include "core/molecules/_ontarioca_breadcrumbs.njk" %}
+  <!-- This div is used by the _skip_to_main functionality to jump the header -->
+  <div id="main-content"></div>
+  {% include "app/_main_content.njk" %}
+  {% include "core/templates/_footer.njk" %}
+  {% include "core/atoms/_back_to_top_button.njk" %}
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<div class="ontario-header__container">
+{% if templateGlobals.useApplicationHeader or useApplicationHeader%}
+  {% include "core/organisms/_application_header.njk" %}
+  {% include "core/organisms/_application_subheader.njk" %}
+{% else %}
+  {% include "core/organisms/_default_header.njk" %}
+{% endif %}
+</div>
+
+<div class="ontario-overlay"></div>
+
+{% include "core/molecules/_header_script_imports.njk" %}
+
+{% include "core/atoms/_header_eleventy_js_globals.njk" %}
