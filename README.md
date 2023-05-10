@@ -18,10 +18,11 @@ You can get a new Ontario.ca Jamstack application running in your local dev envi
 
 2. **Configure your application details.**
 
-   Move into the newly cloned directory and enter the new project setup command:
+   Move into the newly cloned directory, install the needed packages, and enter the new project setup command:
 
    ```shell
    cd jamstack-application-toolkit
+   npm install
    node jam-on.mjs new
    ```
 
