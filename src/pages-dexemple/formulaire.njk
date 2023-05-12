@@ -1,0 +1,83 @@
+---
+tags: example page
+example_page_sort_order: 6
+layout: core/layout.njk
+title: "Système de conception pour l'Ontario - formulaire"
+description: "The best way to start building applications for Ontario.ca."
+lang: fr
+en_page_url: "/example-pages/forms"
+ontarioca_breadcrumbs:
+  - ["Gouvernment", "https://www.ontario.ca/fr/page/gouvernement"]
+  - ["Services numériques de l’Ontario", "https://www.ontario.ca/fr/page/services-numeriques-ontario"]
+---
+
+{% import "core/atoms/ontario-design-system/ontario-form-components.njk" as ontarioForms with context %}
+{% import "core/atoms/ontario-design-system/ontario-components.njk" as ontarioComponents with context %}
+
+{{ ontarioComponents.ontarioButton(
+  id="button-primary",
+  buttonStyle="primary",
+  text="Primaire"
+  )
+}}
+
+{{ ontarioComponents.ontarioButton(
+  id="button-secondary",
+  buttonStyle="secondary",
+  text="Secondaire"
+  )
+}}
+
+{{ ontarioComponents.ontarioButton(
+  id="button-tertiary",
+  buttonStyle="tertiary",
+  text="Tertiaire"
+  )
+}}
+
+{{ ontarioForms.ontarioCheckboxes(
+  legend="Légende de case à cocher",
+  isRequired=true,
+  groupName="options",
+  options={"option_a":"Option A","option_b":"Option B","option_c":"Option C"},
+  otherInputAttributes={"option_b": {"checked": true} }
+  )
+}}
+
+{{ ontarioForms.ontarioRadios(
+  legend="Légende de case d’option",
+  isRequired=true,
+  groupName="options",
+  options={"option_a":"Option A","option_b":"Option B","option_c":"Option C"},
+  otherInputAttributes={"option_c": {"checked": true} }
+  )
+}}
+
+{{ ontarioForms.ontarioDropdownList(
+  id="dropdown",
+  label="Étiquette - listes déroulantes",
+  name="dropdown",
+  options={"option_1":"Option 1", "option_2":"Option 2", "option_3":"Option 3"},
+  isRequired=true,
+  defaultOption="option_2"
+  )
+}}
+
+{{ ontarioForms.ontarioTextArea(
+  id="textarea",
+  label="Étiquette - zone de texte",
+  name="textarea",
+  isRequired=true
+  )
+}}
+
+{{ ontarioForms.ontarioTextInput(
+  id="textinput",
+  label="Étiquette - saisie de texte",
+  name="textinput",
+  isRequired=true,
+  width=4
+  )
+}}
+
+{%- include "app/components/_example_page_list.njk" -%}

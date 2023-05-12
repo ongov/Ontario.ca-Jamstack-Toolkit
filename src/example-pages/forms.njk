@@ -1,0 +1,83 @@
+---
+tags: example page
+example_page_sort_order: 5
+layout: core/layout.njk
+title: "Ontario Design System - Forms"
+description: "The best way to start building applications for Ontario.ca."
+lang: en
+fr_page_url: "/pages-dexemple/formulaire"
+ontarioca_breadcrumbs:
+  - ["Government", "https://www.ontario.ca/page/government"]
+  - ["Ontario Digital Service", "https://www.ontario.ca/page/ontario-digital-service"]
+---
+
+{% import "core/atoms/ontario-design-system/ontario-form-components.njk" as ontarioForms with context %}
+{% import "core/atoms/ontario-design-system/ontario-components.njk" as ontarioComponents with context %}
+
+{{ ontarioComponents.ontarioButton(
+  id="button-primary",
+  buttonStyle="primary",
+  text="Primary"
+  )
+}}
+
+{{ ontarioComponents.ontarioButton(
+  id="button-secondary",
+  buttonStyle="secondary",
+  text="Secondary"
+  )
+}}
+
+{{ ontarioComponents.ontarioButton(
+  id="button-tertiary",
+  buttonStyle="tertiary",
+  text="Tertiary"
+  )
+}}
+
+{{ ontarioForms.ontarioCheckboxes(
+  legend="Checkbox legend",
+  isRequired=true,
+  groupName="checkbox-options",
+  options={"option_a":"Option A","option_b":"Option B","option_c":"Option C"},
+  otherInputAttributes={"option_b": {"checked": true} }
+  )
+}}
+
+{{ ontarioForms.ontarioRadios(
+  legend="Radio legend",
+  isRequired=true,
+  groupName="radio-options",
+  options={"option_a":"Option A","option_b":"Option B","option_c":"Option C"},
+  otherInputAttributes={"option_c": {"checked": true} }
+  )
+}}
+
+{{ ontarioForms.ontarioDropdownList(
+  id="dropdown",
+  label="Dropdown list label",
+  name="dropdown",
+  options={"option_1":"Option 1", "option_2":"Option 2", "option_3":"Option 3"},
+  isRequired=true,
+  defaultOption="option_2"
+  )
+}}
+
+{{ ontarioForms.ontarioTextArea(
+  id="textarea",
+  label="Text area label",
+  name="textarea",
+  isRequired=true
+  )
+}}
+
+{{ ontarioForms.ontarioTextInput(
+  id="textinput",
+  label="Text input label",
+  name="textarea",
+  isRequired=true,
+  width=4
+  )
+}}
+
+{%- include "app/components/_example_page_list.njk" -%}

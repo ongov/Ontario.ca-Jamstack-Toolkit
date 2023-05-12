@@ -1,0 +1,50 @@
+{
+  "name": "jamstack-application-toolkit",
+  "version": "2.1.0",
+  "description": "The Ontario.ca Jamstack Toolkit is designed for teams that want to create maintainable, performant and dynamic user experiences for the public that integrate with Ontario.ca. Quickly start building a frontend application using the Ontario Design System and enrich it with backend APIs.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ongov/Ontario.ca-Jamstack-Toolkit"
+  },
+  "scripts": {
+    "test": "npm run build && mocha",
+    "validateHTML": "rm -rf dist && eleventy & npm run htmlValidateDist",
+    "build": "rm -rf dist && eleventy",
+    "serve": "eleventy --serve",
+    "htmlValidateSrc": "html-validate src/**/*.njk",
+    "htmlValidateDist": "html-validate dist/**/*.html",
+    "formatCode": "npx prettier --write .",
+    "lint": "npm run lintCode",
+    "lintCode": "./node_modules/.bin/eslint \"**/*.js\"",
+    "lintCodeFix": "./node_modules/.bin/eslint \"**/*.js\" --fix",
+    "installDesignSystem": "export DS_VERSION=1.2.1 && export DS_ZIP_NAME=ontario-design-system.zip && export VEN_DIR=src/assets/vendor && export DS_UNZIP_DIR=$VEN_DIR/ontario-design-system && curl https://designsystem.ontario.ca/dist/ontario-design-system-dist-$DS_VERSION.zip > $VEN_DIR/$DS_ZIP_NAME && unzip -o $VEN_DIR/$DS_ZIP_NAME -d $DS_UNZIP_DIR && rm $VEN_DIR/$DS_ZIP_NAME && rm $DS_UNZIP_DIR/version-release-notes-*.* && rm -rf $DS_UNZIP_DIR/html-samples && rm $DS_UNZIP_DIR/index.html && rm $DS_UNZIP_DIR/package.json && rm -rf $DS_UNZIP_DIR/styles/components && rm -rf $DS_UNZIP_DIR/styles/sass && rm -rf $DS_UNZIP_DIR/fonts/ds-fonts.zip"
+  },
+  "author": "Ontario Digital Service",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^13.0.1",
+    "config-chain": "^1.1.13"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "commander": "^9.3.0",
+    "dotenv": "^16.0.0",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^9.0.0",
+    "nunjucks": "^3.2.4",
+    "simple-git": "^3.10.0",
+    "uuid": "^8.3.2",
+    "validate-npm-package-name": "^4.0.0",
+    "@babel/eslint-parser": "^7.19.1",
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "html-validate": "^6.1.0",
+    "mocha": "^9.1.3",
+    "prettier": "2.6.2"
+  }
+}

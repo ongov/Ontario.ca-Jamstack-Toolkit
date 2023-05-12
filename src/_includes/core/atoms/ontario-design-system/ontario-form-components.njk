@@ -1,0 +1,248 @@
+{% import "core/atoms/ontario-design-system/_helpers.njk" as helpers with context %}
+
+{%- set localeStrings =
+    {
+        "required": {
+            "en": "required",
+            "fr": "obligatoire"
+        },
+        "optional": {
+            "en": "optional",
+            "fr": "facultative"
+        },
+        "select": {
+            "en": "Select",
+            "fr": "Sélectionner"
+        }
+    }
+ -%}
+
+{%- macro flagText(isRequired) -%}
+{% if isRequired %}{{ localeStrings.required[lang]}}{% else %}{{ localeStrings.optional[lang]}}{% endif %}
+{% endmacro %}
+
+/**
+ * Generates a single Ontario Design System checkbox with the supplied parameters
+ * @constructor
+ * @param {string} id - <input> 'id' attribute / <label> 'for' attribute
+ * @param {string} label - <label> text
+ * @param {string} name - <input> 'name' attribute
+ * @param {string} value - <input> 'value' attribute
+ * @param {object} otherInputAttributes - set of attribute/value pairs to be added to the <input> tag, for advanced use cases
+*/
+
+{% macro ontarioCheckbox(
+    id="checkbox-macro",
+    label="Checkbox macro label",
+    name="checkbox-macro",
+    value="checkbox-macro-value",
+    otherInputAttributes=null
+    ) %}
+    <div class="ontario-checkboxes__item">
+        <input class="ontario-checkboxes__input" id="{{ id }}" name="{{ name }}" type="checkbox" value="{{ value }}"
+        {{ helpers.renderAttributes(attributes=otherInputAttributes) }}
+        />
+        <label class="ontario-checkboxes__label" for="{{ id }}">
+            {{ label }}
+        </label>
+    </div>
+{% endmacro %}
+
+/**
+ * Generates a group of Ontario Design System checkboxes with the supplied parameters
+ * Automatically generates index-based ids for each checkbox that will be unique
+ * within the context of the `groupName` param
+ * @constructor
+ * @param {string} legend - <legend> text
+ * @param {boolean} isRequired - whether the form element is required for form completion (for flag text purposes)
+ * @param {string} groupName - used for the 'name' attribute of each checkbox <input>, and to namespace the automatic id generation
+ * @param {object} options - object of <input> 'value' attributes and <label> text in this style:
+    {"option_value_1":"Option Label 1","option_value_2":"Option Label 2","option_value_3":"Option Label 3"}
+ * @param {object} otherInputAttributes - object of input 'value' key matching those in 'options', with
+   the value of each key being an object of attribute/value pairs to be supplied to an individual checkbox <input> tag, for advanced usage
+
+*/
+
+{% macro ontarioCheckboxes(
+    legend="Ontario checkboxes macro legend",
+    isRequired=false,
+    groupName="ontario-checkboxes-macro",
+    options={"option_1":"Option 1","option_2":"Option 2","option_3":"Option 3"},
+    otherInputAttributes={"option_1": {"checked": true} }
+    ) %}
+{%- set flagText -%}{{flagText(isRequired)}}{% endset %}
+
+<fieldset class="ontario-fieldset">
+    <legend class="ontario-fieldset__legend">
+        {{ legend }}<span class="ontario-label__flag">({{flagText}})</span>
+    </legend>
+    <div class="ontario-checkboxes">
+        {% for optionValue, optionLabel in options %}
+            {% set currentInputAttributes = otherInputAttributes[optionValue] %}
+            {{ ontarioCheckbox(id="checkbox-"+groupName+"-"+loop.index,
+            label=optionLabel,
+            name=groupName,
+            value=optionValue,
+            otherInputAttributes=currentInputAttributes) }}
+        {% endfor %}
+    </div>
+</fieldset>
+{% endmacro %}
+
+/**
+ * Generates a single Ontario Design System radio button with the supplied parameters
+ * @constructor
+ * @param {string} id - <input> 'id' attribute / <label> 'for' attribute
+ * @param {string} label - <label> text
+ * @param {string} name - <input> 'name' attribute
+ * @param {string} value - <input> 'value' attribute
+ * @param {object} otherInputAttributes - set of attribute/value pairs to be added to the <input> tag, for advanced use cases
+
+*/
+
+{% macro ontarioRadio(
+    id="radio-macro",
+    label="Radio macro label",
+    name="radio-macro",
+    value="radio-macro-value",
+    otherInputAttributes=null
+    ) %}
+    <div class="ontario-radios__item">
+        <input class="ontario-radios__input" id="{{ id }}" name="{{ name }}" type="radio" value="{{ value }}"
+        {{ helpers.renderAttributes(attributes=otherInputAttributes) }}
+        />
+        <label class="ontario-radios__label" for="{{ id }}">
+            {{ label }}
+        </label>
+    </div>
+{% endmacro %}
+
+/**
+ * Generates a group of Ontario Design System radio buttons with the supplied parameters
+ * Automatically generates index-based ids for each radio button that will be unique
+ * within the context of the `groupName` param
+ * @constructor
+ * @param {string} legend - <legend> text
+ * @param {boolean} isRequired - whether the form element is required for form completion (for flag text purposes)
+ * @param {string} groupName - used for the 'name' attribute of each radop bittpn <input>, and to namespace the automatic id generation
+ * @param {object} options - object of <input> 'value' attributes and <label> text in this style:
+    {"option_value_1":"Option Label 1","option_value_2":"Option Label 2","option_value_3":"Option Label 3"}
+ * @param {object} otherInputAttributes - object of input 'value' key matching those in 'options', with
+    the value of each key being an object of attribute/value pairs to be supplied to an individual radio button <input> tag, for advanced usage
+
+*/
+{% macro ontarioRadios(
+    legend="Ontario radios macro legend",
+    isRequired=false,
+    groupName="ontario-radios-macro",
+    options={"option_1":"Option 1", "option_2":"Option 2", "option_3":"Option 3"},
+    otherInputAttributes={
+        "option_1":{"checked": true}
+        }
+    ) %}
+{%- set flagText -%}{{flagText(isRequired)}}{% endset %}
+<fieldset class="ontario-fieldset">
+    <legend class="ontario-fieldset__legend">
+        {{ legend }}<span class="ontario-label__flag">({{ flagText }})</span>
+    </legend>
+    <div class="ontario-radios">
+        {% for optionValue, optionLabel in options %}
+            {% set currentInputAttributes = otherInputAttributes[optionValue] %}
+            {{ ontarioRadio(id="radio-"+groupName+"-"+loop.index, label=optionLabel, name=groupName, value=optionValue, otherInputAttributes=currentInputAttributes) }}
+        {% endfor %}
+
+    </div>
+</fieldset>
+{% endmacro %}
+
+/**
+ * Generates an Ontario Design System dropdown list with the supplied parameters
+ * @constructor
+ * @param {string} id - <select> 'id' attribute / <label> 'for' attribute
+ * @param {string} label - <label> text
+ * @param {string} name - <select> 'name' attribute
+ * @param {object} options - object of <option> 'value' attributes and <option> text in this style:
+    {"option_value_1":"Option Label 1","option_value_2":"Option Label 2","option_value_3":"Option Label 3"}
+ * @param {boolean} isRequired - whether the form element is required for form completion (for flag text purposes)
+ * @param {string} defaultOption - the default option, if any, matching one of the option 'value' attributes
+ * @param {object} otherSelectAttributes - set of attribute/value pairs to be added to the <select> tag, for advanced use cases
+
+*/
+{% macro ontarioDropdownList(
+    id="dropdown-macro",
+    label="Dropdown list macro label",
+    name="dropdown-macro",
+    options={"option_1":"Option 1", "option_2":"Option 2", "option_3":"Option 3"},
+    isRequired=false,
+    defaultOption=null,
+    otherSelectAttributes=null
+    ) %}
+{%- set flagText -%}{{flagText(isRequired )}}{% endset %}
+<label class="ontario-label" for="{{ id }}">
+    {{ label }}<span class="ontario-label__flag">({{ flagText }})</span>
+</label>
+<select class="ontario-input ontario-dropdown" id="{{ id }}" name="{{ name }}"
+    {{ helpers.renderAttributes(attributes=otherSelectAttributes) }}
+    >
+    <option value="">{{ localeStrings.select[lang] }}</option>
+    {% for optionValue, optionText in options %}
+            <option {% if optionValue === defaultOption %}selected {% endif %}value="{{ optionValue }}">{{ optionText }}</option>
+    {% endfor %}
+</select>
+{% endmacro %}
+
+/**
+ * Generates an Ontario Design System text area with the supplied parameters
+ * @constructor
+ * @param {string} id - <textarea> 'id' attribute / <label> 'for' attribute
+ * @param {string} label - <label> text
+ * @param {string} name - <textarea> 'name' attribute
+ * @param {boolean} isRequired - whether the form element is required for form completion (for flag text purposes)
+ * @param {object} otherTextAreaAttributes - set of attribute/value pairs to be added to the <textarea> tag, for advanced use cases
+*/
+{% macro ontarioTextArea(
+    id="textarea-macro",
+    label="Text area macro label",
+    name="textarea-macro",
+    isRequired=false,
+    otherTextAreaAttributes=null
+    ) %}
+{%- set flagText -%}{{flagText(isRequired )}}{% endset %}
+<label class="ontario-label" for="{{ id }}">
+    {{ label }}<span class="ontario-label__flag">({{ flagText }})</span>
+</label>
+<textarea class="ontario-input ontario-textarea" name="{{ name }}" id="{{ id }}"
+{{ helpers.renderAttributes(attributes=otherTextAreaAttributes) }}
+></textarea>
+{% endmacro %}
+
+/**
+ * Generates an Ontario Design System text input with the supplied parameters
+ * @constructor
+ * @param {string} id - <input> 'id' attribute / <label> 'for' attribute
+ * @param {string} label - <label> text
+ * @param {string} name - <input> 'name' attribute
+ * @param {boolean} isRequired - whether the form element is required for form completion (for flag text purposes)
+ * @param {int} width - text input known input length, if any - see
+ *   https://designsystem.ontario.ca/components/detail/text-inputs.html for guidance and standard lengths available
+ * @param {object} otherInputAttributes - set of attribute/value pairs to be added to the <input> tag, for advanced use cases
+*/
+
+{% macro ontarioTextInput(
+    id="textinput-macro",
+    label="Text input macro label",
+    name="textinput-macro",
+    isRequired=false,
+    width=null,
+    otherInputAttributes=null
+    ) %}
+{%- set flagText -%}{{flagText(isRequired )}}{% endset %}
+{%- set widthText -%}{% if width %}ontario-input--{{width}}-char-width {% else %}{% endif %}{% endset %}
+
+<label class="ontario-label" for="{{ id }}">
+    {{ label }}<span class="ontario-label__flag">({{ flagText }})</span>
+</label>
+<input class="ontario-input {{widthText}}" type="text" name="{{ name }}" id="{{ id }}"
+{{ helpers.renderAttributes(attributes=otherInputAttributes) }}
+/>
+{% endmacro %}

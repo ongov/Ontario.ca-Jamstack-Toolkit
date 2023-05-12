@@ -1,0 +1,12 @@
+{% macro renderAttributes(
+    attributes={}
+)%}
+    {% for attr, val in attributes %}
+        {# Output the attribute name only if it's a boolean attribute #}
+        {% if val === true %}
+            {{ attr }}
+        {% else %}
+            {{ attr }}="{{ val}}"
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

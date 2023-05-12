@@ -1,0 +1,26 @@
+/**
+ * Generates a single Ontario Design System button with the supplied parameters
+ * @constructor
+ * @param {string} id - <button> 'id' attribute
+ * @param {string} type - <button> 'type' attribute
+ * @param {string} buttonStyle - Ontario Design System button style: should be one of "primary", "secondary" or "tertiary"
+ * @param {string} text - <button> text
+ * @param {object} otherButtonAttributes - set of attribute/value pairs to be added to the <button> tag, for advanced use cases
+*/
+
+{% import "core/atoms/ontario-design-system/_helpers.njk" as helpers with context %}
+
+{% macro ontarioButton(
+    id="button",
+    type="button",
+    buttonStyle="primary",
+    text="Button",
+    otherButtonAttributes = null
+) %}
+<button
+    id="{{ id }}" type="{{ type }}" class="ontario-button ontario-button--{{ buttonStyle }}"
+    {{ helpers.renderAttributes(attributes=otherButtonAttributes) }}
+>
+{{ text }}
+</button>
+{% endmacro %}
