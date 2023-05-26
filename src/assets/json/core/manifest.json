@@ -1,0 +1,17 @@
+{
+  "name": "Ontario.ca",
+  "short_name": "Ontario.ca",
+  "description": "The official website of the Government of Ontario. Find information on programs and services.",
+  "icons": [
+    {
+      "src": "../../vendor/ontario-design-system/favicons/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../../vendor/ontario-design-system/favicons/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{% set ogTitle = og_title or title %}
+{% set ogDescription = og_description or description %}
+{% set ogType = og_type or "website" %}
+{% set ogSiteName = og_site_name or "Ontario.ca" %}
+{% set ogUrl = og_url or "https://ontario.ca" + page.url %}
+{% set ogImage = og_image or "https://ontario.ca" + templateGlobals.assetsRoot + "/img/core/ontario_ogp_image.png" %}
+{% set twitterCreator = twitter_creator or "@ONgov" %}
+{% set twitterCard = twitter_card or "summary_large_image" %}
+
+{# Open Graph is generally well-supported by most social media sites #}
+<meta property="og:title" content="{{ ogTitle }}" />
+<meta property="og:description" content="{{ ogDescription }}" />
+<meta property="og:type" content="{{ ogType }}" />
+<meta property="og:site_name" content="{{ ogSiteName }}" />
+<meta property="og:url" content="{{ ogUrl }}" />
+<meta property="og:image" content="{{ ogImage }}" />
+
+{# Twitter has their own card standard with supposed fallback to any og meta properties, but this doesn't seem terribly reliable #}
+<meta name="twitter:card" content="{{ twitterCard }}" />
+<meta name="twitter:creator" content="{{ twitterCreator }}">
+<meta name="twitter:site" content="{{ ogSiteName }}">
+
+<meta name="twitter:title" content="{{ ogTitle }}">
+<meta name="twitter:description" content="{{ ogDescription }}">
+<meta name="twitter:url" content="{{ ogUrl }}">
+<meta name="twitter:image" content="{{ ogImage }}">
+
+{# Standard description usage #}
+<meta name="description" content="{{ ogDescription }}">

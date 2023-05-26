@@ -1,0 +1,8 @@
+{% macro display(numToShow, menuItems) %}
+{% for itemKey, navMenuItem in menuItems %}
+{% if loop.index <= numToShow %} <li><a href="{{ ('applicationHeader.navMenu.' + itemKey + '.url') |
+    localeString }}">{{ ('applicationHeader.navMenu.' + itemKey + '.text') |
+    localeString }}</a></li>
+  {% endif %}
+  {% endfor %}
+  {% endmacro %}

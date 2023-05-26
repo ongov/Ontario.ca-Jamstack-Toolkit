@@ -1,0 +1,3 @@
+src/jamstack-toolkit/assets/vendor/**
+dist/assets/vendor/**
+tests_output

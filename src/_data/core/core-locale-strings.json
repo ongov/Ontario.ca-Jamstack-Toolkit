@@ -1,0 +1,376 @@
+{
+  "header": {
+    "skipToMain": {
+      "en": "Skip to main content",
+      "fr": "Passer au contenu principal"
+    },
+    "links": {
+      "home": {
+        "en": "https://www.ontario.ca/page/government-ontario",
+        "fr": "https://www.ontario.ca/fr/page/gouvernement-de-lontario"
+      }
+    },
+    "onGov": {
+      "en": "Government of Ontario",
+      "fr": "Gouvernement de l’Ontario"
+    },
+    "labels": {
+      "search": {
+        "en": "Search",
+        "fr": "Rechercher"
+      },
+      "submit": {
+        "en": "Submit",
+        "fr": "Soumission"
+      },
+      "clearField": {
+        "en": "Clear field",
+        "fr": "Vider le champ"
+      },
+      "menu": {
+        "en": "Menu",
+        "fr": "Sujets"
+      },
+      "openMenu": {
+        "en": "open menu",
+        "fr": "ouvrir les sujets"
+      },
+      "closeSearchBar": {
+        "en": "close search bar",
+        "fr": "fermer la barre de recherche"
+      },
+      "close": {
+        "en": "close",
+        "fr": "fermer"
+      }
+    },
+    "langToggle": {
+      "langFull": {
+        "en": "Français",
+        "fr": "English"
+      },
+      "langAbbr": {
+        "en": "FR",
+        "fr": "EN"
+      }
+    },
+    "navMenu": {
+      "link1": {
+        "url": {
+          "en": "https://ontario.ca/page/arts-and-culture",
+          "fr": "https://ontario.ca/fr/page/affaires-et-economie"
+        },
+        "text": {
+          "en": "Arts and culture",
+          "fr": "Affaires et économie"
+        }
+      },
+      "link2": {
+        "url": {
+          "en": "https://ontario.ca/page/business-and-economy",
+          "fr": "https://ontario.ca/fr/page/arts-et-culture"
+        },
+        "text": {
+          "en": "Business and economy",
+          "fr": "Arts et culture"
+        }
+      },
+      "link3": {
+        "url": {
+          "en": "https://ontario.ca/covid",
+          "fr": "https://ontario.ca/fr/page/conduite-et-routes"
+        },
+        "text": {
+          "en": "COVID-19",
+          "fr": "Conduite et routes"
+        }
+      },
+      "link4": {
+        "url": {
+          "en": "https://ontario.ca/page/driving-and-roads",
+          "fr": "https://ontario.ca/covid-fr"
+        },
+        "text": {
+          "en": "Driving and roads",
+          "fr": "COVID-19"
+        }
+      },
+      "link5": {
+        "url": {
+          "en": "https://ontario.ca/page/education-and-training",
+          "fr": "https://ontario.ca/fr/page/domicile-et-communaute"
+        },
+        "text": {
+          "en": "Education and training",
+          "fr": "Domicile et communauté"
+        }
+      },
+      "link6": {
+        "url": {
+          "en": "https://ontario.ca/page/environment-and-energy",
+          "fr": "https://ontario.ca/fr/page/education-et-formation"
+        },
+        "text": {
+          "en": "Environment and energy",
+          "fr": "Éducation et formation"
+        }
+      },
+      "link7": {
+        "url": {
+          "en": "https://ontario.ca/page/government",
+          "fr": "https://ontario.ca/fr/page/environnement-et-energie"
+        },
+        "text": {
+          "en": "Government",
+          "fr": "Environnement et énergie"
+        }
+      },
+      "link8": {
+        "url": {
+          "en": "https://ontario.ca/page/health-care-ontario",
+          "fr": "https://ontario.ca/fr/page/gouvernement"
+        },
+        "text": {
+          "en": "Health and wellness",
+          "fr": "Gouvernement"
+        }
+      },
+      "link9": {
+        "url": {
+          "en": "https://ontario.ca/page/home-and-community",
+          "fr": "https://ontario.ca/fr/page/impots-et-avantages-fiscaux"
+        },
+        "text": {
+          "en": "Home and community",
+          "fr": "Impôts et avantages fiscaux"
+        }
+      },
+      "link10": {
+        "url": {
+          "en": "https://ontario.ca/page/jobs-and-employment",
+          "fr": "https://ontario.ca/fr/page/lois-et-securite"
+        },
+        "text": {
+          "en": "Jobs and employment",
+          "fr": "Lois et sécurité"
+        }
+      },
+      "link11": {
+        "url": {
+          "en": "https://ontario.ca/page/law-and-safety",
+          "fr": "https://ontario.ca/fr/page/regions-rurales-et-du-nord"
+        },
+        "text": {
+          "en": "Law and safety",
+          "fr": "Régions rurales et du Nord"
+        }
+      },
+      "link12": {
+        "url": {
+          "en": "https://ontario.ca/page/rural-and-north",
+          "fr": "https://ontario.ca/fr/page/les-soins-de-sante-en-ontario"
+        },
+        "text": {
+          "en": "Rural and north",
+          "fr": "Santé et bien-être"
+        }
+      },
+      "link13": {
+        "url": {
+          "en": "https://ontario.ca/page/taxes-and-benefits",
+          "fr": "https://ontario.ca/fr/page/travail-et-emploi"
+        },
+        "text": {
+          "en": "Taxes and benefits",
+          "fr": "Travail et emploi"
+        }
+      },
+      "link14": {
+        "url": {
+          "en": "https://ontario.ca/page/travel-and-recreation",
+          "fr": "https://ontario.ca/fr/page/voyage-et-loisirs"
+        },
+        "text": {
+          "en": "Travel and recreation",
+          "fr": "Voyage et loisirs"
+        }
+      }
+    }
+  },
+  "ontarioCaBreadcrumbs": {
+    "home": {
+      "url": {
+        "en": "https://www.ontario.ca/page/government-ontario",
+        "fr": "https://www.ontario.ca/fr/page/gouvernement-de-lontario"
+      },
+      "text": {
+        "en": "Home",
+        "fr": "Accueil"
+      }
+    }
+  },
+  "footer": {
+    "standard": {
+      "links": {
+        "accessibility": {
+          "url": {
+            "en": "https://www.ontario.ca/page/accessibility",
+            "fr": "https://www.ontario.ca/fr/page/accessibilite"
+          },
+          "text": {
+            "en": "Accessibility",
+            "fr": "Accessibilité"
+          }
+        },
+        "privacy": {
+          "url": {
+            "en": "https://www.ontario.ca/page/privacy-statement",
+            "fr": "https://www.ontario.ca/fr/page/declaration-concernant-la-protection-de-la-vie-privee"
+          },
+          "text": {
+            "en": "Privacy",
+            "fr": "Confidentialité"
+          }
+        },
+        "contactUs": {
+          "url": {
+            "en": "https://www.ontario.ca/feedback/contact-us",
+            "fr": "https://www.ontario.ca/fr/commentaires/pour-nous-joindre"
+          },
+          "text": {
+            "en": "Contact Us",
+            "fr": "Contactez-nous"
+          }
+        },
+        "copyright": {
+          "url": {
+            "en": "https://www.ontario.ca/page/copyright-information",
+            "fr": "https://www.ontario.ca/fr/page/droits-dauteur"
+          },
+          "text": {
+            "en": "King's Printer for Ontario",
+            "fr": "Imprimeur du Roi pour l’Ontario"
+          }
+        }
+      },
+      "backToTop": {
+        "en": "Top",
+        "fr": "Haut"
+      }
+    }
+  },
+  "expandedFooter": {
+    "ontarioGovernment": {
+      "en": "Ontario Government",
+      "fr": "Gouvernement de l'Ontario"
+    },
+    "ontarioGovernmentDescription": {
+      "en": "The Government of Ontario includes 24 ministries as well as agencies and Crown corporations.  Learn about <a href=\"#\">how the government works.</a>",
+      "fr": "Le gouvernement de l’Ontario inclut 24 ministères ainsi que organismes et sociétés de la Couronne. En savoir plus <a href=\"#\">sur le fonctionnement du gouvernement.</a>"
+    },
+    "contactUs": {
+      "en": "Contact us",
+      "fr": "Contactez-nous"
+    },
+    "contactUsDescription": {
+      "en": "You can contact us through a ministry or send us an email.",
+      "fr": "Vous pouvez nous contacter par un ministère ou envoyez-nous un courrier électronique"
+    },
+    "findAMinistry": {
+      "en": "Find a ministry",
+      "fr": "Trouvez un ministère"
+    }
+  },
+  "applicationHeader": {
+    "applicationName": {
+      "en": "Application name",
+      "fr": "Nom de l'application"
+    },
+    "applicationUrl": {
+      "en": "/example-pages/jamstack-toolkit-app-header",
+      "fr": "/pages-dexemple/boite-a-outils-jamstack-app-header"
+    },
+    "navMenu": {
+      "link1": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 1",
+          "fr": "Lien 1"
+        }
+      },
+      "link2": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 2",
+          "fr": "Lien 2"
+        }
+      },
+      "link3": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 3",
+          "fr": "Lien 3"
+        }
+      },
+      "link4": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 4",
+          "fr": "Lien 4"
+        }
+      },
+      "link5": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 5",
+          "fr": "Lien 5"
+        }
+      },
+      "link6": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 6",
+          "fr": "Lien 6"
+        }
+      },
+      "link7": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 7",
+          "fr": "Lien 7"
+        }
+      },
+      "link8": {
+        "url": {
+          "en": "#",
+          "fr": "#"
+        },
+        "text": {
+          "en": "Link 8",
+          "fr": "Lien 8"
+        }
+      }
+    }
+  }
+}

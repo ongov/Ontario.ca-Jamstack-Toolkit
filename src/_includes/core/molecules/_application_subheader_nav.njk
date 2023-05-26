@@ -1,0 +1,22 @@
+{% if numMenuItems > 0 %}
+<ul>
+  {% import "core/atoms/_application_subheader_nav_item.macro.njk" as menuLink with context %}
+  {% for itemKey, navMenuItem in menuItems %}
+    {% if loop.index <= 2 %} 
+      <li class="ontario-show-for-small-only">
+        {{ menuLink.render('applicationHeader.navMenu', itemKey) }}
+      </li>
+    {% endif %}
+    {% if loop.index >=3 and loop.index <= 5 %}
+    <li class="ontario-hide-for-large">
+      {{ menuLink.render('applicationHeader.navMenu', itemKey) }}
+    </li>
+    {% endif %}
+    {% if loop.index >=6 %}
+        <li>          
+          {{ menuLink.render('applicationHeader.navMenu', itemKey) }}
+        </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endif %}

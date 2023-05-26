@@ -1,0 +1,17 @@
+{% if not app['app-globals'].excludeDefaultHeadTagTemplates.favicons %}
+{% include "core/atoms/default_headtags/_favicons_links.njk" %}
+{% endif %}
+{% if not app['app-globals'].excludeDefaultHeadTagTemplates.charsetMeta %}
+{% include "core/atoms/default_headtags/_charset_meta.njk" %}
+{% endif %}
+{% if not app['app-globals'].excludeDefaultHeadTagTemplates.viewportMeta %}
+{% include "core/atoms/default_headtags/_viewport_meta.njk" %}
+{% endif %}
+{% if not app['app-globals'].excludeDefaultHeadTagTemplates.language %}
+{% include "core/atoms/default_headtags/_language_links.njk" %}
+{% endif %}
+{% if not app['app-globals'].excludeDefaultHeadTagTemplates.socialMeta %}
+{% include "core/atoms/default_headtags/_social_meta.njk" %}
+{% endif %}
+{% include "core/atoms/default_headtags/_google_tag_manager.njk" %}
+{% include "core/atoms/default_headtags/_generator_meta.njk" %}
