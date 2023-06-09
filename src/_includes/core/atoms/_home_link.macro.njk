@@ -1,0 +1,12 @@
+{% macro render(isDefault) %}
+  <a href="{{ 'header.links.home' | localeString }}">
+    <img role="img" class="{{ "ontario-show-for-medium" if isDefault}}"
+      src="{{ templateGlobals.designSystemRoot }}/logos/ontario-logo--desktop.svg"
+      alt="{{ 'header.onGov' | localeString }}" />
+    {% if isDefault %}
+      <img role="img" class="ontario-show-for-small-only"
+        src="{{ templateGlobals.designSystemRoot }}/logos/ontario-logo--mobile.svg"
+        alt="{{ 'header.onGov' | localeString }}" />
+    {% endif %}
+  </a>
+{% endmacro %}

@@ -1,0 +1,26 @@
+<div class="ontario-application-subheader__menu-container">
+
+  {# Display the visible menu items if any exist #}
+  {% if numMenuItems > 0 %}
+  {# For large screens, we show 5 items - otherwise 2 #}
+  {% import "core/molecules/_application_subheader_menu_items.macro.njk" as menu with context %}
+  <ul class="ontario-application-subheader__menu ontario-show-for-large">
+    {{ menu.display(5, menuItems) }}
+  </ul>
+  <ul class="ontario-application-subheader__menu ontario-hide-for-small ontario-show-for-medium ontario-hide-for-large">
+    {{ menu.display(2, menuItems) }}
+  </ul>
+  {% endif %}
+  
+  <div 
+      {%- if numMenuItems < 3 %}
+        class="ontario-hide-for-medium"
+      {% endif %}
+      {%- if numMenuItems >2 and numMenuItems < 6 %}
+        class="ontario-hide-for-large"
+      {% endif %}
+  >
+  {% include "core/atoms/_header_menu_open_button.njk" %}
+  {% include "core/atoms/_header_menu_close_button.njk" %}
+  </div>  
+</div>

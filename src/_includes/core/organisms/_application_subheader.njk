@@ -1,0 +1,25 @@
+{% if app["app-locale-strings"].applicationHeader.navMenu %}
+{% set menuItems = app["app-locale-strings"].applicationHeader.navMenu %}
+{% else %}
+{% set menuItems = core["core-locale-strings"].applicationHeader.navMenu %}
+{% endif %}
+{% set numMenuItems = menuItems | length %}
+
+<div class="ontario-application-subheader-menu__container">
+  <section class="ontario-application-subheader">
+    <div class="ontario-row">
+      <div class="ontario-columns ontario-small-12 ontario-application-subheader__container">
+        <p class="ontario-application-subheader__heading">
+          <a href="{{ 'applicationHeader.applicationUrl' | localeString }}">{{ 'applicationHeader.applicationName' | localeString }}</a>
+        </p>
+        {% include "core/molecules/_application_subheader_menu.njk" %}
+      </div>
+    </div>
+  </section>
+
+  <nav class="ontario-navigation" id="ontario-navigation">
+    <div class="ontario-navigation__container">
+      {% include "core/molecules/_application_subheader_nav.njk" %}
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,6 @@
+{% macro render(path, itemKey) %}
+
+<a href="{{ (path + '.' + itemKey + '.url') | localeString }}">{{ (path + '.' + itemKey + '.text') |
+  localeString }}</a>
+
+{% endmacro %}

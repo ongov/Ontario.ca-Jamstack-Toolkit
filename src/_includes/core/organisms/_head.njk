@@ -1,0 +1,7 @@
+<head>
+  <title>{{ title }}{% if not templateGlobals.useApplicationHeader and not useApplicationHeader%} | Ontario.ca
+    {% endif %}</title>
+  {% include "core/molecules/_head_imports.njk" %}
+  {% include "core/molecules/_head_standard_tags.njk" %}
+  {% include "app/_head_custom.njk" %}
+</head>

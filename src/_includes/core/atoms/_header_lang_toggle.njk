@@ -1,0 +1,7 @@
+<a href="{{ en_page_url if lang === 'fr' else fr_page_url }}"
+  class="ontario-header__language-toggler ontario-header-button ontario-header-button--without-outline">
+  {% include "core/atoms/_lang_abbr.njk" %}
+  <span class="ontario-show-for-medium">
+    {{ 'header.langToggle.langFull' | localeString }}
+  </span>
+</a>
