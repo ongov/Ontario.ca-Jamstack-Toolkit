@@ -1,0 +1,18 @@
+---
+tags: example page
+example_page_sort_order: 6
+layout: core/layout.njk
+title: "Boîte à outils Jamstack Ontario.ca (avec l'en-tête pour ServiceOntario)"
+description: "La meilleure façon de commencer à créer des applications pour Ontario.ca."
+lang: fr
+en_page_url: "/example-pages/jamstack-toolkit-so-header"
+useApplicationHeader: true
+useServiceOntarioApplicationHeader: true
+---
+<h2>{{ "homePage.title" | localeString }}</h2>
+<p>{{ "homePage.welcome" | localeString | markdown | safe }}</p>
+<div>
+  <p>{{ "homePage.environment.firstHalf" | localeString }}<strong>{{ app["app-globals"].userFriendlyEnvString[core["core-globals"].env] }}</strong>{{ "homePage.environment.secondHalf" | localeString }}</p>
+</div>
+
+{%- include "app/components/_example_page_list.njk" -%}

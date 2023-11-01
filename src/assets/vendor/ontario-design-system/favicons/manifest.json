@@ -1,0 +1,17 @@
+{
+	"name": "Ontario Design System",
+	"short_name": "Ontario DS",
+	"description": "Design and coding standards to help you build digital products for the Ontario government.",
+	"icons": [
+		{
+			"src": "./favicon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "./favicon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}

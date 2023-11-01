@@ -1,0 +1,62 @@
+
+{% if templateGlobals.applicationHeaderType === "serviceOntario" or useServiceOntarioApplicationHeader %}
+  {% set applicationHeaderClassPrefix = "ontario-service" %}
+  {% else %}
+  {% set applicationHeaderClassPrefix = "ontario-application" %}
+{% endif %}
+
+{% if app["app-locale-strings"].applicationHeader.navMenu %}
+{% set menuItems = app["app-locale-strings"].applicationHeader.navMenu %}
+{% else %}
+{% set menuItems = core["core-locale-strings"].applicationHeader.navMenu %}
+{% endif %}
+{% set numMenuItems = menuItems | length %}
+
+
+<div class="{{ applicationHeaderClassPrefix }}-subheader-menu__container">
+  <section class="{{ applicationHeaderClassPrefix }}-subheader">
+    <div class="ontario-row">
+      <div class="ontario-columns ontario-small-12 {{ applicationHeaderClassPrefix }}-subheader__container">
+
+        {% if templateGlobals.applicationHeaderType === "serviceOntario" or useServiceOntarioApplicationHeader %}
+
+        <a href="{{ 'applicationHeader.applicationUrl' | localeString }}" class="ontario-service-subheader__link">
+            <div class="ontario-service-subheader__heading-container">
+                <p class="ontario-service-subheader__heading">
+                    ServiceOntario
+                </p>
+                <p class="ontario-service-subheader__description">
+                    {{ 'applicationHeader.applicationName' | localeString }}
+                </p>
+            </div>
+        </a>
+
+        {% else %}
+        <p class="{{ applicationHeaderClassPrefix }}-subheader__heading">
+          <a href="{{ 'applicationHeader.applicationUrl' | localeString }}">{{ 'applicationHeader.applicationName' | localeString }}</a>
+        </p>
+        {% endif %}
+
+        {% include "core/molecules/_application_subheader_menu.njk" %}
+
+
+      </div>
+    </div>
+  </section>
+
+  <nav class="ontario-navigation" id="ontario-navigation">
+      <div
+      {%- if numMenuItems < 3 %}
+        class="ontario-hide-for-medium"
+      {% endif %}
+      {%- if numMenuItems >2 and numMenuItems < 6 %}
+        class="ontario-hide-for-large"
+      {% endif %}
+  >
+    {% include "core/atoms/_header_menu_close_button.njk" %}
+    </div>
+    <div class="ontario-navigation__container">
+      {% include "core/molecules/_application_subheader_nav.njk" %}
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,19 @@
+---
+eleventyExcludeFromCollections: true
+permalink: "{{ englishRoot }}/sitemap.xml"
+domainUrl: "https://www.ontario.ca"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% raw %}
+  {% for page in collections.all %}
+  {% if not page.data.draft %}
+  <url>
+    <loc>{{ domainUrl }}{{ page.url | url }}</loc>
+    <lastmod>{{ page.date.toISOString() }}</lastmod>
+    <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
+  </url>
+  {% endif %}
+  {% endfor %}
+  {% endraw %}
+</urlset>

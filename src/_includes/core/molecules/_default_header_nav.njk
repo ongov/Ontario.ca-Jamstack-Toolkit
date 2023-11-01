@@ -1,0 +1,11 @@
+{# fallback global menu items are managed in `src/_data/core/core-locale-strings.json` #}
+<ul id="globalContent-ontarioGlobalMenu">
+  {% import "core/atoms/_application_subheader_nav_item.macro.njk" as menuLink with context %}
+  {% for itemKey, navMenuItem in core["core-locale-strings"].header.navMenu %}
+  <li class="ontario-header-navigation__menu-item">
+    {{ menuLink.render('header.navMenu', itemKey) }}
+  </li>
+  {% endfor %}
+</ul>
+
+{# fallback items are replaced by items fetch from Ontario.ca CMS #}
